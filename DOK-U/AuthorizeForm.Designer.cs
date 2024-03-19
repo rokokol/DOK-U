@@ -37,6 +37,7 @@
             this.blank1 = new System.Windows.Forms.PictureBox();
             this.picture = new System.Windows.Forms.PictureBox();
             this.autorizeMenu = new System.Windows.Forms.Panel();
+            this.showPasswordButton = new System.Windows.Forms.CheckBox();
             this.forgetPasswordTool = new System.Windows.Forms.Label();
             this.changeModeButton = new System.Windows.Forms.Button();
             this.enterButton = new System.Windows.Forms.Button();
@@ -144,6 +145,7 @@
             // 
             // autorizeMenu
             // 
+            this.autorizeMenu.Controls.Add(this.showPasswordButton);
             this.autorizeMenu.Controls.Add(this.forgetPasswordTool);
             this.autorizeMenu.Controls.Add(this.changeModeButton);
             this.autorizeMenu.Controls.Add(this.enterButton);
@@ -155,13 +157,24 @@
             this.autorizeMenu.Size = new System.Drawing.Size(311, 228);
             this.autorizeMenu.TabIndex = 1;
             // 
+            // showPasswordButton
+            // 
+            this.showPasswordButton.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.showPasswordButton.Location = new System.Drawing.Point(3, 203);
+            this.showPasswordButton.Name = "showPasswordButton";
+            this.showPasswordButton.Size = new System.Drawing.Size(162, 19);
+            this.showPasswordButton.TabIndex = 2;
+            this.showPasswordButton.Text = "Показать пароль";
+            this.showPasswordButton.UseVisualStyleBackColor = true;
+            this.showPasswordButton.CheckedChanged += new System.EventHandler(this.showPasswordButton_CheckedChanged);
+            // 
             // forgetPasswordTool
             // 
             this.forgetPasswordTool.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.forgetPasswordTool.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.forgetPasswordTool.Location = new System.Drawing.Point(183, 203);
+            this.forgetPasswordTool.Location = new System.Drawing.Point(187, 203);
             this.forgetPasswordTool.Name = "forgetPasswordTool";
-            this.forgetPasswordTool.Size = new System.Drawing.Size(123, 23);
+            this.forgetPasswordTool.Size = new System.Drawing.Size(121, 23);
             this.forgetPasswordTool.TabIndex = 5;
             this.forgetPasswordTool.Text = "Забыли пароль?";
             // 
@@ -215,11 +228,12 @@
             this.passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passwordTextBox.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.passwordTextBox.Location = new System.Drawing.Point(57, 16);
+            this.passwordTextBox.MaxLength = 16;
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.passwordTextBox.Size = new System.Drawing.Size(248, 32);
             this.passwordTextBox.TabIndex = 2;
-            this.passwordTextBox.Text = "Ваш пароль";
+            this.passwordTextBox.UseSystemPasswordChar = true;
             // 
             // passwordPicture
             // 
@@ -245,11 +259,12 @@
             this.loginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.loginTextBox.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginTextBox.Location = new System.Drawing.Point(58, 16);
+            this.loginTextBox.MaxLength = 16;
             this.loginTextBox.Name = "loginTextBox";
             this.loginTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.loginTextBox.Size = new System.Drawing.Size(248, 32);
             this.loginTextBox.TabIndex = 1;
-            this.loginTextBox.Text = "Ваш логин";
+            this.loginTextBox.Tag = "Ваш логин";
             // 
             // loginPicture
             // 
@@ -281,7 +296,7 @@
             this.Name = "AuthorizeForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "DOK\'U";
+            this.Text = "Вход";
             this.formContainer.Panel1.ResumeLayout(false);
             this.formContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.formContainer)).EndInit();
@@ -300,6 +315,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.loginPicture)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.CheckBox showPasswordButton;
 
         private System.Windows.Forms.Label forgetPasswordTool;
 

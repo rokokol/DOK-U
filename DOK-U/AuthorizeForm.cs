@@ -12,13 +12,12 @@ namespace DOK_U
 {
     public partial class AuthorizeForm : Form
     {
-        static public AuthorizeForm FORM;
         private bool isEnterMode = true;
         
         public AuthorizeForm()
         {
             InitializeComponent();
-            FORM = this;
+            loginTextBox.AccessibleDescription = "Ваш логин";
             loginTextBox.Click += TextBoxOnClick;
             passwordTextBox.Click += TextBoxOnClick;
             forgetPasswordTool.MouseHover += delegate(object sender, EventArgs args)
@@ -38,26 +37,28 @@ namespace DOK_U
             var textBox = (TextBox) sender;
             textBox.SelectAll();
             textBox.Focus();
-            passwordTextBox.PasswordChar = '*';
         }
 
         private void changeModeButton_Click(object sender, EventArgs e)
         {
             isEnterMode = !isEnterMode;
-            passwordTextBox.PasswordChar = '\0';
+            passwordTextBox.UseSystemPasswordChar = true;
+            showPasswordButton.Checked = false;
             if (isEnterMode)
             {
+                Text = "Вход";
                 forgetPasswordTool.Show();
-                loginTextBox.Text = "Ваш логин";
-                passwordTextBox.Text = "Ваш пароль";
+                // loginTextBox.Text = "Ваш логин";
+                // passwordTextBox.Text = "Ваш пароль";
                 changeModeButton.Text = "Регистрация";
                 enterButton.Text = "Войти";
             }
             else
             {
+                Text = "Регистрация";
                 forgetPasswordTool.Hide();
-                loginTextBox.Text = "Придумайте логин";
-                passwordTextBox.Text = "Придумайте пароль";
+                // loginTextBox.Text = "Придумайте логин";
+                // passwordTextBox.Text = "Придумайте пароль";
                 changeModeButton.Text = "Вход";
                 enterButton.Text = "Зарегестрироваться";
             }
@@ -81,6 +82,12 @@ namespace DOK_U
                         MessageBoxIcon.Error);
                 }
             }
+        }
+
+
+        private void showPasswordButton_CheckedChanged(object sender, EventArgs e)
+        {
+            passwordTextBox.UseSystemPasswordChar = !showPasswordButton.Checked;
         }
     }
 }
