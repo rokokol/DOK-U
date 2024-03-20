@@ -10,7 +10,7 @@ namespace DOK_U
         #region Constants
 
         public static MainForm FORM { private set; get; }
-        private static Person? currentUser;
+        private static Person currentUser;
         public static readonly string INITIAL_FILE = "../../Source/Initial.json";
 
         #endregion
@@ -29,17 +29,33 @@ namespace DOK_U
             contentTabs.SizeMode = TabSizeMode.Fixed;
             diaryButton.Enabled = false;
             FillArrays();
-            if (!CheckAuthorized())
-            {
-                Authorize();
-            }
+            Authorize();
         }
 
         private void Authorize()
         {
-            Enabled = false;
-            var authorize = new AuthorizeForm();
-            authorize.Show();
+            if (!TryAuthorize())
+            {
+                Enabled = false;
+                var authorize = new AuthorizeForm();
+                authorize.ShowDialog();
+                TryAuthorize();
+            }
+            SetupUser(currentUser);
+        }
+
+        private void SetupUser(Person user)
+        {
+            nameContent.Text = $"{user.LastName} {user.FirstName} {user.Surname}";
+            loginContent.Text = user.Login;
+            birthdayContent.Text = $"{user.Birthday.Day}.{user.Birthday.Month}.{user.Birthday.Year}";
+            sexContent.Text = user.Sex == "M" ? "Мужской" : "Женский";
+            groupContent.Text = user.Group;
+            
+            if (user.IsAdmin)
+            {
+                ToggleAdminSettings();
+            }
         }
         
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e) {
@@ -51,13 +67,8 @@ namespace DOK_U
             }
         }
         
-        private bool CheckAuthorized()
+        private bool TryAuthorize()
         {
-            if (currentUser != null)
-            {
-                return true;
-            }
-            
             if (File.Exists(INITIAL_FILE))
             {
                 try
@@ -208,6 +219,19 @@ namespace DOK_U
             if(dialogResult == DialogResult.Yes)
             {
                 Application.Exit();
+            }
+        }
+
+        private void logOutButton_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Вы действительно хотите выйти из учетной записи?", 
+                "Подтверждение",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+            if(dialogResult == DialogResult.Yes)
+            {
+                File.Delete(INITIAL_FILE);
+                Authorize();
             }
         }
     }

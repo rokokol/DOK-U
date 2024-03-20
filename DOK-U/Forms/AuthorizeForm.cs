@@ -70,6 +70,15 @@ namespace DOK_U
 
         private void enterButton_Click(object sender, EventArgs e)
         {
+            if (passwordTextBox.Text.Length < 8)
+            {
+                MessageBox.Show("Минимальная длина пароля - 8 символов",
+                    "Пароль слишком короткий",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+            
             if (isEnterMode)
             {
                 Authorize();
@@ -90,11 +99,12 @@ namespace DOK_U
                         "Илья",
                         "Лещенко",
                         "Федорович",
-                        "М",
-                        false,
+                        "M",
+                        true,
                         "test",
                         Person.StringToByteArray("password"),
-                        new DateTime(2005, 12, 29));
+                        new DateTime(2005, 12, 29),
+                        "09-321(2)");
                     var options = new JsonSerializerOptions
                     {
                         WriteIndented = true

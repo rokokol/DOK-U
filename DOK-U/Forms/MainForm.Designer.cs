@@ -78,6 +78,20 @@ namespace DOK_U
             this.tommorow = new System.Windows.Forms.Button();
             this.today = new System.Windows.Forms.Button();
             this.profile = new System.Windows.Forms.TabPage();
+            this.myProfileLable = new System.Windows.Forms.Label();
+            this.logOutButton = new System.Windows.Forms.Button();
+            this.extraCodesButton = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupContent = new System.Windows.Forms.Label();
+            this.sexContent = new System.Windows.Forms.Label();
+            this.birthdayContent = new System.Windows.Forms.Label();
+            this.loginContent = new System.Windows.Forms.Label();
+            this.nameContent = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.groupLable = new System.Windows.Forms.Label();
+            this.sexLable = new System.Windows.Forms.Label();
+            this.dirthdayLable = new System.Windows.Forms.Label();
+            this.loginLable = new System.Windows.Forms.Label();
             this.recordBook = new System.Windows.Forms.TabPage();
             this.recordsTable = new System.Windows.Forms.TableLayoutPanel();
             this.recordLectureBox7 = new System.Windows.Forms.ListBox();
@@ -121,6 +135,8 @@ namespace DOK_U
             this.diaryTable.SuspendLayout();
             this.days.SuspendLayout();
             this.todayTomorrow.SuspendLayout();
+            this.profile.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.recordBook.SuspendLayout();
             this.recordsTable.SuspendLayout();
             this.semesterPanel.SuspendLayout();
@@ -760,12 +776,201 @@ namespace DOK_U
             // profile
             // 
             this.profile.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.profile.Controls.Add(this.myProfileLable);
+            this.profile.Controls.Add(this.logOutButton);
+            this.profile.Controls.Add(this.extraCodesButton);
+            this.profile.Controls.Add(this.tableLayoutPanel1);
             this.profile.Location = new System.Drawing.Point(4, 14);
             this.profile.Name = "profile";
             this.profile.Padding = new System.Windows.Forms.Padding(3);
             this.profile.Size = new System.Drawing.Size(612, 553);
             this.profile.TabIndex = 0;
             this.profile.Text = "Profile";
+            // 
+            // myProfileLable
+            // 
+            this.myProfileLable.Dock = System.Windows.Forms.DockStyle.Top;
+            this.myProfileLable.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.myProfileLable.Location = new System.Drawing.Point(3, 3);
+            this.myProfileLable.Name = "myProfileLable";
+            this.myProfileLable.Size = new System.Drawing.Size(606, 48);
+            this.myProfileLable.TabIndex = 8;
+            this.myProfileLable.Text = "Мой профиль";
+            // 
+            // logOutButton
+            // 
+            this.logOutButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.logOutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.logOutButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.logOutButton.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.logOutButton.Location = new System.Drawing.Point(376, 445);
+            this.logOutButton.Name = "logOutButton";
+            this.logOutButton.Size = new System.Drawing.Size(225, 100);
+            this.logOutButton.TabIndex = 7;
+            this.logOutButton.Text = "Выйти из аккаунта";
+            this.logOutButton.UseVisualStyleBackColor = false;
+            this.logOutButton.Click += new System.EventHandler(this.logOutButton_Click);
+            // 
+            // extraCodesButton
+            // 
+            this.extraCodesButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.extraCodesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.extraCodesButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.extraCodesButton.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.extraCodesButton.Location = new System.Drawing.Point(11, 445);
+            this.extraCodesButton.Name = "extraCodesButton";
+            this.extraCodesButton.Size = new System.Drawing.Size(225, 100);
+            this.extraCodesButton.TabIndex = 6;
+            this.extraCodesButton.Text = "Получить резервный код";
+            this.extraCodesButton.UseVisualStyleBackColor = false;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel1.Controls.Add(this.groupContent, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.sexContent, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.birthdayContent, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.loginContent, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.nameContent, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.nameLabel, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.groupLable, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.sexLable, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.dirthdayLable, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.loginLable, 0, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(7, 72);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(598, 341);
+            this.tableLayoutPanel1.TabIndex = 3;
+            // 
+            // groupContent
+            // 
+            this.groupContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.groupContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.groupContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupContent.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupContent.Location = new System.Drawing.Point(122, 272);
+            this.groupContent.Name = "groupContent";
+            this.groupContent.Size = new System.Drawing.Size(473, 69);
+            this.groupContent.TabIndex = 43;
+            this.groupContent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // sexContent
+            // 
+            this.sexContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.sexContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sexContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sexContent.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sexContent.Location = new System.Drawing.Point(122, 204);
+            this.sexContent.Name = "sexContent";
+            this.sexContent.Size = new System.Drawing.Size(473, 68);
+            this.sexContent.TabIndex = 42;
+            this.sexContent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // birthdayContent
+            // 
+            this.birthdayContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.birthdayContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.birthdayContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.birthdayContent.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.birthdayContent.Location = new System.Drawing.Point(122, 136);
+            this.birthdayContent.Name = "birthdayContent";
+            this.birthdayContent.Size = new System.Drawing.Size(473, 68);
+            this.birthdayContent.TabIndex = 41;
+            this.birthdayContent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // loginContent
+            // 
+            this.loginContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.loginContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.loginContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.loginContent.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.loginContent.Location = new System.Drawing.Point(122, 68);
+            this.loginContent.Name = "loginContent";
+            this.loginContent.Size = new System.Drawing.Size(473, 68);
+            this.loginContent.TabIndex = 40;
+            this.loginContent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // nameContent
+            // 
+            this.nameContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.nameContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nameContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nameContent.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameContent.Location = new System.Drawing.Point(122, 0);
+            this.nameContent.Name = "nameContent";
+            this.nameContent.Size = new System.Drawing.Size(473, 68);
+            this.nameContent.TabIndex = 39;
+            this.nameContent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameLabel.Location = new System.Drawing.Point(3, 0);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(113, 68);
+            this.nameLabel.TabIndex = 38;
+            this.nameLabel.Text = "ФИО";
+            this.nameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupLable
+            // 
+            this.groupLable.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.groupLable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupLable.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupLable.Location = new System.Drawing.Point(3, 272);
+            this.groupLable.Name = "groupLable";
+            this.groupLable.Size = new System.Drawing.Size(113, 69);
+            this.groupLable.TabIndex = 35;
+            this.groupLable.Text = "Группа";
+            this.groupLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // sexLable
+            // 
+            this.sexLable.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.sexLable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sexLable.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sexLable.Location = new System.Drawing.Point(3, 204);
+            this.sexLable.Name = "sexLable";
+            this.sexLable.Size = new System.Drawing.Size(113, 68);
+            this.sexLable.TabIndex = 34;
+            this.sexLable.Text = "Пол";
+            this.sexLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dirthdayLable
+            // 
+            this.dirthdayLable.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dirthdayLable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dirthdayLable.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dirthdayLable.Location = new System.Drawing.Point(3, 136);
+            this.dirthdayLable.Name = "dirthdayLable";
+            this.dirthdayLable.Size = new System.Drawing.Size(113, 68);
+            this.dirthdayLable.TabIndex = 33;
+            this.dirthdayLable.Text = "Дата рождения";
+            this.dirthdayLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // loginLable
+            // 
+            this.loginLable.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.loginLable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.loginLable.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.loginLable.Location = new System.Drawing.Point(3, 68);
+            this.loginLable.Name = "loginLable";
+            this.loginLable.Size = new System.Drawing.Size(113, 68);
+            this.loginLable.TabIndex = 32;
+            this.loginLable.Text = "Логин";
+            this.loginLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // recordBook
             // 
@@ -1229,6 +1434,8 @@ namespace DOK_U
             this.diaryTable.ResumeLayout(false);
             this.days.ResumeLayout(false);
             this.todayTomorrow.ResumeLayout(false);
+            this.profile.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.recordBook.ResumeLayout(false);
             this.recordsTable.ResumeLayout(false);
             this.semesterPanel.ResumeLayout(false);
@@ -1236,6 +1443,26 @@ namespace DOK_U
             this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Label myProfileLable;
+
+        private System.Windows.Forms.Button extraCodesButton;
+        private System.Windows.Forms.Button logOutButton;
+
+        private System.Windows.Forms.Label nameContent;
+        private System.Windows.Forms.Label loginContent;
+        private System.Windows.Forms.Label birthdayContent;
+        private System.Windows.Forms.Label sexContent;
+        private System.Windows.Forms.Label groupContent;
+
+        private System.Windows.Forms.Label nameLabel;
+
+        private System.Windows.Forms.Label sexLable;
+        private System.Windows.Forms.Label dirthdayLable;
+        private System.Windows.Forms.Label loginLable;
+
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label groupLable;
 
         private System.Windows.Forms.ListBox semesterBox;
 
