@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Windows.Forms;
 using System.Text.Json;
 
@@ -9,14 +7,18 @@ namespace DOK_U
 {
     public partial class MainForm : Form
     {
-        #region Consts
+        #region Constants
 
         public static MainForm FORM { private set; get; }
         private static Person? currentUser;
         public static readonly string INITIAL_FILE = "../../Source/Initial.json";
 
         #endregion
-        
+
+        private ListBox[] lectureBoxes;
+        private ListBox[] cabinetBoxes;
+        private ListBox[] recordLectureBoxes;
+        private ListBox[] markBoxes;
         
         public MainForm()
         {
@@ -24,7 +26,9 @@ namespace DOK_U
             notifyIcon.Click += notifyIcon_MouseClick;
             FormClosing += MainForm_FormClosing;
             FORM = this;
+            contentTabs.SizeMode = TabSizeMode.Fixed;
             diaryButton.Enabled = false;
+            FillArrays();
             if (!CheckAuthorized())
             {
                 Authorize();
@@ -42,6 +46,7 @@ namespace DOK_U
             if (e.CloseReason == CloseReason.UserClosing)
             {
                 WindowState = FormWindowState.Minimized;
+                ShowInTaskbar = false;
                 e.Cancel = true;
             }
         }
@@ -119,16 +124,91 @@ namespace DOK_U
             if (WindowState == FormWindowState.Minimized)
             {
                 WindowState = FormWindowState.Normal;
+                ShowInTaskbar = true;
             }
-            else
+        }
+
+        private void FillArrays()
+        {
+            lectureBoxes = new[]
             {
-                WindowState = FormWindowState.Minimized;
+                lectureBox1,
+                lectureBox2,
+                lectureBox3,
+                lectureBox4,
+                lectureBox5,
+                lectureBox6
+            };
+
+            cabinetBoxes = new[]
+            {
+                cabinetBox1,
+                cabinetBox2,
+                cabinetBox3,
+                cabinetBox4,
+                cabinetBox5,
+                cabinetBox6
+            };
+
+            recordLectureBoxes = new[]
+            {
+                recordLectureBox1,
+                recordLectureBox2,
+                recordLectureBox3,
+                recordLectureBox4,
+                recordLectureBox5,
+                recordLectureBox6,
+                recordLectureBox7
+            };
+
+            markBoxes = new[]
+            {
+                markBox1,
+                markBox2,
+                markBox3,
+                markBox4,
+                markBox5,
+                markBox6,
+                markBox7
+            };
+        }
+        
+        private void ToggleAdminSettings()
+        {
+            foreach (var box in lectureBoxes)
+            {
+                box.Enabled = !box.Enabled;
             }
+
+            foreach (var box in cabinetBoxes)
+            {
+                box.Enabled = !box.Enabled;
+            }
+
+            foreach (var box in recordLectureBoxes)
+            {
+                box.Enabled = !box.Enabled;
+            }
+
+            foreach (var box in markBoxes)
+            {
+                box.Enabled = !box.Enabled;
+            }
+
+            groupBox.Enabled = !groupBox.Enabled;
+            studentBox.Enabled = !studentBox.Enabled;
         }
 
         private void exitButton_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult dialogResult = MessageBox.Show("Вы действительно хотите выйти?", 
+                "Подтверждение",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+            if(dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

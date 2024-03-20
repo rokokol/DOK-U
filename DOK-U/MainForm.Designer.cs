@@ -45,7 +45,7 @@ namespace DOK_U
             this.groupPanel = new System.Windows.Forms.Panel();
             this.groupBox = new System.Windows.Forms.ListBox();
             this.groupLabel = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.diaryTable = new System.Windows.Forms.TableLayoutPanel();
             this.time6 = new System.Windows.Forms.Label();
             this.time5 = new System.Windows.Forms.Label();
             this.time4 = new System.Windows.Forms.Label();
@@ -79,10 +79,36 @@ namespace DOK_U
             this.today = new System.Windows.Forms.Button();
             this.profile = new System.Windows.Forms.TabPage();
             this.recordBook = new System.Windows.Forms.TabPage();
+            this.recordsTable = new System.Windows.Forms.TableLayoutPanel();
+            this.recordLectureBox7 = new System.Windows.Forms.ListBox();
+            this.markBox7 = new System.Windows.Forms.ListBox();
+            this.markBox6 = new System.Windows.Forms.ListBox();
+            this.recordLectureBox6 = new System.Windows.Forms.ListBox();
+            this.markBox5 = new System.Windows.Forms.ListBox();
+            this.recordLectureBox5 = new System.Windows.Forms.ListBox();
+            this.markBox4 = new System.Windows.Forms.ListBox();
+            this.recordLectureBox4 = new System.Windows.Forms.ListBox();
+            this.markBox3 = new System.Windows.Forms.ListBox();
+            this.recordLectureBox3 = new System.Windows.Forms.ListBox();
+            this.markBox2 = new System.Windows.Forms.ListBox();
+            this.recordLectureBox2 = new System.Windows.Forms.ListBox();
+            this.markBox1 = new System.Windows.Forms.ListBox();
+            this.markLable = new System.Windows.Forms.Label();
+            this.recordLectureLabel = new System.Windows.Forms.Label();
+            this.recordLectureBox1 = new System.Windows.Forms.ListBox();
+            this.semesterPanel = new System.Windows.Forms.Panel();
+            this.studentBox = new System.Windows.Forms.ListBox();
+            this.studentLabel = new System.Windows.Forms.Label();
+            this.semesterBox = new System.Windows.Forms.ListBox();
+            this.semesterLabel = new System.Windows.Forms.Label();
             this.info = new System.Windows.Forms.TabPage();
             this.exitButton = new System.Windows.Forms.Button();
             this.aboutLabel = new System.Windows.Forms.Label();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.content)).BeginInit();
             this.content.Panel1.SuspendLayout();
             this.content.Panel2.SuspendLayout();
@@ -92,10 +118,14 @@ namespace DOK_U
             this.contentTabs.SuspendLayout();
             this.diary.SuspendLayout();
             this.groupPanel.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.diaryTable.SuspendLayout();
             this.days.SuspendLayout();
             this.todayTomorrow.SuspendLayout();
+            this.recordBook.SuspendLayout();
+            this.recordsTable.SuspendLayout();
+            this.semesterPanel.SuspendLayout();
             this.info.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // content
@@ -113,7 +143,7 @@ namespace DOK_U
             // 
             this.content.Panel2.Controls.Add(this.contentTabs);
             this.content.Panel2MinSize = 600;
-            this.content.Size = new System.Drawing.Size(855, 559);
+            this.content.Size = new System.Drawing.Size(855, 571);
             this.content.SplitterDistance = 231;
             this.content.TabIndex = 0;
             // 
@@ -136,7 +166,7 @@ namespace DOK_U
             this.buttonsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.buttonsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.buttonsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.buttonsPanel.Size = new System.Drawing.Size(231, 559);
+            this.buttonsPanel.Size = new System.Drawing.Size(231, 571);
             this.buttonsPanel.TabIndex = 0;
             // 
             // infoButton
@@ -145,7 +175,7 @@ namespace DOK_U
             this.infoButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.infoButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.infoButton.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.infoButton.Location = new System.Drawing.Point(3, 447);
+            this.infoButton.Location = new System.Drawing.Point(3, 459);
             this.infoButton.Name = "infoButton";
             this.infoButton.Size = new System.Drawing.Size(225, 109);
             this.infoButton.TabIndex = 4;
@@ -160,9 +190,9 @@ namespace DOK_U
             this.recordBookButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.recordBookButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.recordBookButton.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.recordBookButton.Location = new System.Drawing.Point(3, 336);
+            this.recordBookButton.Location = new System.Drawing.Point(3, 345);
             this.recordBookButton.Name = "recordBookButton";
-            this.recordBookButton.Size = new System.Drawing.Size(225, 105);
+            this.recordBookButton.Size = new System.Drawing.Size(225, 108);
             this.recordBookButton.TabIndex = 3;
             this.recordBookButton.Text = "Зачетная книжка";
             this.recordBookButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -176,9 +206,9 @@ namespace DOK_U
             this.diaryButton.Enabled = false;
             this.diaryButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.diaryButton.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.diaryButton.Location = new System.Drawing.Point(3, 225);
+            this.diaryButton.Location = new System.Drawing.Point(3, 231);
             this.diaryButton.Name = "diaryButton";
-            this.diaryButton.Size = new System.Drawing.Size(225, 105);
+            this.diaryButton.Size = new System.Drawing.Size(225, 108);
             this.diaryButton.TabIndex = 2;
             this.diaryButton.Text = "Электронный дневник";
             this.diaryButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -192,7 +222,7 @@ namespace DOK_U
             this.iconBox.Image = ((System.Drawing.Image)(resources.GetObject("iconBox.Image")));
             this.iconBox.Location = new System.Drawing.Point(3, 3);
             this.iconBox.Name = "iconBox";
-            this.iconBox.Size = new System.Drawing.Size(225, 105);
+            this.iconBox.Size = new System.Drawing.Size(225, 108);
             this.iconBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconBox.TabIndex = 0;
             this.iconBox.TabStop = false;
@@ -203,9 +233,9 @@ namespace DOK_U
             this.profileButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.profileButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.profileButton.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.profileButton.Location = new System.Drawing.Point(3, 114);
+            this.profileButton.Location = new System.Drawing.Point(3, 117);
             this.profileButton.Name = "profileButton";
-            this.profileButton.Size = new System.Drawing.Size(225, 105);
+            this.profileButton.Size = new System.Drawing.Size(225, 108);
             this.profileButton.TabIndex = 1;
             this.profileButton.Text = "Мой профиль";
             this.profileButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -226,20 +256,20 @@ namespace DOK_U
             this.contentTabs.Multiline = true;
             this.contentTabs.Name = "contentTabs";
             this.contentTabs.SelectedIndex = 0;
-            this.contentTabs.Size = new System.Drawing.Size(620, 559);
+            this.contentTabs.Size = new System.Drawing.Size(620, 571);
             this.contentTabs.TabIndex = 0;
             // 
             // diary
             // 
             this.diary.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.diary.Controls.Add(this.groupPanel);
-            this.diary.Controls.Add(this.tableLayoutPanel1);
+            this.diary.Controls.Add(this.diaryTable);
             this.diary.Controls.Add(this.days);
             this.diary.Controls.Add(this.todayTomorrow);
             this.diary.Location = new System.Drawing.Point(4, 14);
             this.diary.Name = "diary";
             this.diary.Padding = new System.Windows.Forms.Padding(3);
-            this.diary.Size = new System.Drawing.Size(612, 541);
+            this.diary.Size = new System.Drawing.Size(612, 553);
             this.diary.TabIndex = 1;
             this.diary.Text = "Diary";
             // 
@@ -248,7 +278,7 @@ namespace DOK_U
             this.groupPanel.Controls.Add(this.groupBox);
             this.groupPanel.Controls.Add(this.groupLabel);
             this.groupPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupPanel.Location = new System.Drawing.Point(3, 501);
+            this.groupPanel.Location = new System.Drawing.Point(3, 513);
             this.groupPanel.Name = "groupPanel";
             this.groupPanel.Size = new System.Drawing.Size(606, 37);
             this.groupPanel.TabIndex = 3;
@@ -274,54 +304,57 @@ namespace DOK_U
             this.groupLabel.TabIndex = 0;
             this.groupLabel.Text = "Группа №";
             // 
-            // tableLayoutPanel1
+            // diaryTable
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.Controls.Add(this.time6, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.time5, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.time4, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.time3, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.time2, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.cabinetBox6, 2, 6);
-            this.tableLayoutPanel1.Controls.Add(this.lectureBox6, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.cabinetBox5, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.lectureBox5, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.cabinetBox4, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.lectureBox4, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.cabinetBox3, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lectureBox3, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.cabinetBox2, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lectureBox2, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.cabinetBox1, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.time1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.cabinetLable, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lectureLabel, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.timeLabel, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lectureBox1, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 64);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 7;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(598, 431);
-            this.tableLayoutPanel1.TabIndex = 2;
+            this.diaryTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.diaryTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.diaryTable.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.diaryTable.ColumnCount = 3;
+            this.diaryTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.diaryTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.diaryTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.diaryTable.Controls.Add(this.time6, 0, 6);
+            this.diaryTable.Controls.Add(this.time5, 0, 5);
+            this.diaryTable.Controls.Add(this.time4, 0, 4);
+            this.diaryTable.Controls.Add(this.time3, 0, 3);
+            this.diaryTable.Controls.Add(this.time2, 0, 2);
+            this.diaryTable.Controls.Add(this.cabinetBox6, 2, 6);
+            this.diaryTable.Controls.Add(this.lectureBox6, 1, 6);
+            this.diaryTable.Controls.Add(this.cabinetBox5, 2, 5);
+            this.diaryTable.Controls.Add(this.lectureBox5, 1, 5);
+            this.diaryTable.Controls.Add(this.cabinetBox4, 2, 4);
+            this.diaryTable.Controls.Add(this.lectureBox4, 1, 4);
+            this.diaryTable.Controls.Add(this.cabinetBox3, 2, 3);
+            this.diaryTable.Controls.Add(this.lectureBox3, 1, 3);
+            this.diaryTable.Controls.Add(this.cabinetBox2, 2, 2);
+            this.diaryTable.Controls.Add(this.lectureBox2, 1, 2);
+            this.diaryTable.Controls.Add(this.cabinetBox1, 2, 1);
+            this.diaryTable.Controls.Add(this.time1, 0, 1);
+            this.diaryTable.Controls.Add(this.cabinetLable, 2, 0);
+            this.diaryTable.Controls.Add(this.lectureLabel, 1, 0);
+            this.diaryTable.Controls.Add(this.timeLabel, 0, 0);
+            this.diaryTable.Controls.Add(this.lectureBox1, 1, 1);
+            this.diaryTable.Location = new System.Drawing.Point(6, 64);
+            this.diaryTable.Name = "diaryTable";
+            this.diaryTable.RowCount = 7;
+            this.diaryTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.diaryTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.diaryTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.diaryTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.diaryTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.diaryTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.diaryTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.diaryTable.Size = new System.Drawing.Size(598, 431);
+            this.diaryTable.TabIndex = 2;
             // 
             // time6
             // 
             this.time6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.time6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.time6.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.time6.Location = new System.Drawing.Point(3, 365);
+            this.time6.Location = new System.Drawing.Point(4, 362);
             this.time6.Name = "time6";
-            this.time6.Size = new System.Drawing.Size(54, 66);
+            this.time6.Size = new System.Drawing.Size(54, 68);
             this.time6.TabIndex = 36;
             this.time6.Text = "19:10\r\n-\r\n20:40";
             this.time6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -331,9 +364,9 @@ namespace DOK_U
             this.time5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.time5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.time5.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.time5.Location = new System.Drawing.Point(3, 300);
+            this.time5.Location = new System.Drawing.Point(4, 298);
             this.time5.Name = "time5";
-            this.time5.Size = new System.Drawing.Size(54, 65);
+            this.time5.Size = new System.Drawing.Size(54, 63);
             this.time5.TabIndex = 35;
             this.time5.Text = "17:30\r\n-\r\n19:00";
             this.time5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -343,9 +376,9 @@ namespace DOK_U
             this.time4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.time4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.time4.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.time4.Location = new System.Drawing.Point(3, 235);
+            this.time4.Location = new System.Drawing.Point(4, 234);
             this.time4.Name = "time4";
-            this.time4.Size = new System.Drawing.Size(54, 65);
+            this.time4.Size = new System.Drawing.Size(54, 63);
             this.time4.TabIndex = 34;
             this.time4.Text = "13:50\r\n-\r\n15:20";
             this.time4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -355,9 +388,9 @@ namespace DOK_U
             this.time3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.time3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.time3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.time3.Location = new System.Drawing.Point(3, 170);
+            this.time3.Location = new System.Drawing.Point(4, 170);
             this.time3.Name = "time3";
-            this.time3.Size = new System.Drawing.Size(54, 65);
+            this.time3.Size = new System.Drawing.Size(54, 63);
             this.time3.TabIndex = 33;
             this.time3.Text = "12:10\r\n-\r\n13:40";
             this.time3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -367,9 +400,9 @@ namespace DOK_U
             this.time2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.time2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.time2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.time2.Location = new System.Drawing.Point(3, 105);
+            this.time2.Location = new System.Drawing.Point(4, 106);
             this.time2.Name = "time2";
-            this.time2.Size = new System.Drawing.Size(54, 65);
+            this.time2.Size = new System.Drawing.Size(54, 63);
             this.time2.TabIndex = 32;
             this.time2.Text = "10:10\r\n-\r\n11:40";
             this.time2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -378,97 +411,97 @@ namespace DOK_U
             // 
             this.cabinetBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.cabinetBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cabinetBox6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cabinetBox6.Dock = System.Windows.Forms.DockStyle.Top;
             this.cabinetBox6.Enabled = false;
             this.cabinetBox6.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cabinetBox6.FormattingEnabled = true;
             this.cabinetBox6.ItemHeight = 19;
             this.cabinetBox6.Items.AddRange(new object[] { "Матан" });
-            this.cabinetBox6.Location = new System.Drawing.Point(439, 368);
+            this.cabinetBox6.Location = new System.Drawing.Point(439, 365);
             this.cabinetBox6.Name = "cabinetBox6";
-            this.cabinetBox6.Size = new System.Drawing.Size(156, 60);
+            this.cabinetBox6.Size = new System.Drawing.Size(155, 19);
             this.cabinetBox6.TabIndex = 31;
             // 
             // lectureBox6
             // 
             this.lectureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.lectureBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lectureBox6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lectureBox6.Dock = System.Windows.Forms.DockStyle.Top;
             this.lectureBox6.Enabled = false;
             this.lectureBox6.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lectureBox6.FormattingEnabled = true;
             this.lectureBox6.ItemHeight = 19;
             this.lectureBox6.Items.AddRange(new object[] { "Матан" });
-            this.lectureBox6.Location = new System.Drawing.Point(63, 368);
+            this.lectureBox6.Location = new System.Drawing.Point(65, 365);
             this.lectureBox6.Name = "lectureBox6";
-            this.lectureBox6.Size = new System.Drawing.Size(370, 60);
+            this.lectureBox6.Size = new System.Drawing.Size(367, 19);
             this.lectureBox6.TabIndex = 30;
             // 
             // cabinetBox5
             // 
             this.cabinetBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.cabinetBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cabinetBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cabinetBox5.Dock = System.Windows.Forms.DockStyle.Top;
             this.cabinetBox5.Enabled = false;
             this.cabinetBox5.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cabinetBox5.FormattingEnabled = true;
             this.cabinetBox5.ItemHeight = 19;
             this.cabinetBox5.Items.AddRange(new object[] { "Матан" });
-            this.cabinetBox5.Location = new System.Drawing.Point(439, 303);
+            this.cabinetBox5.Location = new System.Drawing.Point(439, 301);
             this.cabinetBox5.Name = "cabinetBox5";
-            this.cabinetBox5.Size = new System.Drawing.Size(156, 59);
+            this.cabinetBox5.Size = new System.Drawing.Size(155, 19);
             this.cabinetBox5.TabIndex = 29;
             // 
             // lectureBox5
             // 
             this.lectureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.lectureBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lectureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lectureBox5.Dock = System.Windows.Forms.DockStyle.Top;
             this.lectureBox5.Enabled = false;
             this.lectureBox5.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lectureBox5.FormattingEnabled = true;
             this.lectureBox5.ItemHeight = 19;
             this.lectureBox5.Items.AddRange(new object[] { "Матан" });
-            this.lectureBox5.Location = new System.Drawing.Point(63, 303);
+            this.lectureBox5.Location = new System.Drawing.Point(65, 301);
             this.lectureBox5.Name = "lectureBox5";
-            this.lectureBox5.Size = new System.Drawing.Size(370, 59);
+            this.lectureBox5.Size = new System.Drawing.Size(367, 19);
             this.lectureBox5.TabIndex = 28;
             // 
             // cabinetBox4
             // 
             this.cabinetBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.cabinetBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cabinetBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cabinetBox4.Dock = System.Windows.Forms.DockStyle.Top;
             this.cabinetBox4.Enabled = false;
             this.cabinetBox4.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cabinetBox4.FormattingEnabled = true;
             this.cabinetBox4.ItemHeight = 19;
             this.cabinetBox4.Items.AddRange(new object[] { "Матан" });
-            this.cabinetBox4.Location = new System.Drawing.Point(439, 238);
+            this.cabinetBox4.Location = new System.Drawing.Point(439, 237);
             this.cabinetBox4.Name = "cabinetBox4";
-            this.cabinetBox4.Size = new System.Drawing.Size(156, 59);
+            this.cabinetBox4.Size = new System.Drawing.Size(155, 19);
             this.cabinetBox4.TabIndex = 27;
             // 
             // lectureBox4
             // 
             this.lectureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.lectureBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lectureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lectureBox4.Dock = System.Windows.Forms.DockStyle.Top;
             this.lectureBox4.Enabled = false;
             this.lectureBox4.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lectureBox4.FormattingEnabled = true;
             this.lectureBox4.ItemHeight = 19;
             this.lectureBox4.Items.AddRange(new object[] { "Матан" });
-            this.lectureBox4.Location = new System.Drawing.Point(63, 238);
+            this.lectureBox4.Location = new System.Drawing.Point(65, 237);
             this.lectureBox4.Name = "lectureBox4";
-            this.lectureBox4.Size = new System.Drawing.Size(370, 59);
+            this.lectureBox4.Size = new System.Drawing.Size(367, 19);
             this.lectureBox4.TabIndex = 26;
             // 
             // cabinetBox3
             // 
             this.cabinetBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.cabinetBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cabinetBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cabinetBox3.Dock = System.Windows.Forms.DockStyle.Top;
             this.cabinetBox3.Enabled = false;
             this.cabinetBox3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cabinetBox3.FormattingEnabled = true;
@@ -476,67 +509,67 @@ namespace DOK_U
             this.cabinetBox3.Items.AddRange(new object[] { "Матан" });
             this.cabinetBox3.Location = new System.Drawing.Point(439, 173);
             this.cabinetBox3.Name = "cabinetBox3";
-            this.cabinetBox3.Size = new System.Drawing.Size(156, 59);
+            this.cabinetBox3.Size = new System.Drawing.Size(155, 19);
             this.cabinetBox3.TabIndex = 25;
             // 
             // lectureBox3
             // 
             this.lectureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.lectureBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lectureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lectureBox3.Dock = System.Windows.Forms.DockStyle.Top;
             this.lectureBox3.Enabled = false;
             this.lectureBox3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lectureBox3.FormattingEnabled = true;
             this.lectureBox3.ItemHeight = 19;
             this.lectureBox3.Items.AddRange(new object[] { "Матан" });
-            this.lectureBox3.Location = new System.Drawing.Point(63, 173);
+            this.lectureBox3.Location = new System.Drawing.Point(65, 173);
             this.lectureBox3.Name = "lectureBox3";
-            this.lectureBox3.Size = new System.Drawing.Size(370, 59);
+            this.lectureBox3.Size = new System.Drawing.Size(367, 19);
             this.lectureBox3.TabIndex = 24;
             // 
             // cabinetBox2
             // 
             this.cabinetBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.cabinetBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cabinetBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cabinetBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.cabinetBox2.Enabled = false;
             this.cabinetBox2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cabinetBox2.FormattingEnabled = true;
             this.cabinetBox2.ItemHeight = 19;
             this.cabinetBox2.Items.AddRange(new object[] { "Матан" });
-            this.cabinetBox2.Location = new System.Drawing.Point(439, 108);
+            this.cabinetBox2.Location = new System.Drawing.Point(439, 109);
             this.cabinetBox2.Name = "cabinetBox2";
-            this.cabinetBox2.Size = new System.Drawing.Size(156, 59);
+            this.cabinetBox2.Size = new System.Drawing.Size(155, 19);
             this.cabinetBox2.TabIndex = 23;
             // 
             // lectureBox2
             // 
             this.lectureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.lectureBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lectureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lectureBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.lectureBox2.Enabled = false;
             this.lectureBox2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lectureBox2.FormattingEnabled = true;
             this.lectureBox2.ItemHeight = 19;
             this.lectureBox2.Items.AddRange(new object[] { "Матан" });
-            this.lectureBox2.Location = new System.Drawing.Point(63, 108);
+            this.lectureBox2.Location = new System.Drawing.Point(65, 109);
             this.lectureBox2.Name = "lectureBox2";
-            this.lectureBox2.Size = new System.Drawing.Size(370, 59);
+            this.lectureBox2.Size = new System.Drawing.Size(367, 19);
             this.lectureBox2.TabIndex = 22;
             // 
             // cabinetBox1
             // 
             this.cabinetBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.cabinetBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cabinetBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cabinetBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.cabinetBox1.Enabled = false;
             this.cabinetBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cabinetBox1.FormattingEnabled = true;
             this.cabinetBox1.ItemHeight = 19;
             this.cabinetBox1.Items.AddRange(new object[] { "Матан" });
-            this.cabinetBox1.Location = new System.Drawing.Point(439, 43);
+            this.cabinetBox1.Location = new System.Drawing.Point(439, 45);
             this.cabinetBox1.Name = "cabinetBox1";
-            this.cabinetBox1.Size = new System.Drawing.Size(156, 59);
+            this.cabinetBox1.Size = new System.Drawing.Size(155, 19);
             this.cabinetBox1.TabIndex = 20;
             // 
             // time1
@@ -544,9 +577,9 @@ namespace DOK_U
             this.time1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.time1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.time1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.time1.Location = new System.Drawing.Point(3, 40);
+            this.time1.Location = new System.Drawing.Point(4, 42);
             this.time1.Name = "time1";
-            this.time1.Size = new System.Drawing.Size(54, 65);
+            this.time1.Size = new System.Drawing.Size(54, 63);
             this.time1.TabIndex = 3;
             this.time1.Text = "8:30\r\n-\r\n10:00";
             this.time1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -555,9 +588,9 @@ namespace DOK_U
             // 
             this.cabinetLable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cabinetLable.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cabinetLable.Location = new System.Drawing.Point(439, 0);
+            this.cabinetLable.Location = new System.Drawing.Point(439, 1);
             this.cabinetLable.Name = "cabinetLable";
-            this.cabinetLable.Size = new System.Drawing.Size(156, 40);
+            this.cabinetLable.Size = new System.Drawing.Size(155, 40);
             this.cabinetLable.TabIndex = 2;
             this.cabinetLable.Text = "Кабинет";
             this.cabinetLable.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -566,9 +599,9 @@ namespace DOK_U
             // 
             this.lectureLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lectureLabel.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lectureLabel.Location = new System.Drawing.Point(63, 0);
+            this.lectureLabel.Location = new System.Drawing.Point(65, 1);
             this.lectureLabel.Name = "lectureLabel";
-            this.lectureLabel.Size = new System.Drawing.Size(370, 40);
+            this.lectureLabel.Size = new System.Drawing.Size(367, 40);
             this.lectureLabel.TabIndex = 1;
             this.lectureLabel.Text = "Кабинет";
             this.lectureLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -577,7 +610,7 @@ namespace DOK_U
             // 
             this.timeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.timeLabel.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.timeLabel.Location = new System.Drawing.Point(3, 0);
+            this.timeLabel.Location = new System.Drawing.Point(4, 1);
             this.timeLabel.Name = "timeLabel";
             this.timeLabel.Size = new System.Drawing.Size(54, 40);
             this.timeLabel.TabIndex = 0;
@@ -588,15 +621,15 @@ namespace DOK_U
             // 
             this.lectureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.lectureBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lectureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lectureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.lectureBox1.Enabled = false;
             this.lectureBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lectureBox1.FormattingEnabled = true;
             this.lectureBox1.ItemHeight = 19;
             this.lectureBox1.Items.AddRange(new object[] { "Матан" });
-            this.lectureBox1.Location = new System.Drawing.Point(63, 43);
+            this.lectureBox1.Location = new System.Drawing.Point(65, 45);
             this.lectureBox1.Name = "lectureBox1";
-            this.lectureBox1.Size = new System.Drawing.Size(370, 59);
+            this.lectureBox1.Size = new System.Drawing.Size(367, 19);
             this.lectureBox1.TabIndex = 19;
             // 
             // days
@@ -730,19 +763,353 @@ namespace DOK_U
             this.profile.Location = new System.Drawing.Point(4, 14);
             this.profile.Name = "profile";
             this.profile.Padding = new System.Windows.Forms.Padding(3);
-            this.profile.Size = new System.Drawing.Size(612, 541);
+            this.profile.Size = new System.Drawing.Size(612, 553);
             this.profile.TabIndex = 0;
             this.profile.Text = "Profile";
             // 
             // recordBook
             // 
             this.recordBook.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.recordBook.Controls.Add(this.recordsTable);
+            this.recordBook.Controls.Add(this.semesterPanel);
             this.recordBook.Location = new System.Drawing.Point(4, 14);
             this.recordBook.Name = "recordBook";
             this.recordBook.Padding = new System.Windows.Forms.Padding(3);
-            this.recordBook.Size = new System.Drawing.Size(612, 541);
+            this.recordBook.Size = new System.Drawing.Size(612, 553);
             this.recordBook.TabIndex = 2;
             this.recordBook.Text = "recordBook";
+            // 
+            // recordsTable
+            // 
+            this.recordsTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.recordsTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.recordsTable.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.recordsTable.ColumnCount = 2;
+            this.recordsTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.recordsTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.recordsTable.Controls.Add(this.recordLectureBox7, 0, 7);
+            this.recordsTable.Controls.Add(this.markBox7, 0, 7);
+            this.recordsTable.Controls.Add(this.markBox6, 1, 6);
+            this.recordsTable.Controls.Add(this.recordLectureBox6, 0, 6);
+            this.recordsTable.Controls.Add(this.markBox5, 1, 5);
+            this.recordsTable.Controls.Add(this.recordLectureBox5, 0, 5);
+            this.recordsTable.Controls.Add(this.markBox4, 1, 4);
+            this.recordsTable.Controls.Add(this.recordLectureBox4, 0, 4);
+            this.recordsTable.Controls.Add(this.markBox3, 1, 3);
+            this.recordsTable.Controls.Add(this.recordLectureBox3, 0, 3);
+            this.recordsTable.Controls.Add(this.markBox2, 1, 2);
+            this.recordsTable.Controls.Add(this.recordLectureBox2, 0, 2);
+            this.recordsTable.Controls.Add(this.markBox1, 1, 1);
+            this.recordsTable.Controls.Add(this.markLable, 1, 0);
+            this.recordsTable.Controls.Add(this.recordLectureLabel, 0, 0);
+            this.recordsTable.Controls.Add(this.recordLectureBox1, 0, 1);
+            this.recordsTable.Location = new System.Drawing.Point(7, 61);
+            this.recordsTable.Name = "recordsTable";
+            this.recordsTable.RowCount = 8;
+            this.recordsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.recordsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.recordsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.recordsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.recordsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.recordsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.recordsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.recordsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.recordsTable.Size = new System.Drawing.Size(598, 431);
+            this.recordsTable.TabIndex = 5;
+            // 
+            // recordLectureBox7
+            // 
+            this.recordLectureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.recordLectureBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.recordLectureBox7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.recordLectureBox7.Enabled = false;
+            this.recordLectureBox7.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.recordLectureBox7.FormattingEnabled = true;
+            this.recordLectureBox7.ItemHeight = 19;
+            this.recordLectureBox7.Items.AddRange(new object[] { "Матан" });
+            this.recordLectureBox7.Location = new System.Drawing.Point(4, 375);
+            this.recordLectureBox7.Name = "recordLectureBox7";
+            this.recordLectureBox7.Size = new System.Drawing.Size(410, 19);
+            this.recordLectureBox7.TabIndex = 33;
+            // 
+            // markBox7
+            // 
+            this.markBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.markBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.markBox7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.markBox7.Enabled = false;
+            this.markBox7.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.markBox7.FormattingEnabled = true;
+            this.markBox7.ItemHeight = 19;
+            this.markBox7.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
+            this.markBox7.Location = new System.Drawing.Point(421, 375);
+            this.markBox7.Name = "markBox7";
+            this.markBox7.Size = new System.Drawing.Size(173, 19);
+            this.markBox7.TabIndex = 32;
+            // 
+            // markBox6
+            // 
+            this.markBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.markBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.markBox6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.markBox6.Enabled = false;
+            this.markBox6.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.markBox6.FormattingEnabled = true;
+            this.markBox6.ItemHeight = 19;
+            this.markBox6.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
+            this.markBox6.Location = new System.Drawing.Point(421, 320);
+            this.markBox6.Name = "markBox6";
+            this.markBox6.Size = new System.Drawing.Size(173, 19);
+            this.markBox6.TabIndex = 31;
+            // 
+            // recordLectureBox6
+            // 
+            this.recordLectureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.recordLectureBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.recordLectureBox6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.recordLectureBox6.Enabled = false;
+            this.recordLectureBox6.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.recordLectureBox6.FormattingEnabled = true;
+            this.recordLectureBox6.ItemHeight = 19;
+            this.recordLectureBox6.Items.AddRange(new object[] { "Матан" });
+            this.recordLectureBox6.Location = new System.Drawing.Point(4, 320);
+            this.recordLectureBox6.Name = "recordLectureBox6";
+            this.recordLectureBox6.Size = new System.Drawing.Size(410, 19);
+            this.recordLectureBox6.TabIndex = 30;
+            // 
+            // markBox5
+            // 
+            this.markBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.markBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.markBox5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.markBox5.Enabled = false;
+            this.markBox5.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.markBox5.FormattingEnabled = true;
+            this.markBox5.ItemHeight = 19;
+            this.markBox5.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
+            this.markBox5.Location = new System.Drawing.Point(421, 265);
+            this.markBox5.Name = "markBox5";
+            this.markBox5.Size = new System.Drawing.Size(173, 19);
+            this.markBox5.TabIndex = 29;
+            // 
+            // recordLectureBox5
+            // 
+            this.recordLectureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.recordLectureBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.recordLectureBox5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.recordLectureBox5.Enabled = false;
+            this.recordLectureBox5.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.recordLectureBox5.FormattingEnabled = true;
+            this.recordLectureBox5.ItemHeight = 19;
+            this.recordLectureBox5.Items.AddRange(new object[] { "Матан" });
+            this.recordLectureBox5.Location = new System.Drawing.Point(4, 265);
+            this.recordLectureBox5.Name = "recordLectureBox5";
+            this.recordLectureBox5.Size = new System.Drawing.Size(410, 19);
+            this.recordLectureBox5.TabIndex = 28;
+            // 
+            // markBox4
+            // 
+            this.markBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.markBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.markBox4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.markBox4.Enabled = false;
+            this.markBox4.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.markBox4.FormattingEnabled = true;
+            this.markBox4.ItemHeight = 19;
+            this.markBox4.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
+            this.markBox4.Location = new System.Drawing.Point(421, 210);
+            this.markBox4.Name = "markBox4";
+            this.markBox4.Size = new System.Drawing.Size(173, 19);
+            this.markBox4.TabIndex = 27;
+            // 
+            // recordLectureBox4
+            // 
+            this.recordLectureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.recordLectureBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.recordLectureBox4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.recordLectureBox4.Enabled = false;
+            this.recordLectureBox4.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.recordLectureBox4.FormattingEnabled = true;
+            this.recordLectureBox4.ItemHeight = 19;
+            this.recordLectureBox4.Items.AddRange(new object[] { "Матан" });
+            this.recordLectureBox4.Location = new System.Drawing.Point(4, 210);
+            this.recordLectureBox4.Name = "recordLectureBox4";
+            this.recordLectureBox4.Size = new System.Drawing.Size(410, 19);
+            this.recordLectureBox4.TabIndex = 26;
+            // 
+            // markBox3
+            // 
+            this.markBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.markBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.markBox3.DisplayMember = "5";
+            this.markBox3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.markBox3.Enabled = false;
+            this.markBox3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.markBox3.FormattingEnabled = true;
+            this.markBox3.ItemHeight = 19;
+            this.markBox3.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
+            this.markBox3.Location = new System.Drawing.Point(421, 155);
+            this.markBox3.Name = "markBox3";
+            this.markBox3.Size = new System.Drawing.Size(173, 19);
+            this.markBox3.TabIndex = 25;
+            // 
+            // recordLectureBox3
+            // 
+            this.recordLectureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.recordLectureBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.recordLectureBox3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.recordLectureBox3.Enabled = false;
+            this.recordLectureBox3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.recordLectureBox3.FormattingEnabled = true;
+            this.recordLectureBox3.ItemHeight = 19;
+            this.recordLectureBox3.Items.AddRange(new object[] { "Матан" });
+            this.recordLectureBox3.Location = new System.Drawing.Point(4, 155);
+            this.recordLectureBox3.Name = "recordLectureBox3";
+            this.recordLectureBox3.Size = new System.Drawing.Size(410, 19);
+            this.recordLectureBox3.TabIndex = 24;
+            // 
+            // markBox2
+            // 
+            this.markBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.markBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.markBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.markBox2.Enabled = false;
+            this.markBox2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.markBox2.FormattingEnabled = true;
+            this.markBox2.ItemHeight = 19;
+            this.markBox2.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
+            this.markBox2.Location = new System.Drawing.Point(421, 100);
+            this.markBox2.Name = "markBox2";
+            this.markBox2.Size = new System.Drawing.Size(173, 19);
+            this.markBox2.TabIndex = 23;
+            // 
+            // recordLectureBox2
+            // 
+            this.recordLectureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.recordLectureBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.recordLectureBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.recordLectureBox2.Enabled = false;
+            this.recordLectureBox2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.recordLectureBox2.FormattingEnabled = true;
+            this.recordLectureBox2.ItemHeight = 19;
+            this.recordLectureBox2.Items.AddRange(new object[] { "Матан" });
+            this.recordLectureBox2.Location = new System.Drawing.Point(4, 100);
+            this.recordLectureBox2.Name = "recordLectureBox2";
+            this.recordLectureBox2.Size = new System.Drawing.Size(410, 19);
+            this.recordLectureBox2.TabIndex = 22;
+            // 
+            // markBox1
+            // 
+            this.markBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.markBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.markBox1.DisplayMember = "1";
+            this.markBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.markBox1.Enabled = false;
+            this.markBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.markBox1.FormattingEnabled = true;
+            this.markBox1.ItemHeight = 19;
+            this.markBox1.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
+            this.markBox1.Location = new System.Drawing.Point(421, 45);
+            this.markBox1.Name = "markBox1";
+            this.markBox1.ScrollAlwaysVisible = true;
+            this.markBox1.Size = new System.Drawing.Size(173, 19);
+            this.markBox1.TabIndex = 20;
+            // 
+            // markLable
+            // 
+            this.markLable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.markLable.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.markLable.Location = new System.Drawing.Point(421, 1);
+            this.markLable.Name = "markLable";
+            this.markLable.Size = new System.Drawing.Size(173, 40);
+            this.markLable.TabIndex = 2;
+            this.markLable.Text = "Баллы";
+            this.markLable.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // recordLectureLabel
+            // 
+            this.recordLectureLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.recordLectureLabel.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.recordLectureLabel.Location = new System.Drawing.Point(4, 1);
+            this.recordLectureLabel.Name = "recordLectureLabel";
+            this.recordLectureLabel.Size = new System.Drawing.Size(410, 40);
+            this.recordLectureLabel.TabIndex = 1;
+            this.recordLectureLabel.Text = "Предмет";
+            this.recordLectureLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // recordLectureBox1
+            // 
+            this.recordLectureBox1.AllowDrop = true;
+            this.recordLectureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.recordLectureBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.recordLectureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.recordLectureBox1.Enabled = false;
+            this.recordLectureBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.recordLectureBox1.FormattingEnabled = true;
+            this.recordLectureBox1.ItemHeight = 19;
+            this.recordLectureBox1.Items.AddRange(new object[] { "Матан", "Алгем", "Прога" });
+            this.recordLectureBox1.Location = new System.Drawing.Point(4, 45);
+            this.recordLectureBox1.Name = "recordLectureBox1";
+            this.recordLectureBox1.Size = new System.Drawing.Size(410, 19);
+            this.recordLectureBox1.TabIndex = 19;
+            // 
+            // semesterPanel
+            // 
+            this.semesterPanel.Controls.Add(this.studentBox);
+            this.semesterPanel.Controls.Add(this.studentLabel);
+            this.semesterPanel.Controls.Add(this.semesterBox);
+            this.semesterPanel.Controls.Add(this.semesterLabel);
+            this.semesterPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.semesterPanel.Location = new System.Drawing.Point(3, 3);
+            this.semesterPanel.Name = "semesterPanel";
+            this.semesterPanel.Size = new System.Drawing.Size(606, 37);
+            this.semesterPanel.TabIndex = 4;
+            // 
+            // studentBox
+            // 
+            this.studentBox.AllowDrop = true;
+            this.studentBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.studentBox.Enabled = false;
+            this.studentBox.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.studentBox.FormattingEnabled = true;
+            this.studentBox.ItemHeight = 19;
+            this.studentBox.Items.AddRange(new object[] { "Лещенко Илья Федорович", "Логинова Диана Романовна" });
+            this.studentBox.Location = new System.Drawing.Point(335, 3);
+            this.studentBox.Name = "studentBox";
+            this.studentBox.Size = new System.Drawing.Size(264, 23);
+            this.studentBox.TabIndex = 3;
+            // 
+            // studentLabel
+            // 
+            this.studentLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.studentLabel.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.studentLabel.Location = new System.Drawing.Point(244, 3);
+            this.studentLabel.Name = "studentLabel";
+            this.studentLabel.Size = new System.Drawing.Size(85, 29);
+            this.studentLabel.TabIndex = 2;
+            this.studentLabel.Text = "Студент:";
+            // 
+            // semesterBox
+            // 
+            this.semesterBox.AllowDrop = true;
+            this.semesterBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.semesterBox.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.semesterBox.FormattingEnabled = true;
+            this.semesterBox.ItemHeight = 19;
+            this.semesterBox.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8" });
+            this.semesterBox.Location = new System.Drawing.Point(133, 3);
+            this.semesterBox.Name = "semesterBox";
+            this.semesterBox.Size = new System.Drawing.Size(76, 23);
+            this.semesterBox.TabIndex = 1;
+            // 
+            // semesterLabel
+            // 
+            this.semesterLabel.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.semesterLabel.Location = new System.Drawing.Point(3, 3);
+            this.semesterLabel.Name = "semesterLabel";
+            this.semesterLabel.Size = new System.Drawing.Size(115, 29);
+            this.semesterLabel.TabIndex = 0;
+            this.semesterLabel.Text = "Семестр №";
             // 
             // info
             // 
@@ -752,16 +1119,17 @@ namespace DOK_U
             this.info.Location = new System.Drawing.Point(4, 14);
             this.info.Name = "info";
             this.info.Padding = new System.Windows.Forms.Padding(3);
-            this.info.Size = new System.Drawing.Size(612, 541);
+            this.info.Size = new System.Drawing.Size(612, 553);
             this.info.TabIndex = 3;
             this.info.Text = "info";
             // 
             // exitButton
             // 
+            this.exitButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.exitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.exitButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.exitButton.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.exitButton.Location = new System.Drawing.Point(379, 433);
+            this.exitButton.Location = new System.Drawing.Point(182, 445);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(225, 100);
             this.exitButton.TabIndex = 5;
@@ -778,8 +1146,8 @@ namespace DOK_U
             this.aboutLabel.Name = "aboutLabel";
             this.aboutLabel.Size = new System.Drawing.Size(606, 215);
             this.aboutLabel.TabIndex = 4;
-            this.aboutLabel.Text = "Описание дневника насколько же он хорош разрабу бы дал";
-            this.aboutLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.aboutLabel.Text = "DOK\'U - Dictionary Of the Kazan\' University\r\nУдобный электронный дневник для студ" + "ентов\r\nПо предложениям писать на почту: dokuemail@yandex.ru";
+            this.aboutLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // notifyIcon
             // 
@@ -787,16 +1155,67 @@ namespace DOK_U
             this.notifyIcon.Text = "DOK\'U";
             this.notifyIcon.Visible = true;
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 6);
+            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 5);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 7;
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(3, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 66);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "19:10\r\n-\r\n20:40";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 65);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "17:30\r\n-\r\n19:00";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 65);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "13:50\r\n-\r\n15:20";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(855, 559);
+            this.ClientSize = new System.Drawing.Size(855, 571);
             this.Controls.Add(this.content);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(850, 610);
             this.Name = "MainForm";
-            this.ShowInTaskbar = false;
             this.Text = "DOK\'U";
             this.content.Panel1.ResumeLayout(false);
             this.content.Panel2.ResumeLayout(false);
@@ -807,12 +1226,49 @@ namespace DOK_U
             this.contentTabs.ResumeLayout(false);
             this.diary.ResumeLayout(false);
             this.groupPanel.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.diaryTable.ResumeLayout(false);
             this.days.ResumeLayout(false);
             this.todayTomorrow.ResumeLayout(false);
+            this.recordBook.ResumeLayout(false);
+            this.recordsTable.ResumeLayout(false);
+            this.semesterPanel.ResumeLayout(false);
             this.info.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.ListBox semesterBox;
+
+        private System.Windows.Forms.ListBox studentBox;
+
+        private System.Windows.Forms.Label studentLabel;
+
+        private System.Windows.Forms.ListBox markBox7;
+        private System.Windows.Forms.ListBox recordLectureBox7;
+
+        private System.Windows.Forms.TableLayoutPanel recordsTable;
+        private System.Windows.Forms.ListBox markBox6;
+        private System.Windows.Forms.ListBox recordLectureBox6;
+        private System.Windows.Forms.ListBox markBox5;
+        private System.Windows.Forms.ListBox recordLectureBox5;
+        private System.Windows.Forms.ListBox markBox4;
+        private System.Windows.Forms.ListBox recordLectureBox4;
+        private System.Windows.Forms.ListBox markBox3;
+        private System.Windows.Forms.ListBox recordLectureBox3;
+        private System.Windows.Forms.ListBox markBox2;
+        private System.Windows.Forms.ListBox recordLectureBox2;
+        private System.Windows.Forms.ListBox markBox1;
+        private System.Windows.Forms.Label markLable;
+        private System.Windows.Forms.Label recordLectureLabel;
+        private System.Windows.Forms.ListBox recordLectureBox1;
+
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+
+        private System.Windows.Forms.Panel semesterPanel;
+        private System.Windows.Forms.Label semesterLabel;
 
         private System.Windows.Forms.Button exitButton;
 
@@ -823,7 +1279,6 @@ namespace DOK_U
         private System.Windows.Forms.ListBox cabinetBox1;
         private System.Windows.Forms.ListBox lectureBox3;
         private System.Windows.Forms.ListBox cabinetBox2;
-        private System.Windows.Forms.ListBox listBox5;
         private System.Windows.Forms.ListBox cabinetBox3;
         private System.Windows.Forms.ListBox lectureBox4;
         private System.Windows.Forms.ListBox cabinetBox4;
@@ -853,7 +1308,7 @@ namespace DOK_U
 
         private System.Windows.Forms.NotifyIcon notifyIcon;
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel diaryTable;
 
         private System.Windows.Forms.Button tommorow;
 

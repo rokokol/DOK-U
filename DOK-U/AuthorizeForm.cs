@@ -72,54 +72,62 @@ namespace DOK_U
         {
             if (isEnterMode)
             {
-                if (passwordTextBox.Text == "password" && loginTextBox.Text == "test")
-                {
-                    try
-                    {
-                        Person user = new Person(0,
-                            "Илья",
-                            "Лещенко",
-                            "Федорович",
-                            "М",
-                            false,
-                            "test",
-                            Person.StringToByteArray("password"),
-                            new DateTime(2005, 12, 29));
-                        var options = new JsonSerializerOptions
-                        {
-                            WriteIndented = true
-                        };
+                Authorize();
+            }
+            else
+            {
+                //TODO: registration
+            }
+        }
 
-                        File.WriteAllText(MainForm.INITIAL_FILE,
-                            JsonSerializer.Serialize<Person>(user, options));
-                        MainForm.FORM.Enabled = true;
-                        Close();
-                    }
-                    catch (IOException ex)
-                    {
-                        MessageBox.Show("IO Exception",
-                            ex.StackTrace,
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error);
-                    }
-                    catch (JsonException ex)
-                    {
-                        MessageBox.Show("Initial file esception",
-                            ex.StackTrace,
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error);
-                    }
-                }
-                else
+        private void Authorize()
+        {
+            if (passwordTextBox.Text == "password" && loginTextBox.Text == "test")
+            {
+                try
                 {
-                    MessageBox.Show("Неверный логин или пароль",
-                        "Ошибка",
+                    Person user = new Person(0,
+                        "Илья",
+                        "Лещенко",
+                        "Федорович",
+                        "М",
+                        false,
+                        "test",
+                        Person.StringToByteArray("password"),
+                        new DateTime(2005, 12, 29));
+                    var options = new JsonSerializerOptions
+                    {
+                        WriteIndented = true
+                    };
+
+                    File.WriteAllText(MainForm.INITIAL_FILE,
+                        JsonSerializer.Serialize<Person>(user, options));
+                    MainForm.FORM.Enabled = true;
+                    Close();
+                }
+                catch (IOException ex)
+                {
+                    MessageBox.Show("IO Exception",
+                        ex.StackTrace,
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+                catch (JsonException ex)
+                {
+                    MessageBox.Show("Initial file esception",
+                        ex.StackTrace,
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                 }
             }
+            else
+            {
+                MessageBox.Show("Неверный логин или пароль",
+                    "Ошибка",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
-
 
         private void showPasswordButton_CheckedChanged(object sender, EventArgs e)
         {
