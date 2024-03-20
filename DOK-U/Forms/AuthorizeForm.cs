@@ -90,11 +90,12 @@ namespace DOK_U
                         "Илья",
                         "Лещенко",
                         "Федорович",
-                        "М",
-                        false,
+                        "M",
+                        true,
                         "test",
                         Person.StringToByteArray("password"),
-                        new DateTime(2005, 12, 29));
+                        new DateTime(2005, 12, 29),
+                        "09-321(2)");
                     var options = new JsonSerializerOptions
                     {
                         WriteIndented = true

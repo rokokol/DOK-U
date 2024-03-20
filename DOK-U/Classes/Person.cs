@@ -3,7 +3,7 @@ using System.Text;
 
 namespace DOK_U
 {
-    public struct Person
+    public class Person
     {
         public int UserID { get; set; }
         public string FirstName { get; set; }
@@ -14,6 +14,8 @@ namespace DOK_U
         public string Login { get; set; }
         public byte[] Password { get; set; }
         public DateTime Birthday { get; set; }
+        public string Group { get; set; }
+
 
 
         public static byte[] StringToByteArray(string str)
@@ -36,11 +38,12 @@ namespace DOK_U
                    $" {nameof(IsAdmin)}: {IsAdmin}," +
                    $" {nameof(Login)}: {Login}," +
                    $" {nameof(Password)}: {Password}," +
-                   $" {nameof(Birthday)}: {Birthday}";
+                   $" {nameof(Birthday)}: {Birthday}" +
+                   $" {nameof(Group)}: {Group},";
         }
 
         public Person(int userId, string firstName, string lastName, string surname, string sex, bool isAdmin, string login,
-            byte[] password, DateTime birthday)
+            byte[] password, DateTime birthday, string group)
         {
             UserID = userId;
             FirstName = firstName ?? throw new ArgumentNullException(nameof(firstName));
@@ -51,6 +54,7 @@ namespace DOK_U
             Password = password ?? throw new ArgumentNullException(nameof(password));
             Birthday = birthday;
             IsAdmin = isAdmin;
+            Group = group;
         }
     }
 }
