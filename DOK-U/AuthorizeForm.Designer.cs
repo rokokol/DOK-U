@@ -237,9 +237,11 @@
             // 
             // passwordPicture
             // 
+            this.passwordPicture.Image = ((System.Drawing.Image)(resources.GetObject("passwordPicture.Image")));
             this.passwordPicture.Location = new System.Drawing.Point(-1, 0);
             this.passwordPicture.Name = "passwordPicture";
             this.passwordPicture.Size = new System.Drawing.Size(52, 51);
+            this.passwordPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.passwordPicture.TabIndex = 1;
             this.passwordPicture.TabStop = false;
             // 
@@ -268,9 +270,11 @@
             // 
             // loginPicture
             // 
+            this.loginPicture.Image = ((System.Drawing.Image)(resources.GetObject("loginPicture.Image")));
             this.loginPicture.Location = new System.Drawing.Point(0, 0);
             this.loginPicture.Name = "loginPicture";
             this.loginPicture.Size = new System.Drawing.Size(52, 51);
+            this.loginPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.loginPicture.TabIndex = 0;
             this.loginPicture.TabStop = false;
             // 

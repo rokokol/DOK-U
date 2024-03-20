@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
+using System.Text.Json;
 using System.Windows.Forms;
 
 namespace DOK_U
@@ -24,6 +21,13 @@ namespace DOK_U
                 { HighlightText(sender, args, Color.CornflowerBlue); };
             forgetPasswordTool.MouseLeave += delegate(object sender, EventArgs args)
                 { HighlightText(sender, args, Color.Black); };
+            Closing += delegate(object sender, CancelEventArgs args)
+            {
+                if (!MainForm.FORM.Enabled)
+                {
+                    Application.Exit();
+                }
+            };
         }
         
         private void HighlightText(object sender, EventArgs args, Color color)
@@ -70,9 +74,41 @@ namespace DOK_U
             {
                 if (passwordTextBox.Text == "password" && loginTextBox.Text == "test")
                 {
-                    MainForm main = new MainForm();
-                    main.Show();
-                    Hide();
+                    try
+                    {
+                        Person user = new Person(0,
+                            "Илья",
+                            "Лещенко",
+                            "Федорович",
+                            "М",
+                            false,
+                            "test",
+                            Person.StringToByteArray("password"),
+                            new DateTime(2005, 12, 29));
+                        var options = new JsonSerializerOptions
+                        {
+                            WriteIndented = true
+                        };
+
+                        File.WriteAllText(MainForm.INITIAL_FILE,
+                            JsonSerializer.Serialize<Person>(user, options));
+                        MainForm.FORM.Enabled = true;
+                        Close();
+                    }
+                    catch (IOException ex)
+                    {
+                        MessageBox.Show("IO Exception",
+                            ex.StackTrace,
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+                    }
+                    catch (JsonException ex)
+                    {
+                        MessageBox.Show("Initial file esception",
+                            ex.StackTrace,
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {

@@ -80,6 +80,8 @@ namespace DOK_U
             this.profile = new System.Windows.Forms.TabPage();
             this.recordBook = new System.Windows.Forms.TabPage();
             this.info = new System.Windows.Forms.TabPage();
+            this.exitButton = new System.Windows.Forms.Button();
+            this.aboutLabel = new System.Windows.Forms.Label();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.content)).BeginInit();
             this.content.Panel1.SuspendLayout();
@@ -93,6 +95,7 @@ namespace DOK_U
             this.tableLayoutPanel1.SuspendLayout();
             this.days.SuspendLayout();
             this.todayTomorrow.SuspendLayout();
+            this.info.SuspendLayout();
             this.SuspendLayout();
             // 
             // content
@@ -744,12 +747,39 @@ namespace DOK_U
             // info
             // 
             this.info.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.info.Controls.Add(this.exitButton);
+            this.info.Controls.Add(this.aboutLabel);
             this.info.Location = new System.Drawing.Point(4, 14);
             this.info.Name = "info";
             this.info.Padding = new System.Windows.Forms.Padding(3);
             this.info.Size = new System.Drawing.Size(612, 541);
             this.info.TabIndex = 3;
             this.info.Text = "info";
+            // 
+            // exitButton
+            // 
+            this.exitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.exitButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.exitButton.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.exitButton.Location = new System.Drawing.Point(379, 433);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(225, 100);
+            this.exitButton.TabIndex = 5;
+            this.exitButton.Text = "Закрыть программу";
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // aboutLabel
+            // 
+            this.aboutLabel.BackColor = System.Drawing.Color.Transparent;
+            this.aboutLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.aboutLabel.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.aboutLabel.Location = new System.Drawing.Point(3, 3);
+            this.aboutLabel.Name = "aboutLabel";
+            this.aboutLabel.Size = new System.Drawing.Size(606, 215);
+            this.aboutLabel.TabIndex = 4;
+            this.aboutLabel.Text = "Описание дневника насколько же он хорош разрабу бы дал";
+            this.aboutLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // notifyIcon
             // 
@@ -766,6 +796,7 @@ namespace DOK_U
             this.Controls.Add(this.content);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
+            this.ShowInTaskbar = false;
             this.Text = "DOK\'U";
             this.content.Panel1.ResumeLayout(false);
             this.content.Panel2.ResumeLayout(false);
@@ -779,8 +810,13 @@ namespace DOK_U
             this.tableLayoutPanel1.ResumeLayout(false);
             this.days.ResumeLayout(false);
             this.todayTomorrow.ResumeLayout(false);
+            this.info.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button exitButton;
+
+        private System.Windows.Forms.Label aboutLabel;
 
         private System.Windows.Forms.ListBox lectureBox2;
 
