@@ -1,4 +1,7 @@
-﻿namespace DOK_U
+﻿using System;
+using System.Drawing;
+
+namespace DOK_U
 {
     partial class AuthorizeForm
     {
@@ -30,294 +33,317 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AuthorizeForm));
-            this.formContainer = new System.Windows.Forms.SplitContainer();
-            this.blank4 = new System.Windows.Forms.PictureBox();
-            this.blank3 = new System.Windows.Forms.PictureBox();
-            this.blank2 = new System.Windows.Forms.PictureBox();
-            this.blank1 = new System.Windows.Forms.PictureBox();
-            this.picture = new System.Windows.Forms.PictureBox();
-            this.autorizeMenu = new System.Windows.Forms.Panel();
-            this.showPasswordButton = new System.Windows.Forms.CheckBox();
-            this.forgetPasswordTool = new System.Windows.Forms.Label();
-            this.changeModeButton = new System.Windows.Forms.Button();
-            this.enterButton = new System.Windows.Forms.Button();
-            this.passwordPanel = new System.Windows.Forms.Panel();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.passwordPicture = new System.Windows.Forms.PictureBox();
-            this.loginPanel = new System.Windows.Forms.Panel();
-            this.loginTextBox = new System.Windows.Forms.TextBox();
-            this.loginPicture = new System.Windows.Forms.PictureBox();
-            this.enterLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.formContainer)).BeginInit();
-            this.formContainer.Panel1.SuspendLayout();
-            this.formContainer.Panel2.SuspendLayout();
-            this.formContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.blank4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blank3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blank2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blank1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
-            this.autorizeMenu.SuspendLayout();
-            this.passwordPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.passwordPicture)).BeginInit();
-            this.loginPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.loginPicture)).BeginInit();
-            this.SuspendLayout();
+            formContainer = new SplitContainer();
+            blank4 = new PictureBox();
+            blank3 = new PictureBox();
+            blank2 = new PictureBox();
+            blank1 = new PictureBox();
+            picture = new PictureBox();
+            autorizeMenu = new Panel();
+            showPasswordButton = new CheckBox();
+            forgetPasswordTool = new Label();
+            changeModeButton = new Button();
+            enterButton = new Button();
+            passwordPanel = new Panel();
+            passwordTextBox = new TextBox();
+            passwordPicture = new PictureBox();
+            loginPanel = new Panel();
+            loginTextBox = new TextBox();
+            loginPicture = new PictureBox();
+            enterLabel = new Label();
+            ((System.ComponentModel.ISupportInitialize)formContainer).BeginInit();
+            formContainer.Panel1.SuspendLayout();
+            formContainer.Panel2.SuspendLayout();
+            formContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)blank4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)blank3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)blank2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)blank1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picture).BeginInit();
+            autorizeMenu.SuspendLayout();
+            passwordPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)passwordPicture).BeginInit();
+            loginPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)loginPicture).BeginInit();
+            SuspendLayout();
             // 
             // formContainer
             // 
-            this.formContainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.formContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.formContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.formContainer.IsSplitterFixed = true;
-            this.formContainer.Location = new System.Drawing.Point(0, 0);
-            this.formContainer.Name = "formContainer";
+            formContainer.BorderStyle = BorderStyle.FixedSingle;
+            formContainer.Dock = DockStyle.Fill;
+            formContainer.FixedPanel = FixedPanel.Panel1;
+            formContainer.IsSplitterFixed = true;
+            formContainer.Location = new Point(0, 0);
+            formContainer.Margin = new Padding(4, 3, 4, 3);
+            formContainer.Name = "formContainer";
             // 
             // formContainer.Panel1
             // 
-            this.formContainer.Panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.formContainer.Panel1.Controls.Add(this.blank4);
-            this.formContainer.Panel1.Controls.Add(this.blank3);
-            this.formContainer.Panel1.Controls.Add(this.blank2);
-            this.formContainer.Panel1.Controls.Add(this.blank1);
-            this.formContainer.Panel1.Controls.Add(this.picture);
+            formContainer.Panel1.BackColor = SystemColors.ButtonShadow;
+            formContainer.Panel1.Controls.Add(blank4);
+            formContainer.Panel1.Controls.Add(blank3);
+            formContainer.Panel1.Controls.Add(blank2);
+            formContainer.Panel1.Controls.Add(blank1);
+            formContainer.Panel1.Controls.Add(picture);
             // 
             // formContainer.Panel2
             // 
-            this.formContainer.Panel2.Controls.Add(this.autorizeMenu);
-            this.formContainer.Size = new System.Drawing.Size(627, 395);
-            this.formContainer.SplitterDistance = 103;
-            this.formContainer.SplitterWidth = 1;
-            this.formContainer.TabIndex = 0;
+            formContainer.Panel2.Controls.Add(autorizeMenu);
+            formContainer.Size = new Size(732, 456);
+            formContainer.SplitterDistance = 120;
+            formContainer.SplitterWidth = 1;
+            formContainer.TabIndex = 0;
             // 
             // blank4
             // 
-            this.blank4.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.blank4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.blank4.Location = new System.Drawing.Point(0, 316);
-            this.blank4.Name = "blank4";
-            this.blank4.Size = new System.Drawing.Size(104, 81);
-            this.blank4.TabIndex = 4;
-            this.blank4.TabStop = false;
+            blank4.BackColor = SystemColors.ControlLight;
+            blank4.BorderStyle = BorderStyle.FixedSingle;
+            blank4.Location = new Point(0, 365);
+            blank4.Margin = new Padding(4, 3, 4, 3);
+            blank4.Name = "blank4";
+            blank4.Size = new Size(121, 93);
+            blank4.TabIndex = 4;
+            blank4.TabStop = false;
             // 
             // blank3
             // 
-            this.blank3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.blank3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.blank3.Location = new System.Drawing.Point(0, 237);
-            this.blank3.Name = "blank3";
-            this.blank3.Size = new System.Drawing.Size(104, 83);
-            this.blank3.TabIndex = 3;
-            this.blank3.TabStop = false;
+            blank3.BackColor = SystemColors.ControlLight;
+            blank3.BorderStyle = BorderStyle.FixedSingle;
+            blank3.Location = new Point(0, 273);
+            blank3.Margin = new Padding(4, 3, 4, 3);
+            blank3.Name = "blank3";
+            blank3.Size = new Size(121, 95);
+            blank3.TabIndex = 3;
+            blank3.TabStop = false;
             // 
             // blank2
             // 
-            this.blank2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.blank2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.blank2.Location = new System.Drawing.Point(0, 160);
-            this.blank2.Name = "blank2";
-            this.blank2.Size = new System.Drawing.Size(104, 83);
-            this.blank2.TabIndex = 3;
-            this.blank2.TabStop = false;
+            blank2.BackColor = SystemColors.ControlLight;
+            blank2.BorderStyle = BorderStyle.FixedSingle;
+            blank2.Location = new Point(0, 185);
+            blank2.Margin = new Padding(4, 3, 4, 3);
+            blank2.Name = "blank2";
+            blank2.Size = new Size(121, 95);
+            blank2.TabIndex = 3;
+            blank2.TabStop = false;
             // 
             // blank1
             // 
-            this.blank1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.blank1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.blank1.Location = new System.Drawing.Point(0, 80);
-            this.blank1.Name = "blank1";
-            this.blank1.Size = new System.Drawing.Size(104, 83);
-            this.blank1.TabIndex = 3;
-            this.blank1.TabStop = false;
+            blank1.BackColor = SystemColors.ControlLight;
+            blank1.BorderStyle = BorderStyle.FixedSingle;
+            blank1.Location = new Point(0, 92);
+            blank1.Margin = new Padding(4, 3, 4, 3);
+            blank1.Name = "blank1";
+            blank1.Size = new Size(121, 95);
+            blank1.TabIndex = 3;
+            blank1.TabStop = false;
             // 
             // picture
             // 
-            this.picture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.picture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picture.Image = ((System.Drawing.Image)(resources.GetObject("picture.Image")));
-            this.picture.InitialImage = ((System.Drawing.Image)(resources.GetObject("picture.InitialImage")));
-            this.picture.Location = new System.Drawing.Point(0, 0);
-            this.picture.Name = "picture";
-            this.picture.Size = new System.Drawing.Size(104, 83);
-            this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picture.TabIndex = 2;
-            this.picture.TabStop = false;
+            picture.BackColor = Color.FromArgb(232, 232, 232);
+            picture.BorderStyle = BorderStyle.FixedSingle;
+            picture.Image = (Image)resources.GetObject("picture.Image");
+            picture.InitialImage = (Image)resources.GetObject("picture.InitialImage");
+            picture.Location = new Point(0, 0);
+            picture.Margin = new Padding(4, 3, 4, 3);
+            picture.Name = "picture";
+            picture.Size = new Size(121, 95);
+            picture.SizeMode = PictureBoxSizeMode.Zoom;
+            picture.TabIndex = 2;
+            picture.TabStop = false;
             // 
             // autorizeMenu
             // 
-            this.autorizeMenu.Controls.Add(this.showPasswordButton);
-            this.autorizeMenu.Controls.Add(this.forgetPasswordTool);
-            this.autorizeMenu.Controls.Add(this.changeModeButton);
-            this.autorizeMenu.Controls.Add(this.enterButton);
-            this.autorizeMenu.Controls.Add(this.passwordPanel);
-            this.autorizeMenu.Controls.Add(this.loginPanel);
-            this.autorizeMenu.Controls.Add(this.enterLabel);
-            this.autorizeMenu.Location = new System.Drawing.Point(124, 80);
-            this.autorizeMenu.Name = "autorizeMenu";
-            this.autorizeMenu.Size = new System.Drawing.Size(311, 228);
-            this.autorizeMenu.TabIndex = 1;
+            autorizeMenu.Controls.Add(showPasswordButton);
+            autorizeMenu.Controls.Add(forgetPasswordTool);
+            autorizeMenu.Controls.Add(changeModeButton);
+            autorizeMenu.Controls.Add(enterButton);
+            autorizeMenu.Controls.Add(passwordPanel);
+            autorizeMenu.Controls.Add(loginPanel);
+            autorizeMenu.Controls.Add(enterLabel);
+            autorizeMenu.Location = new Point(145, 92);
+            autorizeMenu.Margin = new Padding(4, 3, 4, 3);
+            autorizeMenu.Name = "autorizeMenu";
+            autorizeMenu.Size = new Size(363, 263);
+            autorizeMenu.TabIndex = 1;
             // 
             // showPasswordButton
             // 
-            this.showPasswordButton.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.showPasswordButton.Location = new System.Drawing.Point(3, 203);
-            this.showPasswordButton.Name = "showPasswordButton";
-            this.showPasswordButton.Size = new System.Drawing.Size(162, 19);
-            this.showPasswordButton.TabIndex = 2;
-            this.showPasswordButton.Text = "Показать пароль";
-            this.showPasswordButton.UseVisualStyleBackColor = true;
-            this.showPasswordButton.CheckedChanged += new System.EventHandler(this.showPasswordButton_CheckedChanged);
+            showPasswordButton.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            showPasswordButton.Location = new Point(4, 234);
+            showPasswordButton.Margin = new Padding(4, 3, 4, 3);
+            showPasswordButton.Name = "showPasswordButton";
+            showPasswordButton.Size = new Size(189, 22);
+            showPasswordButton.TabIndex = 2;
+            showPasswordButton.Text = "Показать пароль";
+            showPasswordButton.UseVisualStyleBackColor = true;
+            showPasswordButton.CheckedChanged += showPasswordButton_CheckedChanged;
             // 
             // forgetPasswordTool
             // 
-            this.forgetPasswordTool.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.forgetPasswordTool.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.forgetPasswordTool.Location = new System.Drawing.Point(187, 203);
-            this.forgetPasswordTool.Name = "forgetPasswordTool";
-            this.forgetPasswordTool.Size = new System.Drawing.Size(121, 23);
-            this.forgetPasswordTool.TabIndex = 5;
-            this.forgetPasswordTool.Text = "Забыли пароль?";
+            forgetPasswordTool.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point, 204);
+            forgetPasswordTool.ForeColor = SystemColors.ControlText;
+            forgetPasswordTool.Location = new Point(218, 234);
+            forgetPasswordTool.Margin = new Padding(4, 0, 4, 0);
+            forgetPasswordTool.Name = "forgetPasswordTool";
+            forgetPasswordTool.Size = new Size(141, 27);
+            forgetPasswordTool.TabIndex = 5;
+            forgetPasswordTool.Text = "Забыли пароль?";
+            forgetPasswordTool.MouseHover += forgetPasswordTool_MouseHover;
+            forgetPasswordTool.MouseLeave += forgetPasswordTool_MouseLeave;
             // 
             // changeModeButton
             // 
-            this.changeModeButton.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.changeModeButton.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.changeModeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
-            this.changeModeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.changeModeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.changeModeButton.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.changeModeButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.changeModeButton.Location = new System.Drawing.Point(202, 3);
-            this.changeModeButton.Name = "changeModeButton";
-            this.changeModeButton.Size = new System.Drawing.Size(108, 26);
-            this.changeModeButton.TabIndex = 4;
-            this.changeModeButton.Text = "Регистрация";
-            this.changeModeButton.UseVisualStyleBackColor = false;
-            this.changeModeButton.Click += new System.EventHandler(this.changeModeButton_Click);
+            changeModeButton.BackColor = SystemColors.ScrollBar;
+            changeModeButton.FlatAppearance.BorderColor = Color.DarkGray;
+            changeModeButton.FlatAppearance.MouseDownBackColor = Color.LightGray;
+            changeModeButton.FlatAppearance.MouseOverBackColor = Color.Silver;
+            changeModeButton.FlatStyle = FlatStyle.Flat;
+            changeModeButton.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            changeModeButton.ForeColor = SystemColors.ControlText;
+            changeModeButton.Location = new Point(236, 3);
+            changeModeButton.Margin = new Padding(4, 3, 4, 3);
+            changeModeButton.Name = "changeModeButton";
+            changeModeButton.Size = new Size(126, 30);
+            changeModeButton.TabIndex = 4;
+            changeModeButton.Text = "Регистрация";
+            changeModeButton.UseVisualStyleBackColor = false;
+            changeModeButton.Click += changeModeButton_Click;
             // 
             // enterButton
             // 
-            this.enterButton.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.enterButton.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.enterButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.enterButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.enterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.enterButton.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.enterButton.Location = new System.Drawing.Point(0, 157);
-            this.enterButton.Name = "enterButton";
-            this.enterButton.Size = new System.Drawing.Size(311, 43);
-            this.enterButton.TabIndex = 3;
-            this.enterButton.Text = "Войти";
-            this.enterButton.UseVisualStyleBackColor = false;
-            this.enterButton.Click += new System.EventHandler(this.enterButton_Click);
+            enterButton.BackColor = SystemColors.InactiveCaptionText;
+            enterButton.FlatAppearance.BorderColor = Color.Gray;
+            enterButton.FlatAppearance.MouseDownBackColor = Color.Black;
+            enterButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(35, 35, 35);
+            enterButton.FlatStyle = FlatStyle.Flat;
+            enterButton.Font = new Font("Microsoft YaHei", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            enterButton.ForeColor = SystemColors.ButtonFace;
+            enterButton.Location = new Point(0, 181);
+            enterButton.Margin = new Padding(4, 3, 4, 3);
+            enterButton.Name = "enterButton";
+            enterButton.Size = new Size(363, 50);
+            enterButton.TabIndex = 3;
+            enterButton.Text = "Войти";
+            enterButton.UseVisualStyleBackColor = false;
+            enterButton.Click += enterButton_Click;
             // 
             // passwordPanel
             // 
-            this.passwordPanel.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.passwordPanel.Controls.Add(this.passwordTextBox);
-            this.passwordPanel.Controls.Add(this.passwordPicture);
-            this.passwordPanel.Location = new System.Drawing.Point(1, 89);
-            this.passwordPanel.Name = "passwordPanel";
-            this.passwordPanel.Size = new System.Drawing.Size(310, 51);
-            this.passwordPanel.TabIndex = 2;
+            passwordPanel.BackColor = SystemColors.ButtonShadow;
+            passwordPanel.Controls.Add(passwordTextBox);
+            passwordPanel.Controls.Add(passwordPicture);
+            passwordPanel.Location = new Point(1, 103);
+            passwordPanel.Margin = new Padding(4, 3, 4, 3);
+            passwordPanel.Name = "passwordPanel";
+            passwordPanel.Size = new Size(362, 59);
+            passwordPanel.TabIndex = 2;
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.passwordTextBox.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.passwordTextBox.Location = new System.Drawing.Point(57, 16);
-            this.passwordTextBox.MaxLength = 16;
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.passwordTextBox.Size = new System.Drawing.Size(248, 32);
-            this.passwordTextBox.TabIndex = 2;
-            this.passwordTextBox.UseSystemPasswordChar = true;
+            passwordTextBox.BackColor = SystemColors.ControlDark;
+            passwordTextBox.BorderStyle = BorderStyle.None;
+            passwordTextBox.Font = new Font("Microsoft YaHei", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            passwordTextBox.Location = new Point(66, 18);
+            passwordTextBox.Margin = new Padding(4, 3, 4, 3);
+            passwordTextBox.MaxLength = 16;
+            passwordTextBox.Name = "passwordTextBox";
+            passwordTextBox.PlaceholderText = "Ваш пароль";
+            passwordTextBox.ScrollBars = ScrollBars.Vertical;
+            passwordTextBox.Size = new Size(289, 32);
+            passwordTextBox.TabIndex = 2;
+            passwordTextBox.UseSystemPasswordChar = true;
             // 
             // passwordPicture
             // 
-            this.passwordPicture.Image = ((System.Drawing.Image)(resources.GetObject("passwordPicture.Image")));
-            this.passwordPicture.Location = new System.Drawing.Point(-1, 0);
-            this.passwordPicture.Name = "passwordPicture";
-            this.passwordPicture.Size = new System.Drawing.Size(52, 51);
-            this.passwordPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.passwordPicture.TabIndex = 1;
-            this.passwordPicture.TabStop = false;
+            passwordPicture.Image = (Image)resources.GetObject("passwordPicture.Image");
+            passwordPicture.Location = new Point(-1, 0);
+            passwordPicture.Margin = new Padding(4, 3, 4, 3);
+            passwordPicture.Name = "passwordPicture";
+            passwordPicture.Size = new Size(61, 59);
+            passwordPicture.SizeMode = PictureBoxSizeMode.StretchImage;
+            passwordPicture.TabIndex = 1;
+            passwordPicture.TabStop = false;
             // 
             // loginPanel
             // 
-            this.loginPanel.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.loginPanel.Controls.Add(this.loginTextBox);
-            this.loginPanel.Controls.Add(this.loginPicture);
-            this.loginPanel.Location = new System.Drawing.Point(0, 32);
-            this.loginPanel.Name = "loginPanel";
-            this.loginPanel.Size = new System.Drawing.Size(310, 51);
-            this.loginPanel.TabIndex = 1;
+            loginPanel.BackColor = SystemColors.ButtonShadow;
+            loginPanel.Controls.Add(loginTextBox);
+            loginPanel.Controls.Add(loginPicture);
+            loginPanel.Location = new Point(0, 37);
+            loginPanel.Margin = new Padding(4, 3, 4, 3);
+            loginPanel.Name = "loginPanel";
+            loginPanel.Size = new Size(362, 59);
+            loginPanel.TabIndex = 1;
             // 
             // loginTextBox
             // 
-            this.loginTextBox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.loginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.loginTextBox.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginTextBox.Location = new System.Drawing.Point(58, 16);
-            this.loginTextBox.MaxLength = 16;
-            this.loginTextBox.Name = "loginTextBox";
-            this.loginTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.loginTextBox.Size = new System.Drawing.Size(248, 32);
-            this.loginTextBox.TabIndex = 1;
-            this.loginTextBox.Tag = "Ваш логин";
+            loginTextBox.BackColor = SystemColors.ControlDark;
+            loginTextBox.BorderStyle = BorderStyle.None;
+            loginTextBox.Font = new Font("Microsoft YaHei", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            loginTextBox.Location = new Point(68, 18);
+            loginTextBox.Margin = new Padding(4, 3, 4, 3);
+            loginTextBox.MaxLength = 16;
+            loginTextBox.Name = "loginTextBox";
+            loginTextBox.PlaceholderText = "Ваш логин";
+            loginTextBox.ScrollBars = ScrollBars.Vertical;
+            loginTextBox.Size = new Size(289, 32);
+            loginTextBox.TabIndex = 1;
+            loginTextBox.Tag = "Ваш логин";
             // 
             // loginPicture
             // 
-            this.loginPicture.Image = ((System.Drawing.Image)(resources.GetObject("loginPicture.Image")));
-            this.loginPicture.Location = new System.Drawing.Point(0, 0);
-            this.loginPicture.Name = "loginPicture";
-            this.loginPicture.Size = new System.Drawing.Size(52, 51);
-            this.loginPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.loginPicture.TabIndex = 0;
-            this.loginPicture.TabStop = false;
+            loginPicture.Image = (Image)resources.GetObject("loginPicture.Image");
+            loginPicture.Location = new Point(0, 0);
+            loginPicture.Margin = new Padding(4, 3, 4, 3);
+            loginPicture.Name = "loginPicture";
+            loginPicture.Size = new Size(61, 59);
+            loginPicture.SizeMode = PictureBoxSizeMode.StretchImage;
+            loginPicture.TabIndex = 0;
+            loginPicture.TabStop = false;
             // 
             // enterLabel
             // 
-            this.enterLabel.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterLabel.Location = new System.Drawing.Point(0, 0);
-            this.enterLabel.Name = "enterLabel";
-            this.enterLabel.Size = new System.Drawing.Size(63, 29);
-            this.enterLabel.TabIndex = 0;
-            this.enterLabel.Text = "Вход";
+            enterLabel.Font = new Font("Microsoft YaHei", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            enterLabel.Location = new Point(0, 0);
+            enterLabel.Margin = new Padding(4, 0, 4, 0);
+            enterLabel.Name = "enterLabel";
+            enterLabel.Size = new Size(74, 33);
+            enterLabel.TabIndex = 0;
+            enterLabel.Text = "Вход";
             // 
             // AuthorizeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(627, 395);
-            this.Controls.Add(this.formContainer);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "AuthorizeForm";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
-            this.Text = "Вход";
-            this.formContainer.Panel1.ResumeLayout(false);
-            this.formContainer.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.formContainer)).EndInit();
-            this.formContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.blank4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blank3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blank2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blank1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
-            this.autorizeMenu.ResumeLayout(false);
-            this.passwordPanel.ResumeLayout(false);
-            this.passwordPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.passwordPicture)).EndInit();
-            this.loginPanel.ResumeLayout(false);
-            this.loginPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.loginPicture)).EndInit();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveBorder;
+            ClientSize = new Size(732, 456);
+            Controls.Add(formContainer);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4, 3, 4, 3);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "AuthorizeForm";
+            ShowIcon = false;
+            ShowInTaskbar = false;
+            Text = "Вход";
+            formContainer.Panel1.ResumeLayout(false);
+            formContainer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)formContainer).EndInit();
+            formContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)blank4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)blank3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)blank2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)blank1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picture).EndInit();
+            autorizeMenu.ResumeLayout(false);
+            passwordPanel.ResumeLayout(false);
+            passwordPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)passwordPicture).EndInit();
+            loginPanel.ResumeLayout(false);
+            loginPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)loginPicture).EndInit();
+            ResumeLayout(false);
         }
 
         private System.Windows.Forms.CheckBox showPasswordButton;

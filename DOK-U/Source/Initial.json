@@ -1,0 +1,13 @@
+{
+  "Id": 1,
+  "FirstName": "\u0414\u0438\u0430\u043D\u0430",
+  "LastName": "\u041B\u043E\u0433\u0438\u043D\u043E\u0432\u0430",
+  "Surname": "\u0420\u043E\u043C\u0430\u043D\u043E\u0432\u043D\u0430",
+  "Sex": "\u0416",
+  "IsAdmin": false,
+  "Login": "SLDR",
+  "Password": "",
+  "Birthday": "2005-04-25T00:00:00",
+  "GroupId": 1,
+  "ReserveCode": ""
+}

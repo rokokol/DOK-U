@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOK-U", "DOK-U\DOK-U.csproj", "{46389DC5-F474-4B55-BFFF-381AA89F816D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOK-U", "DOK-U\DOK-U.csproj", "{78BF714B-6E3A-4264-B6EA-03CFBA955FB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +8,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{46389DC5-F474-4B55-BFFF-381AA89F816D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{46389DC5-F474-4B55-BFFF-381AA89F816D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{46389DC5-F474-4B55-BFFF-381AA89F816D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{46389DC5-F474-4B55-BFFF-381AA89F816D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78BF714B-6E3A-4264-B6EA-03CFBA955FB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78BF714B-6E3A-4264-B6EA-03CFBA955FB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78BF714B-6E3A-4264-B6EA-03CFBA955FB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78BF714B-6E3A-4264-B6EA-03CFBA955FB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

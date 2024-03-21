@@ -1,4 +1,6 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
+using System.Windows.Forms;
 
 namespace DOK_U
 {
@@ -31,1417 +33,1504 @@ namespace DOK_U
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.content = new System.Windows.Forms.SplitContainer();
-            this.buttonsPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.infoButton = new System.Windows.Forms.Button();
-            this.recordBookButton = new System.Windows.Forms.Button();
-            this.diaryButton = new System.Windows.Forms.Button();
-            this.iconBox = new System.Windows.Forms.PictureBox();
-            this.profileButton = new System.Windows.Forms.Button();
-            this.contentTabs = new System.Windows.Forms.TabControl();
-            this.diary = new System.Windows.Forms.TabPage();
-            this.groupPanel = new System.Windows.Forms.Panel();
-            this.groupBox = new System.Windows.Forms.ListBox();
-            this.groupLabel = new System.Windows.Forms.Label();
-            this.diaryTable = new System.Windows.Forms.TableLayoutPanel();
-            this.time6 = new System.Windows.Forms.Label();
-            this.time5 = new System.Windows.Forms.Label();
-            this.time4 = new System.Windows.Forms.Label();
-            this.time3 = new System.Windows.Forms.Label();
-            this.time2 = new System.Windows.Forms.Label();
-            this.cabinetBox6 = new System.Windows.Forms.ListBox();
-            this.lectureBox6 = new System.Windows.Forms.ListBox();
-            this.cabinetBox5 = new System.Windows.Forms.ListBox();
-            this.lectureBox5 = new System.Windows.Forms.ListBox();
-            this.cabinetBox4 = new System.Windows.Forms.ListBox();
-            this.lectureBox4 = new System.Windows.Forms.ListBox();
-            this.cabinetBox3 = new System.Windows.Forms.ListBox();
-            this.lectureBox3 = new System.Windows.Forms.ListBox();
-            this.cabinetBox2 = new System.Windows.Forms.ListBox();
-            this.lectureBox2 = new System.Windows.Forms.ListBox();
-            this.cabinetBox1 = new System.Windows.Forms.ListBox();
-            this.time1 = new System.Windows.Forms.Label();
-            this.cabinetLable = new System.Windows.Forms.Label();
-            this.lectureLabel = new System.Windows.Forms.Label();
-            this.timeLabel = new System.Windows.Forms.Label();
-            this.lectureBox1 = new System.Windows.Forms.ListBox();
-            this.days = new System.Windows.Forms.TableLayoutPanel();
-            this.st = new System.Windows.Forms.Button();
-            this.fr = new System.Windows.Forms.Button();
-            this.th = new System.Windows.Forms.Button();
-            this.wd = new System.Windows.Forms.Button();
-            this.tu = new System.Windows.Forms.Button();
-            this.mn = new System.Windows.Forms.Button();
-            this.todayTomorrow = new System.Windows.Forms.TableLayoutPanel();
-            this.tommorow = new System.Windows.Forms.Button();
-            this.today = new System.Windows.Forms.Button();
-            this.profile = new System.Windows.Forms.TabPage();
-            this.myProfileLable = new System.Windows.Forms.Label();
-            this.logOutButton = new System.Windows.Forms.Button();
-            this.extraCodesButton = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupContent = new System.Windows.Forms.Label();
-            this.sexContent = new System.Windows.Forms.Label();
-            this.birthdayContent = new System.Windows.Forms.Label();
-            this.loginContent = new System.Windows.Forms.Label();
-            this.nameContent = new System.Windows.Forms.Label();
-            this.nameLabel = new System.Windows.Forms.Label();
-            this.groupLable = new System.Windows.Forms.Label();
-            this.sexLable = new System.Windows.Forms.Label();
-            this.dirthdayLable = new System.Windows.Forms.Label();
-            this.loginLable = new System.Windows.Forms.Label();
-            this.recordBook = new System.Windows.Forms.TabPage();
-            this.recordsTable = new System.Windows.Forms.TableLayoutPanel();
-            this.recordLectureBox7 = new System.Windows.Forms.ListBox();
-            this.markBox7 = new System.Windows.Forms.ListBox();
-            this.markBox6 = new System.Windows.Forms.ListBox();
-            this.recordLectureBox6 = new System.Windows.Forms.ListBox();
-            this.markBox5 = new System.Windows.Forms.ListBox();
-            this.recordLectureBox5 = new System.Windows.Forms.ListBox();
-            this.markBox4 = new System.Windows.Forms.ListBox();
-            this.recordLectureBox4 = new System.Windows.Forms.ListBox();
-            this.markBox3 = new System.Windows.Forms.ListBox();
-            this.recordLectureBox3 = new System.Windows.Forms.ListBox();
-            this.markBox2 = new System.Windows.Forms.ListBox();
-            this.recordLectureBox2 = new System.Windows.Forms.ListBox();
-            this.markBox1 = new System.Windows.Forms.ListBox();
-            this.markLable = new System.Windows.Forms.Label();
-            this.recordLectureLabel = new System.Windows.Forms.Label();
-            this.recordLectureBox1 = new System.Windows.Forms.ListBox();
-            this.semesterPanel = new System.Windows.Forms.Panel();
-            this.studentBox = new System.Windows.Forms.ListBox();
-            this.studentLabel = new System.Windows.Forms.Label();
-            this.semesterBox = new System.Windows.Forms.ListBox();
-            this.semesterLabel = new System.Windows.Forms.Label();
-            this.info = new System.Windows.Forms.TabPage();
-            this.exitButton = new System.Windows.Forms.Button();
-            this.aboutLabel = new System.Windows.Forms.Label();
-            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.content)).BeginInit();
-            this.content.Panel1.SuspendLayout();
-            this.content.Panel2.SuspendLayout();
-            this.content.SuspendLayout();
-            this.buttonsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconBox)).BeginInit();
-            this.contentTabs.SuspendLayout();
-            this.diary.SuspendLayout();
-            this.groupPanel.SuspendLayout();
-            this.diaryTable.SuspendLayout();
-            this.days.SuspendLayout();
-            this.todayTomorrow.SuspendLayout();
-            this.profile.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.recordBook.SuspendLayout();
-            this.recordsTable.SuspendLayout();
-            this.semesterPanel.SuspendLayout();
-            this.info.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.SuspendLayout();
+            components = new Container();
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(MainForm));
+            content = new SplitContainer();
+            buttonsPanel = new TableLayoutPanel();
+            infoButton = new Button();
+            recordBookButton = new Button();
+            diaryButton = new Button();
+            iconBox = new PictureBox();
+            profileButton = new Button();
+            contentTabs = new TabControl();
+            diary = new TabPage();
+            groupPanel = new Panel();
+            groupBox = new ListBox();
+            groupLabel = new Label();
+            diaryTable = new TableLayoutPanel();
+            time6 = new Label();
+            time5 = new Label();
+            time4 = new Label();
+            time3 = new Label();
+            time2 = new Label();
+            cabinetBox6 = new ListBox();
+            lectureBox6 = new ListBox();
+            cabinetBox5 = new ListBox();
+            lectureBox5 = new ListBox();
+            cabinetBox4 = new ListBox();
+            lectureBox4 = new ListBox();
+            cabinetBox3 = new ListBox();
+            lectureBox3 = new ListBox();
+            cabinetBox2 = new ListBox();
+            lectureBox2 = new ListBox();
+            cabinetBox1 = new ListBox();
+            time1 = new Label();
+            cabinetLable = new Label();
+            lectureLabel = new Label();
+            timeLabel = new Label();
+            lectureBox1 = new ListBox();
+            days = new TableLayoutPanel();
+            st = new Button();
+            fr = new Button();
+            th = new Button();
+            wd = new Button();
+            tu = new Button();
+            mn = new Button();
+            todayTomorrow = new TableLayoutPanel();
+            tommorow = new Button();
+            today = new Button();
+            profile = new TabPage();
+            myProfileLable = new Label();
+            logOutButton = new Button();
+            extraCodesButton = new Button();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            groupContent = new Label();
+            sexContent = new Label();
+            birthdayContent = new Label();
+            loginContent = new Label();
+            nameContent = new Label();
+            nameLabel = new Label();
+            groupLable = new Label();
+            sexLable = new Label();
+            dirthdayLable = new Label();
+            loginLable = new Label();
+            recordBook = new TabPage();
+            recordsTable = new TableLayoutPanel();
+            recordLectureBox7 = new ListBox();
+            markBox7 = new ListBox();
+            markBox6 = new ListBox();
+            recordLectureBox6 = new ListBox();
+            markBox5 = new ListBox();
+            recordLectureBox5 = new ListBox();
+            markBox4 = new ListBox();
+            recordLectureBox4 = new ListBox();
+            markBox3 = new ListBox();
+            recordLectureBox3 = new ListBox();
+            markBox2 = new ListBox();
+            recordLectureBox2 = new ListBox();
+            markBox1 = new ListBox();
+            markLable = new Label();
+            recordLectureLabel = new Label();
+            recordLectureBox1 = new ListBox();
+            semesterPanel = new Panel();
+            studentBox = new ListBox();
+            studentLabel = new Label();
+            semesterBox = new ListBox();
+            semesterLabel = new Label();
+            info = new TabPage();
+            exitButton = new Button();
+            aboutLabel = new Label();
+            notifyIcon = new NotifyIcon(components);
+            tableLayoutPanel2 = new TableLayoutPanel();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            ((ISupportInitialize)content).BeginInit();
+            content.Panel1.SuspendLayout();
+            content.Panel2.SuspendLayout();
+            content.SuspendLayout();
+            buttonsPanel.SuspendLayout();
+            ((ISupportInitialize)iconBox).BeginInit();
+            contentTabs.SuspendLayout();
+            diary.SuspendLayout();
+            groupPanel.SuspendLayout();
+            diaryTable.SuspendLayout();
+            days.SuspendLayout();
+            todayTomorrow.SuspendLayout();
+            profile.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
+            recordBook.SuspendLayout();
+            recordsTable.SuspendLayout();
+            semesterPanel.SuspendLayout();
+            info.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
+            SuspendLayout();
             // 
             // content
             // 
-            this.content.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content.Location = new System.Drawing.Point(0, 0);
-            this.content.Name = "content";
+            content.Dock = DockStyle.Fill;
+            content.Location = new Point(0, 0);
+            content.Margin = new Padding(4, 3, 4, 3);
+            content.Name = "content";
             // 
             // content.Panel1
             // 
-            this.content.Panel1.Controls.Add(this.buttonsPanel);
-            this.content.Panel1MinSize = 230;
+            content.Panel1.Controls.Add(buttonsPanel);
+            content.Panel1MinSize = 230;
             // 
             // content.Panel2
             // 
-            this.content.Panel2.Controls.Add(this.contentTabs);
-            this.content.Panel2MinSize = 600;
-            this.content.Size = new System.Drawing.Size(855, 571);
-            this.content.SplitterDistance = 231;
-            this.content.TabIndex = 0;
+            content.Panel2.Controls.Add(contentTabs);
+            content.Panel2MinSize = 600;
+            content.Size = new Size(997, 659);
+            content.SplitterDistance = 269;
+            content.SplitterWidth = 5;
+            content.TabIndex = 0;
             // 
             // buttonsPanel
             // 
-            this.buttonsPanel.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.buttonsPanel.ColumnCount = 1;
-            this.buttonsPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.buttonsPanel.Controls.Add(this.infoButton, 0, 4);
-            this.buttonsPanel.Controls.Add(this.recordBookButton, 0, 3);
-            this.buttonsPanel.Controls.Add(this.diaryButton, 0, 2);
-            this.buttonsPanel.Controls.Add(this.iconBox, 0, 0);
-            this.buttonsPanel.Controls.Add(this.profileButton, 0, 1);
-            this.buttonsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonsPanel.Location = new System.Drawing.Point(0, 0);
-            this.buttonsPanel.Name = "buttonsPanel";
-            this.buttonsPanel.RowCount = 5;
-            this.buttonsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.buttonsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.buttonsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.buttonsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.buttonsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.buttonsPanel.Size = new System.Drawing.Size(231, 571);
-            this.buttonsPanel.TabIndex = 0;
+            buttonsPanel.BackColor = SystemColors.AppWorkspace;
+            buttonsPanel.ColumnCount = 1;
+            buttonsPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            buttonsPanel.Controls.Add(infoButton, 0, 4);
+            buttonsPanel.Controls.Add(recordBookButton, 0, 3);
+            buttonsPanel.Controls.Add(diaryButton, 0, 2);
+            buttonsPanel.Controls.Add(iconBox, 0, 0);
+            buttonsPanel.Controls.Add(profileButton, 0, 1);
+            buttonsPanel.Dock = DockStyle.Fill;
+            buttonsPanel.Location = new Point(0, 0);
+            buttonsPanel.Margin = new Padding(4, 3, 4, 3);
+            buttonsPanel.Name = "buttonsPanel";
+            buttonsPanel.RowCount = 5;
+            buttonsPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            buttonsPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            buttonsPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            buttonsPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            buttonsPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            buttonsPanel.Size = new Size(269, 659);
+            buttonsPanel.TabIndex = 0;
             // 
             // infoButton
             // 
-            this.infoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.infoButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.infoButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.infoButton.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.infoButton.Location = new System.Drawing.Point(3, 459);
-            this.infoButton.Name = "infoButton";
-            this.infoButton.Size = new System.Drawing.Size(225, 109);
-            this.infoButton.TabIndex = 4;
-            this.infoButton.Text = "О программе";
-            this.infoButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.infoButton.UseVisualStyleBackColor = false;
-            this.infoButton.Click += new System.EventHandler(this.infoButton_Click);
+            infoButton.BackColor = Color.FromArgb(232, 232, 232);
+            infoButton.Dock = DockStyle.Fill;
+            infoButton.FlatAppearance.BorderColor = Color.Black;
+            infoButton.Font = new Font("Microsoft YaHei", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            infoButton.Location = new Point(4, 527);
+            infoButton.Margin = new Padding(4, 3, 4, 3);
+            infoButton.Name = "infoButton";
+            infoButton.Size = new Size(261, 129);
+            infoButton.TabIndex = 4;
+            infoButton.Text = "О программе";
+            infoButton.TextAlign = ContentAlignment.MiddleLeft;
+            infoButton.UseVisualStyleBackColor = false;
+            infoButton.Click += infoButton_Click;
             // 
             // recordBookButton
             // 
-            this.recordBookButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.recordBookButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.recordBookButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.recordBookButton.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.recordBookButton.Location = new System.Drawing.Point(3, 345);
-            this.recordBookButton.Name = "recordBookButton";
-            this.recordBookButton.Size = new System.Drawing.Size(225, 108);
-            this.recordBookButton.TabIndex = 3;
-            this.recordBookButton.Text = "Зачетная книжка";
-            this.recordBookButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.recordBookButton.UseVisualStyleBackColor = false;
-            this.recordBookButton.Click += new System.EventHandler(this.recordBookButton_Click);
+            recordBookButton.BackColor = Color.FromArgb(232, 232, 232);
+            recordBookButton.Dock = DockStyle.Fill;
+            recordBookButton.FlatAppearance.BorderColor = Color.Black;
+            recordBookButton.Font = new Font("Microsoft YaHei", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            recordBookButton.Location = new Point(4, 396);
+            recordBookButton.Margin = new Padding(4, 3, 4, 3);
+            recordBookButton.Name = "recordBookButton";
+            recordBookButton.Size = new Size(261, 125);
+            recordBookButton.TabIndex = 3;
+            recordBookButton.Text = "Зачетная книжка";
+            recordBookButton.TextAlign = ContentAlignment.MiddleLeft;
+            recordBookButton.UseVisualStyleBackColor = false;
+            recordBookButton.Click += recordBookButton_Click;
             // 
             // diaryButton
             // 
-            this.diaryButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.diaryButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.diaryButton.Enabled = false;
-            this.diaryButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.diaryButton.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.diaryButton.Location = new System.Drawing.Point(3, 231);
-            this.diaryButton.Name = "diaryButton";
-            this.diaryButton.Size = new System.Drawing.Size(225, 108);
-            this.diaryButton.TabIndex = 2;
-            this.diaryButton.Text = "Электронный дневник";
-            this.diaryButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.diaryButton.UseVisualStyleBackColor = false;
-            this.diaryButton.Click += new System.EventHandler(this.diaryButton_Click);
+            diaryButton.BackColor = Color.FromArgb(232, 232, 232);
+            diaryButton.Dock = DockStyle.Fill;
+            diaryButton.Enabled = false;
+            diaryButton.FlatAppearance.BorderColor = Color.Black;
+            diaryButton.Font = new Font("Microsoft YaHei", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            diaryButton.Location = new Point(4, 265);
+            diaryButton.Margin = new Padding(4, 3, 4, 3);
+            diaryButton.Name = "diaryButton";
+            diaryButton.Size = new Size(261, 125);
+            diaryButton.TabIndex = 2;
+            diaryButton.Text = "Электронный дневник";
+            diaryButton.TextAlign = ContentAlignment.MiddleLeft;
+            diaryButton.UseVisualStyleBackColor = false;
+            diaryButton.Click += diaryButton_Click;
             // 
             // iconBox
             // 
-            this.iconBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.iconBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.iconBox.Image = ((System.Drawing.Image)(resources.GetObject("iconBox.Image")));
-            this.iconBox.Location = new System.Drawing.Point(3, 3);
-            this.iconBox.Name = "iconBox";
-            this.iconBox.Size = new System.Drawing.Size(225, 108);
-            this.iconBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconBox.TabIndex = 0;
-            this.iconBox.TabStop = false;
+            iconBox.BackColor = Color.FromArgb(232, 232, 232);
+            iconBox.Dock = DockStyle.Fill;
+            iconBox.Image = (Image)resources.GetObject("iconBox.Image");
+            iconBox.Location = new Point(4, 3);
+            iconBox.Margin = new Padding(4, 3, 4, 3);
+            iconBox.Name = "iconBox";
+            iconBox.Size = new Size(261, 125);
+            iconBox.SizeMode = PictureBoxSizeMode.Zoom;
+            iconBox.TabIndex = 0;
+            iconBox.TabStop = false;
             // 
             // profileButton
             // 
-            this.profileButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.profileButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.profileButton.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.profileButton.Location = new System.Drawing.Point(3, 117);
-            this.profileButton.Name = "profileButton";
-            this.profileButton.Size = new System.Drawing.Size(225, 108);
-            this.profileButton.TabIndex = 1;
-            this.profileButton.Text = "Мой профиль";
-            this.profileButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.profileButton.UseVisualStyleBackColor = false;
-            this.profileButton.Click += new System.EventHandler(this.profileButton_Click);
+            profileButton.BackColor = Color.FromArgb(232, 232, 232);
+            profileButton.Dock = DockStyle.Fill;
+            profileButton.FlatAppearance.BorderColor = Color.Black;
+            profileButton.Font = new Font("Microsoft YaHei", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            profileButton.Location = new Point(4, 134);
+            profileButton.Margin = new Padding(4, 3, 4, 3);
+            profileButton.Name = "profileButton";
+            profileButton.Size = new Size(261, 125);
+            profileButton.TabIndex = 1;
+            profileButton.Text = "Мой профиль";
+            profileButton.TextAlign = ContentAlignment.MiddleLeft;
+            profileButton.UseVisualStyleBackColor = false;
+            profileButton.Click += profileButton_Click;
             // 
             // contentTabs
             // 
-            this.contentTabs.Appearance = System.Windows.Forms.TabAppearance.Buttons;
-            this.contentTabs.Controls.Add(this.diary);
-            this.contentTabs.Controls.Add(this.profile);
-            this.contentTabs.Controls.Add(this.recordBook);
-            this.contentTabs.Controls.Add(this.info);
-            this.contentTabs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contentTabs.Font = new System.Drawing.Font("Consolas", 8.25F);
-            this.contentTabs.ItemSize = new System.Drawing.Size(0, 10);
-            this.contentTabs.Location = new System.Drawing.Point(0, 0);
-            this.contentTabs.Multiline = true;
-            this.contentTabs.Name = "contentTabs";
-            this.contentTabs.SelectedIndex = 0;
-            this.contentTabs.Size = new System.Drawing.Size(620, 571);
-            this.contentTabs.TabIndex = 0;
+            contentTabs.Appearance = TabAppearance.Buttons;
+            contentTabs.Controls.Add(diary);
+            contentTabs.Controls.Add(profile);
+            contentTabs.Controls.Add(recordBook);
+            contentTabs.Controls.Add(info);
+            contentTabs.Dock = DockStyle.Fill;
+            contentTabs.Font = new Font("Consolas", 8.25F);
+            contentTabs.ItemSize = new Size(0, 10);
+            contentTabs.Location = new Point(0, 0);
+            contentTabs.Margin = new Padding(4, 3, 4, 3);
+            contentTabs.Multiline = true;
+            contentTabs.Name = "contentTabs";
+            contentTabs.SelectedIndex = 0;
+            contentTabs.Size = new Size(723, 659);
+            contentTabs.TabIndex = 0;
             // 
             // diary
             // 
-            this.diary.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.diary.Controls.Add(this.groupPanel);
-            this.diary.Controls.Add(this.diaryTable);
-            this.diary.Controls.Add(this.days);
-            this.diary.Controls.Add(this.todayTomorrow);
-            this.diary.Location = new System.Drawing.Point(4, 14);
-            this.diary.Name = "diary";
-            this.diary.Padding = new System.Windows.Forms.Padding(3);
-            this.diary.Size = new System.Drawing.Size(612, 553);
-            this.diary.TabIndex = 1;
-            this.diary.Text = "Diary";
+            diary.BackColor = SystemColors.ActiveBorder;
+            diary.Controls.Add(groupPanel);
+            diary.Controls.Add(diaryTable);
+            diary.Controls.Add(days);
+            diary.Controls.Add(todayTomorrow);
+            diary.Location = new Point(4, 14);
+            diary.Margin = new Padding(4, 3, 4, 3);
+            diary.Name = "diary";
+            diary.Padding = new Padding(4, 3, 4, 3);
+            diary.Size = new Size(715, 641);
+            diary.TabIndex = 1;
+            diary.Text = "Diary";
             // 
             // groupPanel
             // 
-            this.groupPanel.Controls.Add(this.groupBox);
-            this.groupPanel.Controls.Add(this.groupLabel);
-            this.groupPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupPanel.Location = new System.Drawing.Point(3, 513);
-            this.groupPanel.Name = "groupPanel";
-            this.groupPanel.Size = new System.Drawing.Size(606, 37);
-            this.groupPanel.TabIndex = 3;
+            groupPanel.Controls.Add(groupBox);
+            groupPanel.Controls.Add(groupLabel);
+            groupPanel.Dock = DockStyle.Bottom;
+            groupPanel.Location = new Point(4, 595);
+            groupPanel.Margin = new Padding(4, 3, 4, 3);
+            groupPanel.Name = "groupPanel";
+            groupPanel.Size = new Size(707, 43);
+            groupPanel.TabIndex = 3;
             // 
             // groupBox
             // 
-            this.groupBox.Enabled = false;
-            this.groupBox.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox.FormattingEnabled = true;
-            this.groupBox.ItemHeight = 19;
-            this.groupBox.Items.AddRange(new object[] { "09-321(1)", "09-321(2)", "09-322(1)", "09-322(2)" });
-            this.groupBox.Location = new System.Drawing.Point(113, 3);
-            this.groupBox.Name = "groupBox";
-            this.groupBox.Size = new System.Drawing.Size(107, 23);
-            this.groupBox.TabIndex = 1;
+            groupBox.Enabled = false;
+            groupBox.Font = new Font("Microsoft YaHei", 10F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            groupBox.FormattingEnabled = true;
+            groupBox.ItemHeight = 19;
+            groupBox.Items.AddRange(new object[] { "09-321(1)", "09-321(2)", "09-322(1)", "09-322(2)" });
+            groupBox.Location = new Point(132, 3);
+            groupBox.Margin = new Padding(4, 3, 4, 3);
+            groupBox.Name = "groupBox";
+            groupBox.Size = new Size(124, 23);
+            groupBox.TabIndex = 1;
             // 
             // groupLabel
             // 
-            this.groupLabel.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupLabel.Location = new System.Drawing.Point(3, 3);
-            this.groupLabel.Name = "groupLabel";
-            this.groupLabel.Size = new System.Drawing.Size(104, 29);
-            this.groupLabel.TabIndex = 0;
-            this.groupLabel.Text = "Группа №";
+            groupLabel.Font = new Font("Microsoft YaHei", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            groupLabel.Location = new Point(4, 3);
+            groupLabel.Margin = new Padding(4, 0, 4, 0);
+            groupLabel.Name = "groupLabel";
+            groupLabel.Size = new Size(121, 33);
+            groupLabel.TabIndex = 0;
+            groupLabel.Text = "Группа №";
             // 
             // diaryTable
             // 
-            this.diaryTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.diaryTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.diaryTable.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.diaryTable.ColumnCount = 3;
-            this.diaryTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.diaryTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.diaryTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.diaryTable.Controls.Add(this.time6, 0, 6);
-            this.diaryTable.Controls.Add(this.time5, 0, 5);
-            this.diaryTable.Controls.Add(this.time4, 0, 4);
-            this.diaryTable.Controls.Add(this.time3, 0, 3);
-            this.diaryTable.Controls.Add(this.time2, 0, 2);
-            this.diaryTable.Controls.Add(this.cabinetBox6, 2, 6);
-            this.diaryTable.Controls.Add(this.lectureBox6, 1, 6);
-            this.diaryTable.Controls.Add(this.cabinetBox5, 2, 5);
-            this.diaryTable.Controls.Add(this.lectureBox5, 1, 5);
-            this.diaryTable.Controls.Add(this.cabinetBox4, 2, 4);
-            this.diaryTable.Controls.Add(this.lectureBox4, 1, 4);
-            this.diaryTable.Controls.Add(this.cabinetBox3, 2, 3);
-            this.diaryTable.Controls.Add(this.lectureBox3, 1, 3);
-            this.diaryTable.Controls.Add(this.cabinetBox2, 2, 2);
-            this.diaryTable.Controls.Add(this.lectureBox2, 1, 2);
-            this.diaryTable.Controls.Add(this.cabinetBox1, 2, 1);
-            this.diaryTable.Controls.Add(this.time1, 0, 1);
-            this.diaryTable.Controls.Add(this.cabinetLable, 2, 0);
-            this.diaryTable.Controls.Add(this.lectureLabel, 1, 0);
-            this.diaryTable.Controls.Add(this.timeLabel, 0, 0);
-            this.diaryTable.Controls.Add(this.lectureBox1, 1, 1);
-            this.diaryTable.Location = new System.Drawing.Point(6, 64);
-            this.diaryTable.Name = "diaryTable";
-            this.diaryTable.RowCount = 7;
-            this.diaryTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.diaryTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.diaryTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.diaryTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.diaryTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.diaryTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.diaryTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.diaryTable.Size = new System.Drawing.Size(598, 431);
-            this.diaryTable.TabIndex = 2;
+            diaryTable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            diaryTable.BackColor = Color.FromArgb(232, 232, 232);
+            diaryTable.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
+            diaryTable.ColumnCount = 3;
+            diaryTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 70F));
+            diaryTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
+            diaryTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
+            diaryTable.Controls.Add(time6, 0, 6);
+            diaryTable.Controls.Add(time5, 0, 5);
+            diaryTable.Controls.Add(time4, 0, 4);
+            diaryTable.Controls.Add(time3, 0, 3);
+            diaryTable.Controls.Add(time2, 0, 2);
+            diaryTable.Controls.Add(cabinetBox6, 2, 6);
+            diaryTable.Controls.Add(lectureBox6, 1, 6);
+            diaryTable.Controls.Add(cabinetBox5, 2, 5);
+            diaryTable.Controls.Add(lectureBox5, 1, 5);
+            diaryTable.Controls.Add(cabinetBox4, 2, 4);
+            diaryTable.Controls.Add(lectureBox4, 1, 4);
+            diaryTable.Controls.Add(cabinetBox3, 2, 3);
+            diaryTable.Controls.Add(lectureBox3, 1, 3);
+            diaryTable.Controls.Add(cabinetBox2, 2, 2);
+            diaryTable.Controls.Add(lectureBox2, 1, 2);
+            diaryTable.Controls.Add(cabinetBox1, 2, 1);
+            diaryTable.Controls.Add(time1, 0, 1);
+            diaryTable.Controls.Add(cabinetLable, 2, 0);
+            diaryTable.Controls.Add(lectureLabel, 1, 0);
+            diaryTable.Controls.Add(timeLabel, 0, 0);
+            diaryTable.Controls.Add(lectureBox1, 1, 1);
+            diaryTable.Location = new Point(7, 74);
+            diaryTable.Margin = new Padding(4, 3, 4, 3);
+            diaryTable.Name = "diaryTable";
+            diaryTable.RowCount = 7;
+            diaryTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 46F));
+            diaryTable.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667F));
+            diaryTable.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667F));
+            diaryTable.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667F));
+            diaryTable.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667F));
+            diaryTable.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667F));
+            diaryTable.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667F));
+            diaryTable.Size = new Size(698, 497);
+            diaryTable.TabIndex = 2;
             // 
             // time6
             // 
-            this.time6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.time6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.time6.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.time6.Location = new System.Drawing.Point(4, 362);
-            this.time6.Name = "time6";
-            this.time6.Size = new System.Drawing.Size(54, 68);
-            this.time6.TabIndex = 36;
-            this.time6.Text = "19:10\r\n-\r\n20:40";
-            this.time6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            time6.BackColor = Color.FromArgb(232, 232, 232);
+            time6.Dock = DockStyle.Fill;
+            time6.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            time6.Location = new Point(5, 418);
+            time6.Margin = new Padding(4, 0, 4, 0);
+            time6.Name = "time6";
+            time6.Size = new Size(62, 78);
+            time6.TabIndex = 36;
+            time6.Text = "19:10\r\n-\r\n20:40";
+            time6.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // time5
             // 
-            this.time5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.time5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.time5.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.time5.Location = new System.Drawing.Point(4, 298);
-            this.time5.Name = "time5";
-            this.time5.Size = new System.Drawing.Size(54, 63);
-            this.time5.TabIndex = 35;
-            this.time5.Text = "17:30\r\n-\r\n19:00";
-            this.time5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            time5.BackColor = Color.FromArgb(232, 232, 232);
+            time5.Dock = DockStyle.Fill;
+            time5.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            time5.Location = new Point(5, 344);
+            time5.Margin = new Padding(4, 0, 4, 0);
+            time5.Name = "time5";
+            time5.Size = new Size(62, 73);
+            time5.TabIndex = 35;
+            time5.Text = "17:30\r\n-\r\n19:00";
+            time5.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // time4
             // 
-            this.time4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.time4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.time4.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.time4.Location = new System.Drawing.Point(4, 234);
-            this.time4.Name = "time4";
-            this.time4.Size = new System.Drawing.Size(54, 63);
-            this.time4.TabIndex = 34;
-            this.time4.Text = "13:50\r\n-\r\n15:20";
-            this.time4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            time4.BackColor = Color.FromArgb(232, 232, 232);
+            time4.Dock = DockStyle.Fill;
+            time4.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            time4.Location = new Point(5, 270);
+            time4.Margin = new Padding(4, 0, 4, 0);
+            time4.Name = "time4";
+            time4.Size = new Size(62, 73);
+            time4.TabIndex = 34;
+            time4.Text = "13:50\r\n-\r\n15:20";
+            time4.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // time3
             // 
-            this.time3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.time3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.time3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.time3.Location = new System.Drawing.Point(4, 170);
-            this.time3.Name = "time3";
-            this.time3.Size = new System.Drawing.Size(54, 63);
-            this.time3.TabIndex = 33;
-            this.time3.Text = "12:10\r\n-\r\n13:40";
-            this.time3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            time3.BackColor = Color.FromArgb(232, 232, 232);
+            time3.Dock = DockStyle.Fill;
+            time3.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            time3.Location = new Point(5, 196);
+            time3.Margin = new Padding(4, 0, 4, 0);
+            time3.Name = "time3";
+            time3.Size = new Size(62, 73);
+            time3.TabIndex = 33;
+            time3.Text = "12:10\r\n-\r\n13:40";
+            time3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // time2
             // 
-            this.time2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.time2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.time2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.time2.Location = new System.Drawing.Point(4, 106);
-            this.time2.Name = "time2";
-            this.time2.Size = new System.Drawing.Size(54, 63);
-            this.time2.TabIndex = 32;
-            this.time2.Text = "10:10\r\n-\r\n11:40";
-            this.time2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            time2.BackColor = Color.FromArgb(232, 232, 232);
+            time2.Dock = DockStyle.Fill;
+            time2.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            time2.Location = new Point(5, 122);
+            time2.Margin = new Padding(4, 0, 4, 0);
+            time2.Name = "time2";
+            time2.Size = new Size(62, 73);
+            time2.TabIndex = 32;
+            time2.Text = "10:10\r\n-\r\n11:40";
+            time2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // cabinetBox6
             // 
-            this.cabinetBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.cabinetBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cabinetBox6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cabinetBox6.Enabled = false;
-            this.cabinetBox6.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cabinetBox6.FormattingEnabled = true;
-            this.cabinetBox6.ItemHeight = 19;
-            this.cabinetBox6.Items.AddRange(new object[] { "Матан" });
-            this.cabinetBox6.Location = new System.Drawing.Point(439, 365);
-            this.cabinetBox6.Name = "cabinetBox6";
-            this.cabinetBox6.Size = new System.Drawing.Size(155, 19);
-            this.cabinetBox6.TabIndex = 31;
+            cabinetBox6.BackColor = Color.FromArgb(232, 232, 232);
+            cabinetBox6.BorderStyle = BorderStyle.None;
+            cabinetBox6.Dock = DockStyle.Top;
+            cabinetBox6.Enabled = false;
+            cabinetBox6.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            cabinetBox6.FormattingEnabled = true;
+            cabinetBox6.ItemHeight = 19;
+            cabinetBox6.Items.AddRange(new object[] { "Матан" });
+            cabinetBox6.Location = new Point(513, 421);
+            cabinetBox6.Margin = new Padding(4, 3, 4, 3);
+            cabinetBox6.Name = "cabinetBox6";
+            cabinetBox6.Size = new Size(180, 19);
+            cabinetBox6.TabIndex = 31;
             // 
             // lectureBox6
             // 
-            this.lectureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.lectureBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lectureBox6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lectureBox6.Enabled = false;
-            this.lectureBox6.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lectureBox6.FormattingEnabled = true;
-            this.lectureBox6.ItemHeight = 19;
-            this.lectureBox6.Items.AddRange(new object[] { "Матан" });
-            this.lectureBox6.Location = new System.Drawing.Point(65, 365);
-            this.lectureBox6.Name = "lectureBox6";
-            this.lectureBox6.Size = new System.Drawing.Size(367, 19);
-            this.lectureBox6.TabIndex = 30;
+            lectureBox6.BackColor = Color.FromArgb(232, 232, 232);
+            lectureBox6.BorderStyle = BorderStyle.None;
+            lectureBox6.Dock = DockStyle.Top;
+            lectureBox6.Enabled = false;
+            lectureBox6.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            lectureBox6.FormattingEnabled = true;
+            lectureBox6.ItemHeight = 19;
+            lectureBox6.Items.AddRange(new object[] { "Матан" });
+            lectureBox6.Location = new Point(76, 421);
+            lectureBox6.Margin = new Padding(4, 3, 4, 3);
+            lectureBox6.Name = "lectureBox6";
+            lectureBox6.Size = new Size(428, 19);
+            lectureBox6.TabIndex = 30;
             // 
             // cabinetBox5
             // 
-            this.cabinetBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.cabinetBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cabinetBox5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cabinetBox5.Enabled = false;
-            this.cabinetBox5.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cabinetBox5.FormattingEnabled = true;
-            this.cabinetBox5.ItemHeight = 19;
-            this.cabinetBox5.Items.AddRange(new object[] { "Матан" });
-            this.cabinetBox5.Location = new System.Drawing.Point(439, 301);
-            this.cabinetBox5.Name = "cabinetBox5";
-            this.cabinetBox5.Size = new System.Drawing.Size(155, 19);
-            this.cabinetBox5.TabIndex = 29;
+            cabinetBox5.BackColor = Color.FromArgb(232, 232, 232);
+            cabinetBox5.BorderStyle = BorderStyle.None;
+            cabinetBox5.Dock = DockStyle.Top;
+            cabinetBox5.Enabled = false;
+            cabinetBox5.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            cabinetBox5.FormattingEnabled = true;
+            cabinetBox5.ItemHeight = 19;
+            cabinetBox5.Items.AddRange(new object[] { "Матан" });
+            cabinetBox5.Location = new Point(513, 347);
+            cabinetBox5.Margin = new Padding(4, 3, 4, 3);
+            cabinetBox5.Name = "cabinetBox5";
+            cabinetBox5.Size = new Size(180, 19);
+            cabinetBox5.TabIndex = 29;
             // 
             // lectureBox5
             // 
-            this.lectureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.lectureBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lectureBox5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lectureBox5.Enabled = false;
-            this.lectureBox5.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lectureBox5.FormattingEnabled = true;
-            this.lectureBox5.ItemHeight = 19;
-            this.lectureBox5.Items.AddRange(new object[] { "Матан" });
-            this.lectureBox5.Location = new System.Drawing.Point(65, 301);
-            this.lectureBox5.Name = "lectureBox5";
-            this.lectureBox5.Size = new System.Drawing.Size(367, 19);
-            this.lectureBox5.TabIndex = 28;
+            lectureBox5.BackColor = Color.FromArgb(232, 232, 232);
+            lectureBox5.BorderStyle = BorderStyle.None;
+            lectureBox5.Dock = DockStyle.Top;
+            lectureBox5.Enabled = false;
+            lectureBox5.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            lectureBox5.FormattingEnabled = true;
+            lectureBox5.ItemHeight = 19;
+            lectureBox5.Items.AddRange(new object[] { "Матан" });
+            lectureBox5.Location = new Point(76, 347);
+            lectureBox5.Margin = new Padding(4, 3, 4, 3);
+            lectureBox5.Name = "lectureBox5";
+            lectureBox5.Size = new Size(428, 19);
+            lectureBox5.TabIndex = 28;
             // 
             // cabinetBox4
             // 
-            this.cabinetBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.cabinetBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cabinetBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cabinetBox4.Enabled = false;
-            this.cabinetBox4.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cabinetBox4.FormattingEnabled = true;
-            this.cabinetBox4.ItemHeight = 19;
-            this.cabinetBox4.Items.AddRange(new object[] { "Матан" });
-            this.cabinetBox4.Location = new System.Drawing.Point(439, 237);
-            this.cabinetBox4.Name = "cabinetBox4";
-            this.cabinetBox4.Size = new System.Drawing.Size(155, 19);
-            this.cabinetBox4.TabIndex = 27;
+            cabinetBox4.BackColor = Color.FromArgb(232, 232, 232);
+            cabinetBox4.BorderStyle = BorderStyle.None;
+            cabinetBox4.Dock = DockStyle.Top;
+            cabinetBox4.Enabled = false;
+            cabinetBox4.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            cabinetBox4.FormattingEnabled = true;
+            cabinetBox4.ItemHeight = 19;
+            cabinetBox4.Items.AddRange(new object[] { "Матан" });
+            cabinetBox4.Location = new Point(513, 273);
+            cabinetBox4.Margin = new Padding(4, 3, 4, 3);
+            cabinetBox4.Name = "cabinetBox4";
+            cabinetBox4.Size = new Size(180, 19);
+            cabinetBox4.TabIndex = 27;
             // 
             // lectureBox4
             // 
-            this.lectureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.lectureBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lectureBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lectureBox4.Enabled = false;
-            this.lectureBox4.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lectureBox4.FormattingEnabled = true;
-            this.lectureBox4.ItemHeight = 19;
-            this.lectureBox4.Items.AddRange(new object[] { "Матан" });
-            this.lectureBox4.Location = new System.Drawing.Point(65, 237);
-            this.lectureBox4.Name = "lectureBox4";
-            this.lectureBox4.Size = new System.Drawing.Size(367, 19);
-            this.lectureBox4.TabIndex = 26;
+            lectureBox4.BackColor = Color.FromArgb(232, 232, 232);
+            lectureBox4.BorderStyle = BorderStyle.None;
+            lectureBox4.Dock = DockStyle.Top;
+            lectureBox4.Enabled = false;
+            lectureBox4.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            lectureBox4.FormattingEnabled = true;
+            lectureBox4.ItemHeight = 19;
+            lectureBox4.Items.AddRange(new object[] { "Матан" });
+            lectureBox4.Location = new Point(76, 273);
+            lectureBox4.Margin = new Padding(4, 3, 4, 3);
+            lectureBox4.Name = "lectureBox4";
+            lectureBox4.Size = new Size(428, 19);
+            lectureBox4.TabIndex = 26;
             // 
             // cabinetBox3
             // 
-            this.cabinetBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.cabinetBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cabinetBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cabinetBox3.Enabled = false;
-            this.cabinetBox3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cabinetBox3.FormattingEnabled = true;
-            this.cabinetBox3.ItemHeight = 19;
-            this.cabinetBox3.Items.AddRange(new object[] { "Матан" });
-            this.cabinetBox3.Location = new System.Drawing.Point(439, 173);
-            this.cabinetBox3.Name = "cabinetBox3";
-            this.cabinetBox3.Size = new System.Drawing.Size(155, 19);
-            this.cabinetBox3.TabIndex = 25;
+            cabinetBox3.BackColor = Color.FromArgb(232, 232, 232);
+            cabinetBox3.BorderStyle = BorderStyle.None;
+            cabinetBox3.Dock = DockStyle.Top;
+            cabinetBox3.Enabled = false;
+            cabinetBox3.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            cabinetBox3.FormattingEnabled = true;
+            cabinetBox3.ItemHeight = 19;
+            cabinetBox3.Items.AddRange(new object[] { "Матан" });
+            cabinetBox3.Location = new Point(513, 199);
+            cabinetBox3.Margin = new Padding(4, 3, 4, 3);
+            cabinetBox3.Name = "cabinetBox3";
+            cabinetBox3.Size = new Size(180, 19);
+            cabinetBox3.TabIndex = 25;
             // 
             // lectureBox3
             // 
-            this.lectureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.lectureBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lectureBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lectureBox3.Enabled = false;
-            this.lectureBox3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lectureBox3.FormattingEnabled = true;
-            this.lectureBox3.ItemHeight = 19;
-            this.lectureBox3.Items.AddRange(new object[] { "Матан" });
-            this.lectureBox3.Location = new System.Drawing.Point(65, 173);
-            this.lectureBox3.Name = "lectureBox3";
-            this.lectureBox3.Size = new System.Drawing.Size(367, 19);
-            this.lectureBox3.TabIndex = 24;
+            lectureBox3.BackColor = Color.FromArgb(232, 232, 232);
+            lectureBox3.BorderStyle = BorderStyle.None;
+            lectureBox3.Dock = DockStyle.Top;
+            lectureBox3.Enabled = false;
+            lectureBox3.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            lectureBox3.FormattingEnabled = true;
+            lectureBox3.ItemHeight = 19;
+            lectureBox3.Items.AddRange(new object[] { "Матан" });
+            lectureBox3.Location = new Point(76, 199);
+            lectureBox3.Margin = new Padding(4, 3, 4, 3);
+            lectureBox3.Name = "lectureBox3";
+            lectureBox3.Size = new Size(428, 19);
+            lectureBox3.TabIndex = 24;
             // 
             // cabinetBox2
             // 
-            this.cabinetBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.cabinetBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cabinetBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cabinetBox2.Enabled = false;
-            this.cabinetBox2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cabinetBox2.FormattingEnabled = true;
-            this.cabinetBox2.ItemHeight = 19;
-            this.cabinetBox2.Items.AddRange(new object[] { "Матан" });
-            this.cabinetBox2.Location = new System.Drawing.Point(439, 109);
-            this.cabinetBox2.Name = "cabinetBox2";
-            this.cabinetBox2.Size = new System.Drawing.Size(155, 19);
-            this.cabinetBox2.TabIndex = 23;
+            cabinetBox2.BackColor = Color.FromArgb(232, 232, 232);
+            cabinetBox2.BorderStyle = BorderStyle.None;
+            cabinetBox2.Dock = DockStyle.Top;
+            cabinetBox2.Enabled = false;
+            cabinetBox2.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            cabinetBox2.FormattingEnabled = true;
+            cabinetBox2.ItemHeight = 19;
+            cabinetBox2.Items.AddRange(new object[] { "Матан" });
+            cabinetBox2.Location = new Point(513, 125);
+            cabinetBox2.Margin = new Padding(4, 3, 4, 3);
+            cabinetBox2.Name = "cabinetBox2";
+            cabinetBox2.Size = new Size(180, 19);
+            cabinetBox2.TabIndex = 23;
             // 
             // lectureBox2
             // 
-            this.lectureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.lectureBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lectureBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lectureBox2.Enabled = false;
-            this.lectureBox2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lectureBox2.FormattingEnabled = true;
-            this.lectureBox2.ItemHeight = 19;
-            this.lectureBox2.Items.AddRange(new object[] { "Матан" });
-            this.lectureBox2.Location = new System.Drawing.Point(65, 109);
-            this.lectureBox2.Name = "lectureBox2";
-            this.lectureBox2.Size = new System.Drawing.Size(367, 19);
-            this.lectureBox2.TabIndex = 22;
+            lectureBox2.BackColor = Color.FromArgb(232, 232, 232);
+            lectureBox2.BorderStyle = BorderStyle.None;
+            lectureBox2.Dock = DockStyle.Top;
+            lectureBox2.Enabled = false;
+            lectureBox2.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            lectureBox2.FormattingEnabled = true;
+            lectureBox2.ItemHeight = 19;
+            lectureBox2.Items.AddRange(new object[] { "Матан" });
+            lectureBox2.Location = new Point(76, 125);
+            lectureBox2.Margin = new Padding(4, 3, 4, 3);
+            lectureBox2.Name = "lectureBox2";
+            lectureBox2.Size = new Size(428, 19);
+            lectureBox2.TabIndex = 22;
             // 
             // cabinetBox1
             // 
-            this.cabinetBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.cabinetBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cabinetBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cabinetBox1.Enabled = false;
-            this.cabinetBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cabinetBox1.FormattingEnabled = true;
-            this.cabinetBox1.ItemHeight = 19;
-            this.cabinetBox1.Items.AddRange(new object[] { "Матан" });
-            this.cabinetBox1.Location = new System.Drawing.Point(439, 45);
-            this.cabinetBox1.Name = "cabinetBox1";
-            this.cabinetBox1.Size = new System.Drawing.Size(155, 19);
-            this.cabinetBox1.TabIndex = 20;
+            cabinetBox1.BackColor = Color.FromArgb(232, 232, 232);
+            cabinetBox1.BorderStyle = BorderStyle.None;
+            cabinetBox1.Dock = DockStyle.Top;
+            cabinetBox1.Enabled = false;
+            cabinetBox1.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            cabinetBox1.FormattingEnabled = true;
+            cabinetBox1.ItemHeight = 19;
+            cabinetBox1.Items.AddRange(new object[] { "Матан" });
+            cabinetBox1.Location = new Point(513, 51);
+            cabinetBox1.Margin = new Padding(4, 3, 4, 3);
+            cabinetBox1.Name = "cabinetBox1";
+            cabinetBox1.Size = new Size(180, 19);
+            cabinetBox1.TabIndex = 20;
             // 
             // time1
             // 
-            this.time1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.time1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.time1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.time1.Location = new System.Drawing.Point(4, 42);
-            this.time1.Name = "time1";
-            this.time1.Size = new System.Drawing.Size(54, 63);
-            this.time1.TabIndex = 3;
-            this.time1.Text = "8:30\r\n-\r\n10:00";
-            this.time1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            time1.BackColor = Color.FromArgb(232, 232, 232);
+            time1.Dock = DockStyle.Fill;
+            time1.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            time1.Location = new Point(5, 48);
+            time1.Margin = new Padding(4, 0, 4, 0);
+            time1.Name = "time1";
+            time1.Size = new Size(62, 73);
+            time1.TabIndex = 3;
+            time1.Text = "8:30\r\n-\r\n10:00";
+            time1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // cabinetLable
             // 
-            this.cabinetLable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cabinetLable.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cabinetLable.Location = new System.Drawing.Point(439, 1);
-            this.cabinetLable.Name = "cabinetLable";
-            this.cabinetLable.Size = new System.Drawing.Size(155, 40);
-            this.cabinetLable.TabIndex = 2;
-            this.cabinetLable.Text = "Кабинет";
-            this.cabinetLable.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            cabinetLable.Dock = DockStyle.Fill;
+            cabinetLable.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            cabinetLable.Location = new Point(513, 1);
+            cabinetLable.Margin = new Padding(4, 0, 4, 0);
+            cabinetLable.Name = "cabinetLable";
+            cabinetLable.Size = new Size(180, 46);
+            cabinetLable.TabIndex = 2;
+            cabinetLable.Text = "Кабинет";
+            cabinetLable.TextAlign = ContentAlignment.BottomLeft;
             // 
             // lectureLabel
             // 
-            this.lectureLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lectureLabel.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lectureLabel.Location = new System.Drawing.Point(65, 1);
-            this.lectureLabel.Name = "lectureLabel";
-            this.lectureLabel.Size = new System.Drawing.Size(367, 40);
-            this.lectureLabel.TabIndex = 1;
-            this.lectureLabel.Text = "Кабинет";
-            this.lectureLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            lectureLabel.Dock = DockStyle.Fill;
+            lectureLabel.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            lectureLabel.Location = new Point(76, 1);
+            lectureLabel.Margin = new Padding(4, 0, 4, 0);
+            lectureLabel.Name = "lectureLabel";
+            lectureLabel.Size = new Size(428, 46);
+            lectureLabel.TabIndex = 1;
+            lectureLabel.Text = "Кабинет";
+            lectureLabel.TextAlign = ContentAlignment.BottomLeft;
             // 
             // timeLabel
             // 
-            this.timeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.timeLabel.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.timeLabel.Location = new System.Drawing.Point(4, 1);
-            this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(54, 40);
-            this.timeLabel.TabIndex = 0;
-            this.timeLabel.Text = "Время";
-            this.timeLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            timeLabel.Dock = DockStyle.Fill;
+            timeLabel.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            timeLabel.Location = new Point(5, 1);
+            timeLabel.Margin = new Padding(4, 0, 4, 0);
+            timeLabel.Name = "timeLabel";
+            timeLabel.Size = new Size(62, 46);
+            timeLabel.TabIndex = 0;
+            timeLabel.Text = "Время";
+            timeLabel.TextAlign = ContentAlignment.BottomLeft;
             // 
             // lectureBox1
             // 
-            this.lectureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.lectureBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lectureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lectureBox1.Enabled = false;
-            this.lectureBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lectureBox1.FormattingEnabled = true;
-            this.lectureBox1.ItemHeight = 19;
-            this.lectureBox1.Items.AddRange(new object[] { "Матан" });
-            this.lectureBox1.Location = new System.Drawing.Point(65, 45);
-            this.lectureBox1.Name = "lectureBox1";
-            this.lectureBox1.Size = new System.Drawing.Size(367, 19);
-            this.lectureBox1.TabIndex = 19;
+            lectureBox1.BackColor = Color.FromArgb(232, 232, 232);
+            lectureBox1.BorderStyle = BorderStyle.None;
+            lectureBox1.Dock = DockStyle.Top;
+            lectureBox1.Enabled = false;
+            lectureBox1.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            lectureBox1.FormattingEnabled = true;
+            lectureBox1.ItemHeight = 19;
+            lectureBox1.Items.AddRange(new object[] { "Матан" });
+            lectureBox1.Location = new Point(76, 51);
+            lectureBox1.Margin = new Padding(4, 3, 4, 3);
+            lectureBox1.Name = "lectureBox1";
+            lectureBox1.Size = new Size(428, 19);
+            lectureBox1.TabIndex = 19;
             // 
             // days
             // 
-            this.days.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.days.ColumnCount = 6;
-            this.days.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.days.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.days.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.days.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.days.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.days.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.days.Controls.Add(this.st, 5, 0);
-            this.days.Controls.Add(this.fr, 4, 0);
-            this.days.Controls.Add(this.th, 3, 0);
-            this.days.Controls.Add(this.wd, 2, 0);
-            this.days.Controls.Add(this.tu, 1, 0);
-            this.days.Controls.Add(this.mn, 0, 0);
-            this.days.Location = new System.Drawing.Point(274, 6);
-            this.days.Name = "days";
-            this.days.RowCount = 1;
-            this.days.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.days.Size = new System.Drawing.Size(330, 52);
-            this.days.TabIndex = 1;
+            days.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            days.ColumnCount = 6;
+            days.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
+            days.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
+            days.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
+            days.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
+            days.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
+            days.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
+            days.Controls.Add(st, 5, 0);
+            days.Controls.Add(fr, 4, 0);
+            days.Controls.Add(th, 3, 0);
+            days.Controls.Add(wd, 2, 0);
+            days.Controls.Add(tu, 1, 0);
+            days.Controls.Add(mn, 0, 0);
+            days.Location = new Point(320, 7);
+            days.Margin = new Padding(4, 3, 4, 3);
+            days.Name = "days";
+            days.RowCount = 1;
+            days.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            days.Size = new Size(385, 60);
+            days.TabIndex = 1;
             // 
             // st
             // 
-            this.st.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.st.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.st.Location = new System.Drawing.Point(273, 3);
-            this.st.Name = "st";
-            this.st.Size = new System.Drawing.Size(54, 46);
-            this.st.TabIndex = 5;
-            this.st.Text = "СБ";
-            this.st.UseVisualStyleBackColor = true;
+            st.Dock = DockStyle.Fill;
+            st.Font = new Font("Microsoft YaHei", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            st.Location = new Point(324, 3);
+            st.Margin = new Padding(4, 3, 4, 3);
+            st.Name = "st";
+            st.Size = new Size(57, 54);
+            st.TabIndex = 5;
+            st.Text = "СБ";
+            st.UseVisualStyleBackColor = true;
             // 
             // fr
             // 
-            this.fr.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fr.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.fr.Location = new System.Drawing.Point(219, 3);
-            this.fr.Name = "fr";
-            this.fr.Size = new System.Drawing.Size(48, 46);
-            this.fr.TabIndex = 4;
-            this.fr.Text = "ПТ";
-            this.fr.UseVisualStyleBackColor = true;
+            fr.Dock = DockStyle.Fill;
+            fr.Font = new Font("Microsoft YaHei", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            fr.Location = new Point(260, 3);
+            fr.Margin = new Padding(4, 3, 4, 3);
+            fr.Name = "fr";
+            fr.Size = new Size(56, 54);
+            fr.TabIndex = 4;
+            fr.Text = "ПТ";
+            fr.UseVisualStyleBackColor = true;
             // 
             // th
             // 
-            this.th.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.th.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.th.Location = new System.Drawing.Point(165, 3);
-            this.th.Name = "th";
-            this.th.Size = new System.Drawing.Size(48, 46);
-            this.th.TabIndex = 3;
-            this.th.Text = "ЧТ";
-            this.th.UseVisualStyleBackColor = true;
+            th.Dock = DockStyle.Fill;
+            th.Font = new Font("Microsoft YaHei", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            th.Location = new Point(196, 3);
+            th.Margin = new Padding(4, 3, 4, 3);
+            th.Name = "th";
+            th.Size = new Size(56, 54);
+            th.TabIndex = 3;
+            th.Text = "ЧТ";
+            th.UseVisualStyleBackColor = true;
             // 
             // wd
             // 
-            this.wd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.wd.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.wd.Location = new System.Drawing.Point(111, 3);
-            this.wd.Name = "wd";
-            this.wd.Size = new System.Drawing.Size(48, 46);
-            this.wd.TabIndex = 2;
-            this.wd.Text = "СР";
-            this.wd.UseVisualStyleBackColor = true;
+            wd.Dock = DockStyle.Fill;
+            wd.Font = new Font("Microsoft YaHei", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            wd.Location = new Point(132, 3);
+            wd.Margin = new Padding(4, 3, 4, 3);
+            wd.Name = "wd";
+            wd.Size = new Size(56, 54);
+            wd.TabIndex = 2;
+            wd.Text = "СР";
+            wd.UseVisualStyleBackColor = true;
             // 
             // tu
             // 
-            this.tu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tu.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tu.Location = new System.Drawing.Point(57, 3);
-            this.tu.Name = "tu";
-            this.tu.Size = new System.Drawing.Size(48, 46);
-            this.tu.TabIndex = 1;
-            this.tu.Text = "ВТ";
-            this.tu.UseVisualStyleBackColor = true;
+            tu.Dock = DockStyle.Fill;
+            tu.Font = new Font("Microsoft YaHei", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            tu.Location = new Point(68, 3);
+            tu.Margin = new Padding(4, 3, 4, 3);
+            tu.Name = "tu";
+            tu.Size = new Size(56, 54);
+            tu.TabIndex = 1;
+            tu.Text = "ВТ";
+            tu.UseVisualStyleBackColor = true;
             // 
             // mn
             // 
-            this.mn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mn.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.mn.Location = new System.Drawing.Point(3, 3);
-            this.mn.Name = "mn";
-            this.mn.Size = new System.Drawing.Size(48, 46);
-            this.mn.TabIndex = 0;
-            this.mn.Text = "ПН";
-            this.mn.UseVisualStyleBackColor = true;
+            mn.Dock = DockStyle.Fill;
+            mn.Font = new Font("Microsoft YaHei", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            mn.Location = new Point(4, 3);
+            mn.Margin = new Padding(4, 3, 4, 3);
+            mn.Name = "mn";
+            mn.Size = new Size(56, 54);
+            mn.TabIndex = 0;
+            mn.Text = "ПН";
+            mn.UseVisualStyleBackColor = true;
             // 
             // todayTomorrow
             // 
-            this.todayTomorrow.ColumnCount = 2;
-            this.todayTomorrow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.todayTomorrow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.todayTomorrow.Controls.Add(this.tommorow, 0, 0);
-            this.todayTomorrow.Controls.Add(this.today, 0, 0);
-            this.todayTomorrow.Location = new System.Drawing.Point(6, 6);
-            this.todayTomorrow.Name = "todayTomorrow";
-            this.todayTomorrow.RowCount = 1;
-            this.todayTomorrow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.todayTomorrow.Size = new System.Drawing.Size(196, 52);
-            this.todayTomorrow.TabIndex = 0;
+            todayTomorrow.ColumnCount = 2;
+            todayTomorrow.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            todayTomorrow.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            todayTomorrow.Controls.Add(tommorow, 0, 0);
+            todayTomorrow.Controls.Add(today, 0, 0);
+            todayTomorrow.Location = new Point(7, 7);
+            todayTomorrow.Margin = new Padding(4, 3, 4, 3);
+            todayTomorrow.Name = "todayTomorrow";
+            todayTomorrow.RowCount = 1;
+            todayTomorrow.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            todayTomorrow.Size = new Size(229, 60);
+            todayTomorrow.TabIndex = 0;
             // 
             // tommorow
             // 
-            this.tommorow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tommorow.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tommorow.Location = new System.Drawing.Point(101, 3);
-            this.tommorow.Name = "tommorow";
-            this.tommorow.Size = new System.Drawing.Size(92, 46);
-            this.tommorow.TabIndex = 1;
-            this.tommorow.Text = "Завтра";
-            this.tommorow.UseVisualStyleBackColor = true;
+            tommorow.Dock = DockStyle.Fill;
+            tommorow.Font = new Font("Microsoft YaHei", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            tommorow.Location = new Point(118, 3);
+            tommorow.Margin = new Padding(4, 3, 4, 3);
+            tommorow.Name = "tommorow";
+            tommorow.Size = new Size(107, 54);
+            tommorow.TabIndex = 1;
+            tommorow.Text = "Завтра";
+            tommorow.UseVisualStyleBackColor = true;
             // 
             // today
             // 
-            this.today.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.today.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.today.Location = new System.Drawing.Point(3, 3);
-            this.today.Name = "today";
-            this.today.Size = new System.Drawing.Size(92, 46);
-            this.today.TabIndex = 0;
-            this.today.Text = "Сегодня";
-            this.today.UseVisualStyleBackColor = true;
+            today.Dock = DockStyle.Fill;
+            today.Font = new Font("Microsoft YaHei", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            today.Location = new Point(4, 3);
+            today.Margin = new Padding(4, 3, 4, 3);
+            today.Name = "today";
+            today.Size = new Size(106, 54);
+            today.TabIndex = 0;
+            today.Text = "Сегодня";
+            today.UseVisualStyleBackColor = true;
             // 
             // profile
             // 
-            this.profile.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.profile.Controls.Add(this.myProfileLable);
-            this.profile.Controls.Add(this.logOutButton);
-            this.profile.Controls.Add(this.extraCodesButton);
-            this.profile.Controls.Add(this.tableLayoutPanel1);
-            this.profile.Location = new System.Drawing.Point(4, 14);
-            this.profile.Name = "profile";
-            this.profile.Padding = new System.Windows.Forms.Padding(3);
-            this.profile.Size = new System.Drawing.Size(612, 553);
-            this.profile.TabIndex = 0;
-            this.profile.Text = "Profile";
+            profile.BackColor = SystemColors.ActiveBorder;
+            profile.Controls.Add(myProfileLable);
+            profile.Controls.Add(logOutButton);
+            profile.Controls.Add(extraCodesButton);
+            profile.Controls.Add(tableLayoutPanel1);
+            profile.Location = new Point(4, 14);
+            profile.Margin = new Padding(4, 3, 4, 3);
+            profile.Name = "profile";
+            profile.Padding = new Padding(4, 3, 4, 3);
+            profile.Size = new Size(715, 641);
+            profile.TabIndex = 0;
+            profile.Text = "Profile";
             // 
             // myProfileLable
             // 
-            this.myProfileLable.Dock = System.Windows.Forms.DockStyle.Top;
-            this.myProfileLable.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.myProfileLable.Location = new System.Drawing.Point(3, 3);
-            this.myProfileLable.Name = "myProfileLable";
-            this.myProfileLable.Size = new System.Drawing.Size(606, 48);
-            this.myProfileLable.TabIndex = 8;
-            this.myProfileLable.Text = "Мой профиль";
+            myProfileLable.Dock = DockStyle.Top;
+            myProfileLable.Font = new Font("Microsoft YaHei", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            myProfileLable.Location = new Point(4, 3);
+            myProfileLable.Margin = new Padding(4, 0, 4, 0);
+            myProfileLable.Name = "myProfileLable";
+            myProfileLable.Size = new Size(707, 55);
+            myProfileLable.TabIndex = 8;
+            myProfileLable.Text = "Мой профиль";
             // 
             // logOutButton
             // 
-            this.logOutButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.logOutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.logOutButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.logOutButton.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.logOutButton.Location = new System.Drawing.Point(376, 445);
-            this.logOutButton.Name = "logOutButton";
-            this.logOutButton.Size = new System.Drawing.Size(225, 100);
-            this.logOutButton.TabIndex = 7;
-            this.logOutButton.Text = "Выйти из аккаунта";
-            this.logOutButton.UseVisualStyleBackColor = false;
-            this.logOutButton.Click += new System.EventHandler(this.logOutButton_Click);
+            logOutButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            logOutButton.BackColor = Color.FromArgb(232, 232, 232);
+            logOutButton.FlatAppearance.BorderColor = Color.Black;
+            logOutButton.Font = new Font("Microsoft YaHei", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            logOutButton.Location = new Point(439, 513);
+            logOutButton.Margin = new Padding(4, 3, 4, 3);
+            logOutButton.Name = "logOutButton";
+            logOutButton.Size = new Size(262, 115);
+            logOutButton.TabIndex = 7;
+            logOutButton.Text = "Выйти из аккаунта";
+            logOutButton.UseVisualStyleBackColor = false;
+            logOutButton.Click += logOutButton_Click;
             // 
             // extraCodesButton
             // 
-            this.extraCodesButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.extraCodesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.extraCodesButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.extraCodesButton.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.extraCodesButton.Location = new System.Drawing.Point(11, 445);
-            this.extraCodesButton.Name = "extraCodesButton";
-            this.extraCodesButton.Size = new System.Drawing.Size(225, 100);
-            this.extraCodesButton.TabIndex = 6;
-            this.extraCodesButton.Text = "Получить резервный код";
-            this.extraCodesButton.UseVisualStyleBackColor = false;
+            extraCodesButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            extraCodesButton.BackColor = Color.FromArgb(232, 232, 232);
+            extraCodesButton.FlatAppearance.BorderColor = Color.Black;
+            extraCodesButton.Font = new Font("Microsoft YaHei", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            extraCodesButton.Location = new Point(13, 513);
+            extraCodesButton.Margin = new Padding(4, 3, 4, 3);
+            extraCodesButton.Name = "extraCodesButton";
+            extraCodesButton.Size = new Size(262, 115);
+            extraCodesButton.TabIndex = 6;
+            extraCodesButton.Text = "Получить резервный код";
+            extraCodesButton.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel1.Controls.Add(this.groupContent, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.sexContent, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.birthdayContent, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.loginContent, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.nameContent, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.nameLabel, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.groupLable, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.sexLable, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.dirthdayLable, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.loginLable, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(7, 72);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(598, 341);
-            this.tableLayoutPanel1.TabIndex = 3;
+            tableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel1.BackColor = SystemColors.ActiveBorder;
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 80F));
+            tableLayoutPanel1.Controls.Add(groupContent, 1, 4);
+            tableLayoutPanel1.Controls.Add(sexContent, 1, 3);
+            tableLayoutPanel1.Controls.Add(birthdayContent, 1, 2);
+            tableLayoutPanel1.Controls.Add(loginContent, 1, 1);
+            tableLayoutPanel1.Controls.Add(nameContent, 1, 0);
+            tableLayoutPanel1.Controls.Add(nameLabel, 0, 0);
+            tableLayoutPanel1.Controls.Add(groupLable, 0, 4);
+            tableLayoutPanel1.Controls.Add(sexLable, 0, 3);
+            tableLayoutPanel1.Controls.Add(dirthdayLable, 0, 2);
+            tableLayoutPanel1.Controls.Add(loginLable, 0, 1);
+            tableLayoutPanel1.Location = new Point(8, 83);
+            tableLayoutPanel1.Margin = new Padding(4, 3, 4, 3);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 5;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel1.Size = new Size(698, 393);
+            tableLayoutPanel1.TabIndex = 3;
             // 
             // groupContent
             // 
-            this.groupContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.groupContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.groupContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupContent.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupContent.Location = new System.Drawing.Point(122, 272);
-            this.groupContent.Name = "groupContent";
-            this.groupContent.Size = new System.Drawing.Size(473, 69);
-            this.groupContent.TabIndex = 43;
-            this.groupContent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            groupContent.BackColor = Color.FromArgb(232, 232, 232);
+            groupContent.BorderStyle = BorderStyle.FixedSingle;
+            groupContent.Dock = DockStyle.Fill;
+            groupContent.Font = new Font("Microsoft YaHei", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            groupContent.Location = new Point(143, 312);
+            groupContent.Margin = new Padding(4, 0, 4, 0);
+            groupContent.Name = "groupContent";
+            groupContent.Size = new Size(551, 81);
+            groupContent.TabIndex = 43;
+            groupContent.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // sexContent
             // 
-            this.sexContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.sexContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.sexContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sexContent.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sexContent.Location = new System.Drawing.Point(122, 204);
-            this.sexContent.Name = "sexContent";
-            this.sexContent.Size = new System.Drawing.Size(473, 68);
-            this.sexContent.TabIndex = 42;
-            this.sexContent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            sexContent.BackColor = Color.FromArgb(232, 232, 232);
+            sexContent.BorderStyle = BorderStyle.FixedSingle;
+            sexContent.Dock = DockStyle.Fill;
+            sexContent.Font = new Font("Microsoft YaHei", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            sexContent.Location = new Point(143, 234);
+            sexContent.Margin = new Padding(4, 0, 4, 0);
+            sexContent.Name = "sexContent";
+            sexContent.Size = new Size(551, 78);
+            sexContent.TabIndex = 42;
+            sexContent.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // birthdayContent
             // 
-            this.birthdayContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.birthdayContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.birthdayContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.birthdayContent.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.birthdayContent.Location = new System.Drawing.Point(122, 136);
-            this.birthdayContent.Name = "birthdayContent";
-            this.birthdayContent.Size = new System.Drawing.Size(473, 68);
-            this.birthdayContent.TabIndex = 41;
-            this.birthdayContent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            birthdayContent.BackColor = Color.FromArgb(232, 232, 232);
+            birthdayContent.BorderStyle = BorderStyle.FixedSingle;
+            birthdayContent.Dock = DockStyle.Fill;
+            birthdayContent.Font = new Font("Microsoft YaHei", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            birthdayContent.Location = new Point(143, 156);
+            birthdayContent.Margin = new Padding(4, 0, 4, 0);
+            birthdayContent.Name = "birthdayContent";
+            birthdayContent.Size = new Size(551, 78);
+            birthdayContent.TabIndex = 41;
+            birthdayContent.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // loginContent
             // 
-            this.loginContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.loginContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.loginContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.loginContent.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.loginContent.Location = new System.Drawing.Point(122, 68);
-            this.loginContent.Name = "loginContent";
-            this.loginContent.Size = new System.Drawing.Size(473, 68);
-            this.loginContent.TabIndex = 40;
-            this.loginContent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            loginContent.BackColor = Color.FromArgb(232, 232, 232);
+            loginContent.BorderStyle = BorderStyle.FixedSingle;
+            loginContent.Dock = DockStyle.Fill;
+            loginContent.Font = new Font("Microsoft YaHei", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            loginContent.Location = new Point(143, 78);
+            loginContent.Margin = new Padding(4, 0, 4, 0);
+            loginContent.Name = "loginContent";
+            loginContent.Size = new Size(551, 78);
+            loginContent.TabIndex = 40;
+            loginContent.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // nameContent
             // 
-            this.nameContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.nameContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nameContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nameContent.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.nameContent.Location = new System.Drawing.Point(122, 0);
-            this.nameContent.Name = "nameContent";
-            this.nameContent.Size = new System.Drawing.Size(473, 68);
-            this.nameContent.TabIndex = 39;
-            this.nameContent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            nameContent.BackColor = Color.FromArgb(232, 232, 232);
+            nameContent.BorderStyle = BorderStyle.FixedSingle;
+            nameContent.Dock = DockStyle.Fill;
+            nameContent.Font = new Font("Microsoft YaHei", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            nameContent.Location = new Point(143, 0);
+            nameContent.Margin = new Padding(4, 0, 4, 0);
+            nameContent.Name = "nameContent";
+            nameContent.Size = new Size(551, 78);
+            nameContent.TabIndex = 39;
+            nameContent.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // nameLabel
             // 
-            this.nameLabel.BackColor = System.Drawing.Color.Transparent;
-            this.nameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nameLabel.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.nameLabel.Location = new System.Drawing.Point(3, 0);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(113, 68);
-            this.nameLabel.TabIndex = 38;
-            this.nameLabel.Text = "ФИО";
-            this.nameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            nameLabel.BackColor = Color.Transparent;
+            nameLabel.Dock = DockStyle.Fill;
+            nameLabel.Font = new Font("Microsoft YaHei", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            nameLabel.Location = new Point(4, 0);
+            nameLabel.Margin = new Padding(4, 0, 4, 0);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new Size(131, 78);
+            nameLabel.TabIndex = 38;
+            nameLabel.Text = "ФИО";
+            nameLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // groupLable
             // 
-            this.groupLable.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.groupLable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupLable.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupLable.Location = new System.Drawing.Point(3, 272);
-            this.groupLable.Name = "groupLable";
-            this.groupLable.Size = new System.Drawing.Size(113, 69);
-            this.groupLable.TabIndex = 35;
-            this.groupLable.Text = "Группа";
-            this.groupLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            groupLable.BackColor = SystemColors.ActiveBorder;
+            groupLable.Dock = DockStyle.Fill;
+            groupLable.Font = new Font("Microsoft YaHei", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            groupLable.Location = new Point(4, 312);
+            groupLable.Margin = new Padding(4, 0, 4, 0);
+            groupLable.Name = "groupLable";
+            groupLable.Size = new Size(131, 81);
+            groupLable.TabIndex = 35;
+            groupLable.Text = "Группа";
+            groupLable.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // sexLable
             // 
-            this.sexLable.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.sexLable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sexLable.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sexLable.Location = new System.Drawing.Point(3, 204);
-            this.sexLable.Name = "sexLable";
-            this.sexLable.Size = new System.Drawing.Size(113, 68);
-            this.sexLable.TabIndex = 34;
-            this.sexLable.Text = "Пол";
-            this.sexLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            sexLable.BackColor = SystemColors.ActiveBorder;
+            sexLable.Dock = DockStyle.Fill;
+            sexLable.Font = new Font("Microsoft YaHei", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            sexLable.Location = new Point(4, 234);
+            sexLable.Margin = new Padding(4, 0, 4, 0);
+            sexLable.Name = "sexLable";
+            sexLable.Size = new Size(131, 78);
+            sexLable.TabIndex = 34;
+            sexLable.Text = "Пол";
+            sexLable.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // dirthdayLable
             // 
-            this.dirthdayLable.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dirthdayLable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dirthdayLable.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dirthdayLable.Location = new System.Drawing.Point(3, 136);
-            this.dirthdayLable.Name = "dirthdayLable";
-            this.dirthdayLable.Size = new System.Drawing.Size(113, 68);
-            this.dirthdayLable.TabIndex = 33;
-            this.dirthdayLable.Text = "Дата рождения";
-            this.dirthdayLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            dirthdayLable.BackColor = SystemColors.ActiveBorder;
+            dirthdayLable.Dock = DockStyle.Fill;
+            dirthdayLable.Font = new Font("Microsoft YaHei", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            dirthdayLable.Location = new Point(4, 156);
+            dirthdayLable.Margin = new Padding(4, 0, 4, 0);
+            dirthdayLable.Name = "dirthdayLable";
+            dirthdayLable.Size = new Size(131, 78);
+            dirthdayLable.TabIndex = 33;
+            dirthdayLable.Text = "Дата рождения";
+            dirthdayLable.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // loginLable
             // 
-            this.loginLable.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.loginLable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.loginLable.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.loginLable.Location = new System.Drawing.Point(3, 68);
-            this.loginLable.Name = "loginLable";
-            this.loginLable.Size = new System.Drawing.Size(113, 68);
-            this.loginLable.TabIndex = 32;
-            this.loginLable.Text = "Логин";
-            this.loginLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            loginLable.BackColor = SystemColors.ActiveBorder;
+            loginLable.Dock = DockStyle.Fill;
+            loginLable.Font = new Font("Microsoft YaHei", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            loginLable.Location = new Point(4, 78);
+            loginLable.Margin = new Padding(4, 0, 4, 0);
+            loginLable.Name = "loginLable";
+            loginLable.Size = new Size(131, 78);
+            loginLable.TabIndex = 32;
+            loginLable.Text = "Логин";
+            loginLable.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // recordBook
             // 
-            this.recordBook.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.recordBook.Controls.Add(this.recordsTable);
-            this.recordBook.Controls.Add(this.semesterPanel);
-            this.recordBook.Location = new System.Drawing.Point(4, 14);
-            this.recordBook.Name = "recordBook";
-            this.recordBook.Padding = new System.Windows.Forms.Padding(3);
-            this.recordBook.Size = new System.Drawing.Size(612, 553);
-            this.recordBook.TabIndex = 2;
-            this.recordBook.Text = "recordBook";
+            recordBook.BackColor = SystemColors.ActiveBorder;
+            recordBook.Controls.Add(recordsTable);
+            recordBook.Controls.Add(semesterPanel);
+            recordBook.Location = new Point(4, 14);
+            recordBook.Margin = new Padding(4, 3, 4, 3);
+            recordBook.Name = "recordBook";
+            recordBook.Padding = new Padding(4, 3, 4, 3);
+            recordBook.Size = new Size(715, 641);
+            recordBook.TabIndex = 2;
+            recordBook.Text = "recordBook";
             // 
             // recordsTable
             // 
-            this.recordsTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.recordsTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.recordsTable.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.recordsTable.ColumnCount = 2;
-            this.recordsTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.recordsTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.recordsTable.Controls.Add(this.recordLectureBox7, 0, 7);
-            this.recordsTable.Controls.Add(this.markBox7, 0, 7);
-            this.recordsTable.Controls.Add(this.markBox6, 1, 6);
-            this.recordsTable.Controls.Add(this.recordLectureBox6, 0, 6);
-            this.recordsTable.Controls.Add(this.markBox5, 1, 5);
-            this.recordsTable.Controls.Add(this.recordLectureBox5, 0, 5);
-            this.recordsTable.Controls.Add(this.markBox4, 1, 4);
-            this.recordsTable.Controls.Add(this.recordLectureBox4, 0, 4);
-            this.recordsTable.Controls.Add(this.markBox3, 1, 3);
-            this.recordsTable.Controls.Add(this.recordLectureBox3, 0, 3);
-            this.recordsTable.Controls.Add(this.markBox2, 1, 2);
-            this.recordsTable.Controls.Add(this.recordLectureBox2, 0, 2);
-            this.recordsTable.Controls.Add(this.markBox1, 1, 1);
-            this.recordsTable.Controls.Add(this.markLable, 1, 0);
-            this.recordsTable.Controls.Add(this.recordLectureLabel, 0, 0);
-            this.recordsTable.Controls.Add(this.recordLectureBox1, 0, 1);
-            this.recordsTable.Location = new System.Drawing.Point(7, 61);
-            this.recordsTable.Name = "recordsTable";
-            this.recordsTable.RowCount = 8;
-            this.recordsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.recordsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.recordsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.recordsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.recordsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.recordsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.recordsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.recordsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.recordsTable.Size = new System.Drawing.Size(598, 431);
-            this.recordsTable.TabIndex = 5;
+            recordsTable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            recordsTable.BackColor = Color.FromArgb(232, 232, 232);
+            recordsTable.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
+            recordsTable.ColumnCount = 2;
+            recordsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
+            recordsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
+            recordsTable.Controls.Add(recordLectureBox7, 0, 7);
+            recordsTable.Controls.Add(markBox7, 0, 7);
+            recordsTable.Controls.Add(markBox6, 1, 6);
+            recordsTable.Controls.Add(recordLectureBox6, 0, 6);
+            recordsTable.Controls.Add(markBox5, 1, 5);
+            recordsTable.Controls.Add(recordLectureBox5, 0, 5);
+            recordsTable.Controls.Add(markBox4, 1, 4);
+            recordsTable.Controls.Add(recordLectureBox4, 0, 4);
+            recordsTable.Controls.Add(markBox3, 1, 3);
+            recordsTable.Controls.Add(recordLectureBox3, 0, 3);
+            recordsTable.Controls.Add(markBox2, 1, 2);
+            recordsTable.Controls.Add(recordLectureBox2, 0, 2);
+            recordsTable.Controls.Add(markBox1, 1, 1);
+            recordsTable.Controls.Add(markLable, 1, 0);
+            recordsTable.Controls.Add(recordLectureLabel, 0, 0);
+            recordsTable.Controls.Add(recordLectureBox1, 0, 1);
+            recordsTable.Location = new Point(8, 70);
+            recordsTable.Margin = new Padding(4, 3, 4, 3);
+            recordsTable.Name = "recordsTable";
+            recordsTable.RowCount = 8;
+            recordsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 46F));
+            recordsTable.RowStyles.Add(new RowStyle(SizeType.Percent, 14.28571F));
+            recordsTable.RowStyles.Add(new RowStyle(SizeType.Percent, 14.28571F));
+            recordsTable.RowStyles.Add(new RowStyle(SizeType.Percent, 14.28571F));
+            recordsTable.RowStyles.Add(new RowStyle(SizeType.Percent, 14.28571F));
+            recordsTable.RowStyles.Add(new RowStyle(SizeType.Percent, 14.28571F));
+            recordsTable.RowStyles.Add(new RowStyle(SizeType.Percent, 14.28571F));
+            recordsTable.RowStyles.Add(new RowStyle(SizeType.Percent, 14.28571F));
+            recordsTable.Size = new Size(698, 497);
+            recordsTable.TabIndex = 5;
             // 
             // recordLectureBox7
             // 
-            this.recordLectureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.recordLectureBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.recordLectureBox7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.recordLectureBox7.Enabled = false;
-            this.recordLectureBox7.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.recordLectureBox7.FormattingEnabled = true;
-            this.recordLectureBox7.ItemHeight = 19;
-            this.recordLectureBox7.Items.AddRange(new object[] { "Матан" });
-            this.recordLectureBox7.Location = new System.Drawing.Point(4, 375);
-            this.recordLectureBox7.Name = "recordLectureBox7";
-            this.recordLectureBox7.Size = new System.Drawing.Size(410, 19);
-            this.recordLectureBox7.TabIndex = 33;
+            recordLectureBox7.BackColor = Color.FromArgb(232, 232, 232);
+            recordLectureBox7.BorderStyle = BorderStyle.None;
+            recordLectureBox7.Dock = DockStyle.Top;
+            recordLectureBox7.Enabled = false;
+            recordLectureBox7.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            recordLectureBox7.FormattingEnabled = true;
+            recordLectureBox7.ItemHeight = 19;
+            recordLectureBox7.Items.AddRange(new object[] { "Матан" });
+            recordLectureBox7.Location = new Point(5, 435);
+            recordLectureBox7.Margin = new Padding(4, 3, 4, 3);
+            recordLectureBox7.Name = "recordLectureBox7";
+            recordLectureBox7.Size = new Size(478, 19);
+            recordLectureBox7.TabIndex = 33;
             // 
             // markBox7
             // 
-            this.markBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.markBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.markBox7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.markBox7.Enabled = false;
-            this.markBox7.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.markBox7.FormattingEnabled = true;
-            this.markBox7.ItemHeight = 19;
-            this.markBox7.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
-            this.markBox7.Location = new System.Drawing.Point(421, 375);
-            this.markBox7.Name = "markBox7";
-            this.markBox7.Size = new System.Drawing.Size(173, 19);
-            this.markBox7.TabIndex = 32;
+            markBox7.BackColor = Color.FromArgb(232, 232, 232);
+            markBox7.BorderStyle = BorderStyle.None;
+            markBox7.Dock = DockStyle.Top;
+            markBox7.Enabled = false;
+            markBox7.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            markBox7.FormattingEnabled = true;
+            markBox7.ItemHeight = 19;
+            markBox7.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
+            markBox7.Location = new Point(492, 435);
+            markBox7.Margin = new Padding(4, 3, 4, 3);
+            markBox7.Name = "markBox7";
+            markBox7.Size = new Size(201, 19);
+            markBox7.TabIndex = 32;
             // 
             // markBox6
             // 
-            this.markBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.markBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.markBox6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.markBox6.Enabled = false;
-            this.markBox6.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.markBox6.FormattingEnabled = true;
-            this.markBox6.ItemHeight = 19;
-            this.markBox6.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
-            this.markBox6.Location = new System.Drawing.Point(421, 320);
-            this.markBox6.Name = "markBox6";
-            this.markBox6.Size = new System.Drawing.Size(173, 19);
-            this.markBox6.TabIndex = 31;
+            markBox6.BackColor = Color.FromArgb(232, 232, 232);
+            markBox6.BorderStyle = BorderStyle.None;
+            markBox6.Dock = DockStyle.Top;
+            markBox6.Enabled = false;
+            markBox6.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            markBox6.FormattingEnabled = true;
+            markBox6.ItemHeight = 19;
+            markBox6.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
+            markBox6.Location = new Point(492, 371);
+            markBox6.Margin = new Padding(4, 3, 4, 3);
+            markBox6.Name = "markBox6";
+            markBox6.Size = new Size(201, 19);
+            markBox6.TabIndex = 31;
             // 
             // recordLectureBox6
             // 
-            this.recordLectureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.recordLectureBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.recordLectureBox6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.recordLectureBox6.Enabled = false;
-            this.recordLectureBox6.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.recordLectureBox6.FormattingEnabled = true;
-            this.recordLectureBox6.ItemHeight = 19;
-            this.recordLectureBox6.Items.AddRange(new object[] { "Матан" });
-            this.recordLectureBox6.Location = new System.Drawing.Point(4, 320);
-            this.recordLectureBox6.Name = "recordLectureBox6";
-            this.recordLectureBox6.Size = new System.Drawing.Size(410, 19);
-            this.recordLectureBox6.TabIndex = 30;
+            recordLectureBox6.BackColor = Color.FromArgb(232, 232, 232);
+            recordLectureBox6.BorderStyle = BorderStyle.None;
+            recordLectureBox6.Dock = DockStyle.Top;
+            recordLectureBox6.Enabled = false;
+            recordLectureBox6.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            recordLectureBox6.FormattingEnabled = true;
+            recordLectureBox6.ItemHeight = 19;
+            recordLectureBox6.Items.AddRange(new object[] { "Матан" });
+            recordLectureBox6.Location = new Point(5, 371);
+            recordLectureBox6.Margin = new Padding(4, 3, 4, 3);
+            recordLectureBox6.Name = "recordLectureBox6";
+            recordLectureBox6.Size = new Size(478, 19);
+            recordLectureBox6.TabIndex = 30;
             // 
             // markBox5
             // 
-            this.markBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.markBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.markBox5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.markBox5.Enabled = false;
-            this.markBox5.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.markBox5.FormattingEnabled = true;
-            this.markBox5.ItemHeight = 19;
-            this.markBox5.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
-            this.markBox5.Location = new System.Drawing.Point(421, 265);
-            this.markBox5.Name = "markBox5";
-            this.markBox5.Size = new System.Drawing.Size(173, 19);
-            this.markBox5.TabIndex = 29;
+            markBox5.BackColor = Color.FromArgb(232, 232, 232);
+            markBox5.BorderStyle = BorderStyle.None;
+            markBox5.Dock = DockStyle.Top;
+            markBox5.Enabled = false;
+            markBox5.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            markBox5.FormattingEnabled = true;
+            markBox5.ItemHeight = 19;
+            markBox5.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
+            markBox5.Location = new Point(492, 307);
+            markBox5.Margin = new Padding(4, 3, 4, 3);
+            markBox5.Name = "markBox5";
+            markBox5.Size = new Size(201, 19);
+            markBox5.TabIndex = 29;
             // 
             // recordLectureBox5
             // 
-            this.recordLectureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.recordLectureBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.recordLectureBox5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.recordLectureBox5.Enabled = false;
-            this.recordLectureBox5.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.recordLectureBox5.FormattingEnabled = true;
-            this.recordLectureBox5.ItemHeight = 19;
-            this.recordLectureBox5.Items.AddRange(new object[] { "Матан" });
-            this.recordLectureBox5.Location = new System.Drawing.Point(4, 265);
-            this.recordLectureBox5.Name = "recordLectureBox5";
-            this.recordLectureBox5.Size = new System.Drawing.Size(410, 19);
-            this.recordLectureBox5.TabIndex = 28;
+            recordLectureBox5.BackColor = Color.FromArgb(232, 232, 232);
+            recordLectureBox5.BorderStyle = BorderStyle.None;
+            recordLectureBox5.Dock = DockStyle.Top;
+            recordLectureBox5.Enabled = false;
+            recordLectureBox5.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            recordLectureBox5.FormattingEnabled = true;
+            recordLectureBox5.ItemHeight = 19;
+            recordLectureBox5.Items.AddRange(new object[] { "Матан" });
+            recordLectureBox5.Location = new Point(5, 307);
+            recordLectureBox5.Margin = new Padding(4, 3, 4, 3);
+            recordLectureBox5.Name = "recordLectureBox5";
+            recordLectureBox5.Size = new Size(478, 19);
+            recordLectureBox5.TabIndex = 28;
             // 
             // markBox4
             // 
-            this.markBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.markBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.markBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.markBox4.Enabled = false;
-            this.markBox4.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.markBox4.FormattingEnabled = true;
-            this.markBox4.ItemHeight = 19;
-            this.markBox4.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
-            this.markBox4.Location = new System.Drawing.Point(421, 210);
-            this.markBox4.Name = "markBox4";
-            this.markBox4.Size = new System.Drawing.Size(173, 19);
-            this.markBox4.TabIndex = 27;
+            markBox4.BackColor = Color.FromArgb(232, 232, 232);
+            markBox4.BorderStyle = BorderStyle.None;
+            markBox4.Dock = DockStyle.Top;
+            markBox4.Enabled = false;
+            markBox4.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            markBox4.FormattingEnabled = true;
+            markBox4.ItemHeight = 19;
+            markBox4.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
+            markBox4.Location = new Point(492, 243);
+            markBox4.Margin = new Padding(4, 3, 4, 3);
+            markBox4.Name = "markBox4";
+            markBox4.Size = new Size(201, 19);
+            markBox4.TabIndex = 27;
             // 
             // recordLectureBox4
             // 
-            this.recordLectureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.recordLectureBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.recordLectureBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.recordLectureBox4.Enabled = false;
-            this.recordLectureBox4.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.recordLectureBox4.FormattingEnabled = true;
-            this.recordLectureBox4.ItemHeight = 19;
-            this.recordLectureBox4.Items.AddRange(new object[] { "Матан" });
-            this.recordLectureBox4.Location = new System.Drawing.Point(4, 210);
-            this.recordLectureBox4.Name = "recordLectureBox4";
-            this.recordLectureBox4.Size = new System.Drawing.Size(410, 19);
-            this.recordLectureBox4.TabIndex = 26;
+            recordLectureBox4.BackColor = Color.FromArgb(232, 232, 232);
+            recordLectureBox4.BorderStyle = BorderStyle.None;
+            recordLectureBox4.Dock = DockStyle.Top;
+            recordLectureBox4.Enabled = false;
+            recordLectureBox4.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            recordLectureBox4.FormattingEnabled = true;
+            recordLectureBox4.ItemHeight = 19;
+            recordLectureBox4.Items.AddRange(new object[] { "Матан" });
+            recordLectureBox4.Location = new Point(5, 243);
+            recordLectureBox4.Margin = new Padding(4, 3, 4, 3);
+            recordLectureBox4.Name = "recordLectureBox4";
+            recordLectureBox4.Size = new Size(478, 19);
+            recordLectureBox4.TabIndex = 26;
             // 
             // markBox3
             // 
-            this.markBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.markBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.markBox3.DisplayMember = "5";
-            this.markBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.markBox3.Enabled = false;
-            this.markBox3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.markBox3.FormattingEnabled = true;
-            this.markBox3.ItemHeight = 19;
-            this.markBox3.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
-            this.markBox3.Location = new System.Drawing.Point(421, 155);
-            this.markBox3.Name = "markBox3";
-            this.markBox3.Size = new System.Drawing.Size(173, 19);
-            this.markBox3.TabIndex = 25;
+            markBox3.BackColor = Color.FromArgb(232, 232, 232);
+            markBox3.BorderStyle = BorderStyle.None;
+            markBox3.DisplayMember = "5";
+            markBox3.Dock = DockStyle.Top;
+            markBox3.Enabled = false;
+            markBox3.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            markBox3.FormattingEnabled = true;
+            markBox3.ItemHeight = 19;
+            markBox3.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
+            markBox3.Location = new Point(492, 179);
+            markBox3.Margin = new Padding(4, 3, 4, 3);
+            markBox3.Name = "markBox3";
+            markBox3.Size = new Size(201, 19);
+            markBox3.TabIndex = 25;
             // 
             // recordLectureBox3
             // 
-            this.recordLectureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.recordLectureBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.recordLectureBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.recordLectureBox3.Enabled = false;
-            this.recordLectureBox3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.recordLectureBox3.FormattingEnabled = true;
-            this.recordLectureBox3.ItemHeight = 19;
-            this.recordLectureBox3.Items.AddRange(new object[] { "Матан" });
-            this.recordLectureBox3.Location = new System.Drawing.Point(4, 155);
-            this.recordLectureBox3.Name = "recordLectureBox3";
-            this.recordLectureBox3.Size = new System.Drawing.Size(410, 19);
-            this.recordLectureBox3.TabIndex = 24;
+            recordLectureBox3.BackColor = Color.FromArgb(232, 232, 232);
+            recordLectureBox3.BorderStyle = BorderStyle.None;
+            recordLectureBox3.Dock = DockStyle.Top;
+            recordLectureBox3.Enabled = false;
+            recordLectureBox3.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            recordLectureBox3.FormattingEnabled = true;
+            recordLectureBox3.ItemHeight = 19;
+            recordLectureBox3.Items.AddRange(new object[] { "Матан" });
+            recordLectureBox3.Location = new Point(5, 179);
+            recordLectureBox3.Margin = new Padding(4, 3, 4, 3);
+            recordLectureBox3.Name = "recordLectureBox3";
+            recordLectureBox3.Size = new Size(478, 19);
+            recordLectureBox3.TabIndex = 24;
             // 
             // markBox2
             // 
-            this.markBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.markBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.markBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.markBox2.Enabled = false;
-            this.markBox2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.markBox2.FormattingEnabled = true;
-            this.markBox2.ItemHeight = 19;
-            this.markBox2.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
-            this.markBox2.Location = new System.Drawing.Point(421, 100);
-            this.markBox2.Name = "markBox2";
-            this.markBox2.Size = new System.Drawing.Size(173, 19);
-            this.markBox2.TabIndex = 23;
+            markBox2.BackColor = Color.FromArgb(232, 232, 232);
+            markBox2.BorderStyle = BorderStyle.None;
+            markBox2.Dock = DockStyle.Top;
+            markBox2.Enabled = false;
+            markBox2.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            markBox2.FormattingEnabled = true;
+            markBox2.ItemHeight = 19;
+            markBox2.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
+            markBox2.Location = new Point(492, 115);
+            markBox2.Margin = new Padding(4, 3, 4, 3);
+            markBox2.Name = "markBox2";
+            markBox2.Size = new Size(201, 19);
+            markBox2.TabIndex = 23;
             // 
             // recordLectureBox2
             // 
-            this.recordLectureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.recordLectureBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.recordLectureBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.recordLectureBox2.Enabled = false;
-            this.recordLectureBox2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.recordLectureBox2.FormattingEnabled = true;
-            this.recordLectureBox2.ItemHeight = 19;
-            this.recordLectureBox2.Items.AddRange(new object[] { "Матан" });
-            this.recordLectureBox2.Location = new System.Drawing.Point(4, 100);
-            this.recordLectureBox2.Name = "recordLectureBox2";
-            this.recordLectureBox2.Size = new System.Drawing.Size(410, 19);
-            this.recordLectureBox2.TabIndex = 22;
+            recordLectureBox2.BackColor = Color.FromArgb(232, 232, 232);
+            recordLectureBox2.BorderStyle = BorderStyle.None;
+            recordLectureBox2.Dock = DockStyle.Top;
+            recordLectureBox2.Enabled = false;
+            recordLectureBox2.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            recordLectureBox2.FormattingEnabled = true;
+            recordLectureBox2.ItemHeight = 19;
+            recordLectureBox2.Items.AddRange(new object[] { "Матан" });
+            recordLectureBox2.Location = new Point(5, 115);
+            recordLectureBox2.Margin = new Padding(4, 3, 4, 3);
+            recordLectureBox2.Name = "recordLectureBox2";
+            recordLectureBox2.Size = new Size(478, 19);
+            recordLectureBox2.TabIndex = 22;
             // 
             // markBox1
             // 
-            this.markBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.markBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.markBox1.DisplayMember = "1";
-            this.markBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.markBox1.Enabled = false;
-            this.markBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.markBox1.FormattingEnabled = true;
-            this.markBox1.ItemHeight = 19;
-            this.markBox1.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
-            this.markBox1.Location = new System.Drawing.Point(421, 45);
-            this.markBox1.Name = "markBox1";
-            this.markBox1.ScrollAlwaysVisible = true;
-            this.markBox1.Size = new System.Drawing.Size(173, 19);
-            this.markBox1.TabIndex = 20;
+            markBox1.BackColor = Color.FromArgb(232, 232, 232);
+            markBox1.BorderStyle = BorderStyle.None;
+            markBox1.DisplayMember = "1";
+            markBox1.Dock = DockStyle.Top;
+            markBox1.Enabled = false;
+            markBox1.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            markBox1.FormattingEnabled = true;
+            markBox1.ItemHeight = 19;
+            markBox1.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
+            markBox1.Location = new Point(492, 51);
+            markBox1.Margin = new Padding(4, 3, 4, 3);
+            markBox1.Name = "markBox1";
+            markBox1.ScrollAlwaysVisible = true;
+            markBox1.Size = new Size(201, 19);
+            markBox1.TabIndex = 20;
             // 
             // markLable
             // 
-            this.markLable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.markLable.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.markLable.Location = new System.Drawing.Point(421, 1);
-            this.markLable.Name = "markLable";
-            this.markLable.Size = new System.Drawing.Size(173, 40);
-            this.markLable.TabIndex = 2;
-            this.markLable.Text = "Баллы";
-            this.markLable.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            markLable.Dock = DockStyle.Fill;
+            markLable.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            markLable.Location = new Point(492, 1);
+            markLable.Margin = new Padding(4, 0, 4, 0);
+            markLable.Name = "markLable";
+            markLable.Size = new Size(201, 46);
+            markLable.TabIndex = 2;
+            markLable.Text = "Баллы";
+            markLable.TextAlign = ContentAlignment.BottomLeft;
             // 
             // recordLectureLabel
             // 
-            this.recordLectureLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.recordLectureLabel.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.recordLectureLabel.Location = new System.Drawing.Point(4, 1);
-            this.recordLectureLabel.Name = "recordLectureLabel";
-            this.recordLectureLabel.Size = new System.Drawing.Size(410, 40);
-            this.recordLectureLabel.TabIndex = 1;
-            this.recordLectureLabel.Text = "Предмет";
-            this.recordLectureLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            recordLectureLabel.Dock = DockStyle.Fill;
+            recordLectureLabel.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            recordLectureLabel.Location = new Point(5, 1);
+            recordLectureLabel.Margin = new Padding(4, 0, 4, 0);
+            recordLectureLabel.Name = "recordLectureLabel";
+            recordLectureLabel.Size = new Size(478, 46);
+            recordLectureLabel.TabIndex = 1;
+            recordLectureLabel.Text = "Предмет";
+            recordLectureLabel.TextAlign = ContentAlignment.BottomLeft;
             // 
             // recordLectureBox1
             // 
-            this.recordLectureBox1.AllowDrop = true;
-            this.recordLectureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.recordLectureBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.recordLectureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.recordLectureBox1.Enabled = false;
-            this.recordLectureBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.recordLectureBox1.FormattingEnabled = true;
-            this.recordLectureBox1.ItemHeight = 19;
-            this.recordLectureBox1.Items.AddRange(new object[] { "Матан", "Алгем", "Прога" });
-            this.recordLectureBox1.Location = new System.Drawing.Point(4, 45);
-            this.recordLectureBox1.Name = "recordLectureBox1";
-            this.recordLectureBox1.Size = new System.Drawing.Size(410, 19);
-            this.recordLectureBox1.TabIndex = 19;
+            recordLectureBox1.AllowDrop = true;
+            recordLectureBox1.BackColor = Color.FromArgb(232, 232, 232);
+            recordLectureBox1.BorderStyle = BorderStyle.None;
+            recordLectureBox1.Dock = DockStyle.Top;
+            recordLectureBox1.Enabled = false;
+            recordLectureBox1.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            recordLectureBox1.FormattingEnabled = true;
+            recordLectureBox1.ItemHeight = 19;
+            recordLectureBox1.Items.AddRange(new object[] { "Матан", "Алгем", "Прога" });
+            recordLectureBox1.Location = new Point(5, 51);
+            recordLectureBox1.Margin = new Padding(4, 3, 4, 3);
+            recordLectureBox1.Name = "recordLectureBox1";
+            recordLectureBox1.Size = new Size(478, 19);
+            recordLectureBox1.TabIndex = 19;
             // 
             // semesterPanel
             // 
-            this.semesterPanel.Controls.Add(this.studentBox);
-            this.semesterPanel.Controls.Add(this.studentLabel);
-            this.semesterPanel.Controls.Add(this.semesterBox);
-            this.semesterPanel.Controls.Add(this.semesterLabel);
-            this.semesterPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.semesterPanel.Location = new System.Drawing.Point(3, 3);
-            this.semesterPanel.Name = "semesterPanel";
-            this.semesterPanel.Size = new System.Drawing.Size(606, 37);
-            this.semesterPanel.TabIndex = 4;
+            semesterPanel.Controls.Add(studentBox);
+            semesterPanel.Controls.Add(studentLabel);
+            semesterPanel.Controls.Add(semesterBox);
+            semesterPanel.Controls.Add(semesterLabel);
+            semesterPanel.Dock = DockStyle.Top;
+            semesterPanel.Location = new Point(4, 3);
+            semesterPanel.Margin = new Padding(4, 3, 4, 3);
+            semesterPanel.Name = "semesterPanel";
+            semesterPanel.Size = new Size(707, 43);
+            semesterPanel.TabIndex = 4;
             // 
             // studentBox
             // 
-            this.studentBox.AllowDrop = true;
-            this.studentBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.studentBox.Enabled = false;
-            this.studentBox.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.studentBox.FormattingEnabled = true;
-            this.studentBox.ItemHeight = 19;
-            this.studentBox.Items.AddRange(new object[] { "Лещенко Илья Федорович", "Логинова Диана Романовна" });
-            this.studentBox.Location = new System.Drawing.Point(335, 3);
-            this.studentBox.Name = "studentBox";
-            this.studentBox.Size = new System.Drawing.Size(264, 23);
-            this.studentBox.TabIndex = 3;
+            studentBox.AllowDrop = true;
+            studentBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            studentBox.Enabled = false;
+            studentBox.Font = new Font("Microsoft YaHei", 10F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            studentBox.FormattingEnabled = true;
+            studentBox.ItemHeight = 19;
+            studentBox.Items.AddRange(new object[] { "Лещенко Илья Федорович", "Логинова Диана Романовна" });
+            studentBox.Location = new Point(391, 3);
+            studentBox.Margin = new Padding(4, 3, 4, 3);
+            studentBox.Name = "studentBox";
+            studentBox.Size = new Size(307, 23);
+            studentBox.TabIndex = 3;
             // 
             // studentLabel
             // 
-            this.studentLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.studentLabel.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.studentLabel.Location = new System.Drawing.Point(244, 3);
-            this.studentLabel.Name = "studentLabel";
-            this.studentLabel.Size = new System.Drawing.Size(85, 29);
-            this.studentLabel.TabIndex = 2;
-            this.studentLabel.Text = "Студент:";
+            studentLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            studentLabel.Font = new Font("Microsoft YaHei", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            studentLabel.Location = new Point(285, 3);
+            studentLabel.Margin = new Padding(4, 0, 4, 0);
+            studentLabel.Name = "studentLabel";
+            studentLabel.Size = new Size(99, 33);
+            studentLabel.TabIndex = 2;
+            studentLabel.Text = "Студент:";
             // 
             // semesterBox
             // 
-            this.semesterBox.AllowDrop = true;
-            this.semesterBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.semesterBox.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.semesterBox.FormattingEnabled = true;
-            this.semesterBox.ItemHeight = 19;
-            this.semesterBox.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8" });
-            this.semesterBox.Location = new System.Drawing.Point(133, 3);
-            this.semesterBox.Name = "semesterBox";
-            this.semesterBox.Size = new System.Drawing.Size(76, 23);
-            this.semesterBox.TabIndex = 1;
+            semesterBox.AllowDrop = true;
+            semesterBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            semesterBox.Font = new Font("Microsoft YaHei", 10F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            semesterBox.FormattingEnabled = true;
+            semesterBox.ItemHeight = 19;
+            semesterBox.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8" });
+            semesterBox.Location = new Point(155, 3);
+            semesterBox.Margin = new Padding(4, 3, 4, 3);
+            semesterBox.Name = "semesterBox";
+            semesterBox.Size = new Size(88, 23);
+            semesterBox.TabIndex = 1;
             // 
             // semesterLabel
             // 
-            this.semesterLabel.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.semesterLabel.Location = new System.Drawing.Point(3, 3);
-            this.semesterLabel.Name = "semesterLabel";
-            this.semesterLabel.Size = new System.Drawing.Size(115, 29);
-            this.semesterLabel.TabIndex = 0;
-            this.semesterLabel.Text = "Семестр №";
+            semesterLabel.Font = new Font("Microsoft YaHei", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            semesterLabel.Location = new Point(4, 3);
+            semesterLabel.Margin = new Padding(4, 0, 4, 0);
+            semesterLabel.Name = "semesterLabel";
+            semesterLabel.Size = new Size(134, 33);
+            semesterLabel.TabIndex = 0;
+            semesterLabel.Text = "Семестр №";
             // 
             // info
             // 
-            this.info.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.info.Controls.Add(this.exitButton);
-            this.info.Controls.Add(this.aboutLabel);
-            this.info.Location = new System.Drawing.Point(4, 14);
-            this.info.Name = "info";
-            this.info.Padding = new System.Windows.Forms.Padding(3);
-            this.info.Size = new System.Drawing.Size(612, 553);
-            this.info.TabIndex = 3;
-            this.info.Text = "info";
+            info.BackColor = SystemColors.ActiveBorder;
+            info.Controls.Add(exitButton);
+            info.Controls.Add(aboutLabel);
+            info.Location = new Point(4, 14);
+            info.Margin = new Padding(4, 3, 4, 3);
+            info.Name = "info";
+            info.Padding = new Padding(4, 3, 4, 3);
+            info.Size = new Size(715, 641);
+            info.TabIndex = 3;
+            info.Text = "info";
             // 
             // exitButton
             // 
-            this.exitButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.exitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.exitButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.exitButton.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.exitButton.Location = new System.Drawing.Point(182, 445);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(225, 100);
-            this.exitButton.TabIndex = 5;
-            this.exitButton.Text = "Закрыть программу";
-            this.exitButton.UseVisualStyleBackColor = false;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            exitButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            exitButton.BackColor = Color.FromArgb(232, 232, 232);
+            exitButton.FlatAppearance.BorderColor = Color.Black;
+            exitButton.Font = new Font("Microsoft YaHei", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            exitButton.Location = new Point(212, 513);
+            exitButton.Margin = new Padding(4, 3, 4, 3);
+            exitButton.Name = "exitButton";
+            exitButton.Size = new Size(262, 115);
+            exitButton.TabIndex = 5;
+            exitButton.Text = "Закрыть программу";
+            exitButton.UseVisualStyleBackColor = false;
+            exitButton.Click += exitButton_Click;
             // 
             // aboutLabel
             // 
-            this.aboutLabel.BackColor = System.Drawing.Color.Transparent;
-            this.aboutLabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.aboutLabel.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.aboutLabel.Location = new System.Drawing.Point(3, 3);
-            this.aboutLabel.Name = "aboutLabel";
-            this.aboutLabel.Size = new System.Drawing.Size(606, 215);
-            this.aboutLabel.TabIndex = 4;
-            this.aboutLabel.Text = "DOK\'U - Dictionary Of the Kazan\' University\r\nУдобный электронный дневник для студ" + "ентов\r\nПо предложениям писать на почту: dokuemail@yandex.ru";
-            this.aboutLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            aboutLabel.BackColor = Color.Transparent;
+            aboutLabel.Dock = DockStyle.Top;
+            aboutLabel.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            aboutLabel.Location = new Point(4, 3);
+            aboutLabel.Margin = new Padding(4, 0, 4, 0);
+            aboutLabel.Name = "aboutLabel";
+            aboutLabel.Size = new Size(707, 248);
+            aboutLabel.TabIndex = 4;
+            aboutLabel.Text = "DOK'U - Dictionary Of the Kazan' University\r\nУдобный электронный дневник для студентов\r\nПо предложениям писать на почту: dokuemail@yandex.ru";
+            aboutLabel.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // notifyIcon
             // 
-            this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
-            this.notifyIcon.Text = "DOK\'U";
-            this.notifyIcon.Visible = true;
+            notifyIcon.Icon = (Icon)resources.GetObject("notifyIcon.Icon");
+            notifyIcon.Text = "DOK'U";
+            notifyIcon.MouseClick += notifyIcon_MouseClick;
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 6);
-            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 5);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 7;
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(200, 100);
-            this.tableLayoutPanel2.TabIndex = 0;
+            tableLayoutPanel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel2.ColumnCount = 3;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 60F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
+            tableLayoutPanel2.Controls.Add(label1, 0, 6);
+            tableLayoutPanel2.Controls.Add(label2, 0, 5);
+            tableLayoutPanel2.Location = new Point(0, 0);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 7;
+            tableLayoutPanel2.Size = new Size(200, 100);
+            tableLayoutPanel2.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(3, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 66);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "19:10\r\n-\r\n20:40";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label1.BackColor = Color.FromArgb(232, 232, 232);
+            label1.Dock = DockStyle.Fill;
+            label1.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label1.Location = new Point(3, 65);
+            label1.Name = "label1";
+            label1.Size = new Size(54, 66);
+            label1.TabIndex = 36;
+            label1.Text = "19:10\r\n-\r\n20:40";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 65);
-            this.label2.TabIndex = 35;
-            this.label2.Text = "17:30\r\n-\r\n19:00";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label2.BackColor = Color.FromArgb(232, 232, 232);
+            label2.Dock = DockStyle.Fill;
+            label2.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label2.Location = new Point(3, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(54, 65);
+            label2.TabIndex = 35;
+            label2.Text = "17:30\r\n-\r\n19:00";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(3, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 65);
-            this.label3.TabIndex = 34;
-            this.label3.Text = "13:50\r\n-\r\n15:20";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label3.BackColor = Color.FromArgb(232, 232, 232);
+            label3.Dock = DockStyle.Fill;
+            label3.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label3.Location = new Point(3, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(54, 65);
+            label3.TabIndex = 34;
+            label3.Text = "13:50\r\n-\r\n15:20";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(855, 571);
-            this.Controls.Add(this.content);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(850, 610);
-            this.Name = "MainForm";
-            this.Text = "DOK\'U";
-            this.content.Panel1.ResumeLayout(false);
-            this.content.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.content)).EndInit();
-            this.content.ResumeLayout(false);
-            this.buttonsPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.iconBox)).EndInit();
-            this.contentTabs.ResumeLayout(false);
-            this.diary.ResumeLayout(false);
-            this.groupPanel.ResumeLayout(false);
-            this.diaryTable.ResumeLayout(false);
-            this.days.ResumeLayout(false);
-            this.todayTomorrow.ResumeLayout(false);
-            this.profile.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.recordBook.ResumeLayout(false);
-            this.recordsTable.ResumeLayout(false);
-            this.semesterPanel.ResumeLayout(false);
-            this.info.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveBorder;
+            ClientSize = new Size(997, 659);
+            Controls.Add(content);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4, 3, 4, 3);
+            MinimumSize = new Size(989, 698);
+            Name = "MainForm";
+            Text = "DOK'U";
+            content.Panel1.ResumeLayout(false);
+            content.Panel2.ResumeLayout(false);
+            ((ISupportInitialize)content).EndInit();
+            content.ResumeLayout(false);
+            buttonsPanel.ResumeLayout(false);
+            ((ISupportInitialize)iconBox).EndInit();
+            contentTabs.ResumeLayout(false);
+            diary.ResumeLayout(false);
+            groupPanel.ResumeLayout(false);
+            diaryTable.ResumeLayout(false);
+            days.ResumeLayout(false);
+            todayTomorrow.ResumeLayout(false);
+            profile.ResumeLayout(false);
+            tableLayoutPanel1.ResumeLayout(false);
+            recordBook.ResumeLayout(false);
+            recordsTable.ResumeLayout(false);
+            semesterPanel.ResumeLayout(false);
+            info.ResumeLayout(false);
+            tableLayoutPanel2.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         private System.Windows.Forms.Label myProfileLable;

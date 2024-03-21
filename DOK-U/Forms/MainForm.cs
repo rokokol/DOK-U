@@ -1,60 +1,76 @@
-﻿using System;
-using System.IO;
-using System.Windows.Forms;
-using System.Text.Json;
+﻿using System.Text.Json;
+using DOK_U.Classes;
+using Microsoft.EntityFrameworkCore;
 
 namespace DOK_U
 {
     public partial class MainForm : Form
     {
-        #region Constants
+        #region Vars
 
-        public static MainForm FORM { private set; get; }
-        private static Person currentUser;
-        public static readonly string INITIAL_FILE = "../../Source/Initial.json";
+        private Person currentUser;
+        public static readonly string INITIAL_FILE = "../../../Source/Initial.json";
+        private DatabaseContext db = new DatabaseContext();
 
-        #endregion
+        #region Boxes
 
         private ListBox[] lectureBoxes;
         private ListBox[] cabinetBoxes;
         private ListBox[] recordLectureBoxes;
         private ListBox[] markBoxes;
-        
+
+        #endregion
+
+        #endregion
+
         public MainForm()
         {
             InitializeComponent();
-            notifyIcon.Click += notifyIcon_MouseClick;
-            FormClosing += MainForm_FormClosing;
-            FORM = this;
             contentTabs.SizeMode = TabSizeMode.Fixed;
-            diaryButton.Enabled = false;
+            FormClosing += MainForm_FormClosing;
             FillArrays();
+            notifyIcon.ContextMenuStrip = new ContextMenuStrip();
+            notifyIcon.ContextMenuStrip.Items.Add("Закрыть приложение", null,
+                delegate { Application.Exit(); });
             Authorize();
+            LoadDB();
+        }
+
+        private void LoadDB()
+        {
+            db.Database.EnsureCreated();
+            db.Users.Load();
+            db.Groups.Load();
+            DataContext = db.Users.Local.ToObservableCollection();
         }
 
         private void Authorize()
         {
             if (!TryAuthorize())
             {
-                Enabled = false;
                 var authorize = new AuthorizeForm();
                 authorize.ShowDialog();
                 TryAuthorize();
             }
+
+            notifyIcon.Visible = true;
             SetupUser(currentUser);
         }
 
         private void SetupUser(Person user)
         {
-            nameContent.Text = $"{user.LastName} {user.FirstName} {user.Surname}";
-            loginContent.Text = user.Login;
-            birthdayContent.Text = $"{user.Birthday.Day}.{user.Birthday.Month}.{user.Birthday.Year}";
-            sexContent.Text = user.Sex == "M" ? "Мужской" : "Женский";
-            groupContent.Text = user.Group;
-            
-            if (user.IsAdmin)
+            if (user != null)
             {
-                ToggleAdminSettings();
+                nameContent.Text = $"{user.LastName} {user.FirstName} {user.Surname}";
+                loginContent.Text = user.Login;
+                birthdayContent.Text = $"{user.Birthday.Day:D2}.{user.Birthday.Month:D2}.{user.Birthday.Year}";
+                sexContent.Text = user.Sex == "М" ? "Мужской" : "Женский";
+                groupContent.Text = db.Groups.Find(currentUser.GroupId).GroupNumber;
+
+                if (user.IsAdmin)
+                {
+                    ToggleAdminSettings();
+                }
             }
         }
         
@@ -73,13 +89,9 @@ namespace DOK_U
             {
                 try
                 {
-                    var user = JsonSerializer.Deserialize<Person>
+                    currentUser = JsonSerializer.Deserialize<Person>
                         (File.ReadAllText(INITIAL_FILE));
-                    if (user.Login == "test" && Person.ByteArrayToString(user.Password) == "password")
-                    {
-                        currentUser = user;
-                        return true;
-                    }
+                    return true;
                 }
                 catch (IOException e)
                 {
@@ -137,6 +149,8 @@ namespace DOK_U
                 WindowState = FormWindowState.Normal;
                 ShowInTaskbar = true;
             }
+            
+            Activate();
         }
 
         private void FillArrays()
