@@ -11,13 +11,15 @@ namespace DOK_U.Classes
         public int Id { get; set; }
         public int StudentId { get; set; }
         public int LectureId { get; set; }
-        public int Value { get; set; }
+        public int TermNumber { get; set; }
+        public string Value { get; set; }
 
-        public Mark(int id, int studentId, int lectureId, int value)
+        public Mark(int id, int studentId, int lectureId, int termNumber, string value)
         {
             Id = id;
             StudentId = studentId;
             LectureId = lectureId;
+            TermNumber = termNumber;
             Value = value;
         }
 

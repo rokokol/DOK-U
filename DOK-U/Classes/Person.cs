@@ -30,6 +30,11 @@ namespace DOK_U
                    $" {nameof(Login)}: {Login}";
         }
 
+        public string FullName()
+        {
+            return $"{LastName} {FirstName} {Surname}";
+        }
+
         public Person(int id,
             string firstName,
             string lastName,

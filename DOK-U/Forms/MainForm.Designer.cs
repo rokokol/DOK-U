@@ -45,30 +45,30 @@ namespace DOK_U
             contentTabs = new TabControl();
             diary = new TabPage();
             groupPanel = new Panel();
-            groupBox = new ListBox();
+            groupBox = new ComboBox();
             groupLabel = new Label();
             diaryTable = new TableLayoutPanel();
+            lectureBox5 = new ComboBox();
+            lectureBox4 = new ComboBox();
+            lectureBox3 = new ComboBox();
+            lectureBox6 = new ComboBox();
             time6 = new Label();
             time5 = new Label();
             time4 = new Label();
             time3 = new Label();
             time2 = new Label();
-            cabinetBox6 = new ListBox();
-            lectureBox6 = new ListBox();
-            cabinetBox5 = new ListBox();
-            lectureBox5 = new ListBox();
-            cabinetBox4 = new ListBox();
-            lectureBox4 = new ListBox();
-            cabinetBox3 = new ListBox();
-            lectureBox3 = new ListBox();
-            cabinetBox2 = new ListBox();
-            lectureBox2 = new ListBox();
-            cabinetBox1 = new ListBox();
+            cabinetBox6 = new ComboBox();
+            cabinetBox5 = new ComboBox();
+            cabinetBox4 = new ComboBox();
+            cabinetBox3 = new ComboBox();
+            cabinetBox2 = new ComboBox();
+            cabinetBox1 = new ComboBox();
             time1 = new Label();
             cabinetLable = new Label();
             lectureLabel = new Label();
             timeLabel = new Label();
-            lectureBox1 = new ListBox();
+            lectureBox1 = new ComboBox();
+            lectureBox2 = new ComboBox();
             days = new TableLayoutPanel();
             st = new Button();
             fr = new Button();
@@ -96,26 +96,26 @@ namespace DOK_U
             loginLable = new Label();
             recordBook = new TabPage();
             recordsTable = new TableLayoutPanel();
-            recordLectureBox7 = new ListBox();
-            markBox7 = new ListBox();
-            markBox6 = new ListBox();
-            recordLectureBox6 = new ListBox();
-            markBox5 = new ListBox();
-            recordLectureBox5 = new ListBox();
-            markBox4 = new ListBox();
-            recordLectureBox4 = new ListBox();
-            markBox3 = new ListBox();
-            recordLectureBox3 = new ListBox();
-            markBox2 = new ListBox();
-            recordLectureBox2 = new ListBox();
-            markBox1 = new ListBox();
+            recordLectureBox7 = new ComboBox();
+            markBox7 = new ComboBox();
+            markBox6 = new ComboBox();
+            recordLectureBox6 = new ComboBox();
+            markBox5 = new ComboBox();
+            recordLectureBox5 = new ComboBox();
+            markBox4 = new ComboBox();
+            recordLectureBox4 = new ComboBox();
+            markBox3 = new ComboBox();
+            recordLectureBox3 = new ComboBox();
+            markBox2 = new ComboBox();
+            recordLectureBox2 = new ComboBox();
+            markBox1 = new ComboBox();
             markLable = new Label();
             recordLectureLabel = new Label();
-            recordLectureBox1 = new ListBox();
+            recordLectureBox1 = new ComboBox();
             semesterPanel = new Panel();
-            studentBox = new ListBox();
+            studentBox = new ComboBox();
             studentLabel = new Label();
-            semesterBox = new ListBox();
+            semesterBox = new ComboBox();
             semesterLabel = new Label();
             info = new TabPage();
             exitButton = new Button();
@@ -322,7 +322,7 @@ namespace DOK_U
             groupBox.Location = new Point(132, 3);
             groupBox.Margin = new Padding(4, 3, 4, 3);
             groupBox.Name = "groupBox";
-            groupBox.Size = new Size(124, 23);
+            groupBox.Size = new Size(124, 27);
             groupBox.TabIndex = 1;
             // 
             // groupLabel
@@ -344,27 +344,27 @@ namespace DOK_U
             diaryTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 70F));
             diaryTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
             diaryTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
+            diaryTable.Controls.Add(lectureBox5, 1, 5);
+            diaryTable.Controls.Add(lectureBox4, 1, 4);
+            diaryTable.Controls.Add(lectureBox3, 1, 3);
+            diaryTable.Controls.Add(lectureBox6, 0, 6);
             diaryTable.Controls.Add(time6, 0, 6);
             diaryTable.Controls.Add(time5, 0, 5);
             diaryTable.Controls.Add(time4, 0, 4);
             diaryTable.Controls.Add(time3, 0, 3);
             diaryTable.Controls.Add(time2, 0, 2);
             diaryTable.Controls.Add(cabinetBox6, 2, 6);
-            diaryTable.Controls.Add(lectureBox6, 1, 6);
             diaryTable.Controls.Add(cabinetBox5, 2, 5);
-            diaryTable.Controls.Add(lectureBox5, 1, 5);
             diaryTable.Controls.Add(cabinetBox4, 2, 4);
-            diaryTable.Controls.Add(lectureBox4, 1, 4);
             diaryTable.Controls.Add(cabinetBox3, 2, 3);
-            diaryTable.Controls.Add(lectureBox3, 1, 3);
             diaryTable.Controls.Add(cabinetBox2, 2, 2);
-            diaryTable.Controls.Add(lectureBox2, 1, 2);
             diaryTable.Controls.Add(cabinetBox1, 2, 1);
             diaryTable.Controls.Add(time1, 0, 1);
             diaryTable.Controls.Add(cabinetLable, 2, 0);
             diaryTable.Controls.Add(lectureLabel, 1, 0);
             diaryTable.Controls.Add(timeLabel, 0, 0);
             diaryTable.Controls.Add(lectureBox1, 1, 1);
+            diaryTable.Controls.Add(lectureBox2, 1, 2);
             diaryTable.Location = new Point(7, 74);
             diaryTable.Margin = new Padding(4, 3, 4, 3);
             diaryTable.Name = "diaryTable";
@@ -376,8 +376,57 @@ namespace DOK_U
             diaryTable.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667F));
             diaryTable.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667F));
             diaryTable.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667F));
+            diaryTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             diaryTable.Size = new Size(698, 497);
             diaryTable.TabIndex = 2;
+            // 
+            // lectureBox5
+            // 
+            lectureBox5.BackColor = Color.FromArgb(232, 232, 232);
+            lectureBox5.Dock = DockStyle.Top;
+            lectureBox5.Enabled = false;
+            lectureBox5.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold);
+            lectureBox5.FormattingEnabled = true;
+            lectureBox5.Location = new Point(75, 347);
+            lectureBox5.Name = "lectureBox5";
+            lectureBox5.Size = new Size(430, 27);
+            lectureBox5.TabIndex = 42;
+            // 
+            // lectureBox4
+            // 
+            lectureBox4.BackColor = Color.FromArgb(232, 232, 232);
+            lectureBox4.Dock = DockStyle.Top;
+            lectureBox4.Enabled = false;
+            lectureBox4.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold);
+            lectureBox4.FormattingEnabled = true;
+            lectureBox4.Location = new Point(75, 273);
+            lectureBox4.Name = "lectureBox4";
+            lectureBox4.Size = new Size(430, 27);
+            lectureBox4.TabIndex = 41;
+            // 
+            // lectureBox3
+            // 
+            lectureBox3.BackColor = Color.FromArgb(232, 232, 232);
+            lectureBox3.Dock = DockStyle.Top;
+            lectureBox3.Enabled = false;
+            lectureBox3.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold);
+            lectureBox3.FormattingEnabled = true;
+            lectureBox3.Location = new Point(75, 199);
+            lectureBox3.Name = "lectureBox3";
+            lectureBox3.Size = new Size(430, 27);
+            lectureBox3.TabIndex = 40;
+            // 
+            // lectureBox6
+            // 
+            lectureBox6.BackColor = Color.FromArgb(232, 232, 232);
+            lectureBox6.Dock = DockStyle.Top;
+            lectureBox6.Enabled = false;
+            lectureBox6.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold);
+            lectureBox6.FormattingEnabled = true;
+            lectureBox6.Location = new Point(75, 421);
+            lectureBox6.Name = "lectureBox6";
+            lectureBox6.Size = new Size(430, 27);
+            lectureBox6.TabIndex = 38;
             // 
             // time6
             // 
@@ -447,177 +496,85 @@ namespace DOK_U
             // cabinetBox6
             // 
             cabinetBox6.BackColor = Color.FromArgb(232, 232, 232);
-            cabinetBox6.BorderStyle = BorderStyle.None;
             cabinetBox6.Dock = DockStyle.Top;
             cabinetBox6.Enabled = false;
             cabinetBox6.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             cabinetBox6.FormattingEnabled = true;
             cabinetBox6.ItemHeight = 19;
-            cabinetBox6.Items.AddRange(new object[] { "Матан" });
             cabinetBox6.Location = new Point(513, 421);
             cabinetBox6.Margin = new Padding(4, 3, 4, 3);
             cabinetBox6.Name = "cabinetBox6";
-            cabinetBox6.Size = new Size(180, 19);
+            cabinetBox6.Size = new Size(180, 27);
             cabinetBox6.TabIndex = 31;
-            // 
-            // lectureBox6
-            // 
-            lectureBox6.BackColor = Color.FromArgb(232, 232, 232);
-            lectureBox6.BorderStyle = BorderStyle.None;
-            lectureBox6.Dock = DockStyle.Top;
-            lectureBox6.Enabled = false;
-            lectureBox6.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            lectureBox6.FormattingEnabled = true;
-            lectureBox6.ItemHeight = 19;
-            lectureBox6.Items.AddRange(new object[] { "Матан" });
-            lectureBox6.Location = new Point(76, 421);
-            lectureBox6.Margin = new Padding(4, 3, 4, 3);
-            lectureBox6.Name = "lectureBox6";
-            lectureBox6.Size = new Size(428, 19);
-            lectureBox6.TabIndex = 30;
             // 
             // cabinetBox5
             // 
             cabinetBox5.BackColor = Color.FromArgb(232, 232, 232);
-            cabinetBox5.BorderStyle = BorderStyle.None;
             cabinetBox5.Dock = DockStyle.Top;
             cabinetBox5.Enabled = false;
             cabinetBox5.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             cabinetBox5.FormattingEnabled = true;
             cabinetBox5.ItemHeight = 19;
-            cabinetBox5.Items.AddRange(new object[] { "Матан" });
             cabinetBox5.Location = new Point(513, 347);
             cabinetBox5.Margin = new Padding(4, 3, 4, 3);
             cabinetBox5.Name = "cabinetBox5";
-            cabinetBox5.Size = new Size(180, 19);
+            cabinetBox5.Size = new Size(180, 27);
             cabinetBox5.TabIndex = 29;
-            // 
-            // lectureBox5
-            // 
-            lectureBox5.BackColor = Color.FromArgb(232, 232, 232);
-            lectureBox5.BorderStyle = BorderStyle.None;
-            lectureBox5.Dock = DockStyle.Top;
-            lectureBox5.Enabled = false;
-            lectureBox5.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            lectureBox5.FormattingEnabled = true;
-            lectureBox5.ItemHeight = 19;
-            lectureBox5.Items.AddRange(new object[] { "Матан" });
-            lectureBox5.Location = new Point(76, 347);
-            lectureBox5.Margin = new Padding(4, 3, 4, 3);
-            lectureBox5.Name = "lectureBox5";
-            lectureBox5.Size = new Size(428, 19);
-            lectureBox5.TabIndex = 28;
             // 
             // cabinetBox4
             // 
             cabinetBox4.BackColor = Color.FromArgb(232, 232, 232);
-            cabinetBox4.BorderStyle = BorderStyle.None;
             cabinetBox4.Dock = DockStyle.Top;
             cabinetBox4.Enabled = false;
             cabinetBox4.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             cabinetBox4.FormattingEnabled = true;
             cabinetBox4.ItemHeight = 19;
-            cabinetBox4.Items.AddRange(new object[] { "Матан" });
             cabinetBox4.Location = new Point(513, 273);
             cabinetBox4.Margin = new Padding(4, 3, 4, 3);
             cabinetBox4.Name = "cabinetBox4";
-            cabinetBox4.Size = new Size(180, 19);
+            cabinetBox4.Size = new Size(180, 27);
             cabinetBox4.TabIndex = 27;
-            // 
-            // lectureBox4
-            // 
-            lectureBox4.BackColor = Color.FromArgb(232, 232, 232);
-            lectureBox4.BorderStyle = BorderStyle.None;
-            lectureBox4.Dock = DockStyle.Top;
-            lectureBox4.Enabled = false;
-            lectureBox4.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            lectureBox4.FormattingEnabled = true;
-            lectureBox4.ItemHeight = 19;
-            lectureBox4.Items.AddRange(new object[] { "Матан" });
-            lectureBox4.Location = new Point(76, 273);
-            lectureBox4.Margin = new Padding(4, 3, 4, 3);
-            lectureBox4.Name = "lectureBox4";
-            lectureBox4.Size = new Size(428, 19);
-            lectureBox4.TabIndex = 26;
             // 
             // cabinetBox3
             // 
             cabinetBox3.BackColor = Color.FromArgb(232, 232, 232);
-            cabinetBox3.BorderStyle = BorderStyle.None;
             cabinetBox3.Dock = DockStyle.Top;
             cabinetBox3.Enabled = false;
             cabinetBox3.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             cabinetBox3.FormattingEnabled = true;
             cabinetBox3.ItemHeight = 19;
-            cabinetBox3.Items.AddRange(new object[] { "Матан" });
             cabinetBox3.Location = new Point(513, 199);
             cabinetBox3.Margin = new Padding(4, 3, 4, 3);
             cabinetBox3.Name = "cabinetBox3";
-            cabinetBox3.Size = new Size(180, 19);
+            cabinetBox3.Size = new Size(180, 27);
             cabinetBox3.TabIndex = 25;
-            // 
-            // lectureBox3
-            // 
-            lectureBox3.BackColor = Color.FromArgb(232, 232, 232);
-            lectureBox3.BorderStyle = BorderStyle.None;
-            lectureBox3.Dock = DockStyle.Top;
-            lectureBox3.Enabled = false;
-            lectureBox3.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            lectureBox3.FormattingEnabled = true;
-            lectureBox3.ItemHeight = 19;
-            lectureBox3.Items.AddRange(new object[] { "Матан" });
-            lectureBox3.Location = new Point(76, 199);
-            lectureBox3.Margin = new Padding(4, 3, 4, 3);
-            lectureBox3.Name = "lectureBox3";
-            lectureBox3.Size = new Size(428, 19);
-            lectureBox3.TabIndex = 24;
             // 
             // cabinetBox2
             // 
             cabinetBox2.BackColor = Color.FromArgb(232, 232, 232);
-            cabinetBox2.BorderStyle = BorderStyle.None;
             cabinetBox2.Dock = DockStyle.Top;
             cabinetBox2.Enabled = false;
             cabinetBox2.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             cabinetBox2.FormattingEnabled = true;
             cabinetBox2.ItemHeight = 19;
-            cabinetBox2.Items.AddRange(new object[] { "Матан" });
             cabinetBox2.Location = new Point(513, 125);
             cabinetBox2.Margin = new Padding(4, 3, 4, 3);
             cabinetBox2.Name = "cabinetBox2";
-            cabinetBox2.Size = new Size(180, 19);
+            cabinetBox2.Size = new Size(180, 27);
             cabinetBox2.TabIndex = 23;
-            // 
-            // lectureBox2
-            // 
-            lectureBox2.BackColor = Color.FromArgb(232, 232, 232);
-            lectureBox2.BorderStyle = BorderStyle.None;
-            lectureBox2.Dock = DockStyle.Top;
-            lectureBox2.Enabled = false;
-            lectureBox2.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            lectureBox2.FormattingEnabled = true;
-            lectureBox2.ItemHeight = 19;
-            lectureBox2.Items.AddRange(new object[] { "Матан" });
-            lectureBox2.Location = new Point(76, 125);
-            lectureBox2.Margin = new Padding(4, 3, 4, 3);
-            lectureBox2.Name = "lectureBox2";
-            lectureBox2.Size = new Size(428, 19);
-            lectureBox2.TabIndex = 22;
             // 
             // cabinetBox1
             // 
             cabinetBox1.BackColor = Color.FromArgb(232, 232, 232);
-            cabinetBox1.BorderStyle = BorderStyle.None;
             cabinetBox1.Dock = DockStyle.Top;
             cabinetBox1.Enabled = false;
             cabinetBox1.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             cabinetBox1.FormattingEnabled = true;
             cabinetBox1.ItemHeight = 19;
-            cabinetBox1.Items.AddRange(new object[] { "Матан" });
             cabinetBox1.Location = new Point(513, 51);
             cabinetBox1.Margin = new Padding(4, 3, 4, 3);
             cabinetBox1.Name = "cabinetBox1";
-            cabinetBox1.Size = new Size(180, 19);
+            cabinetBox1.Size = new Size(180, 27);
             cabinetBox1.TabIndex = 20;
             // 
             // time1
@@ -672,18 +629,26 @@ namespace DOK_U
             // lectureBox1
             // 
             lectureBox1.BackColor = Color.FromArgb(232, 232, 232);
-            lectureBox1.BorderStyle = BorderStyle.None;
             lectureBox1.Dock = DockStyle.Top;
             lectureBox1.Enabled = false;
-            lectureBox1.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            lectureBox1.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold);
             lectureBox1.FormattingEnabled = true;
-            lectureBox1.ItemHeight = 19;
-            lectureBox1.Items.AddRange(new object[] { "Матан" });
-            lectureBox1.Location = new Point(76, 51);
-            lectureBox1.Margin = new Padding(4, 3, 4, 3);
+            lectureBox1.Location = new Point(75, 51);
             lectureBox1.Name = "lectureBox1";
-            lectureBox1.Size = new Size(428, 19);
-            lectureBox1.TabIndex = 19;
+            lectureBox1.Size = new Size(430, 27);
+            lectureBox1.TabIndex = 37;
+            // 
+            // lectureBox2
+            // 
+            lectureBox2.BackColor = Color.FromArgb(232, 232, 232);
+            lectureBox2.Dock = DockStyle.Top;
+            lectureBox2.Enabled = false;
+            lectureBox2.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold);
+            lectureBox2.FormattingEnabled = true;
+            lectureBox2.Location = new Point(75, 125);
+            lectureBox2.Name = "lectureBox2";
+            lectureBox2.Size = new Size(430, 27);
+            lectureBox2.TabIndex = 39;
             // 
             // days
             // 
@@ -720,6 +685,7 @@ namespace DOK_U
             st.TabIndex = 5;
             st.Text = "СБ";
             st.UseVisualStyleBackColor = true;
+            st.Click += st_Click;
             // 
             // fr
             // 
@@ -732,6 +698,7 @@ namespace DOK_U
             fr.TabIndex = 4;
             fr.Text = "ПТ";
             fr.UseVisualStyleBackColor = true;
+            fr.Click += fr_Click;
             // 
             // th
             // 
@@ -744,6 +711,7 @@ namespace DOK_U
             th.TabIndex = 3;
             th.Text = "ЧТ";
             th.UseVisualStyleBackColor = true;
+            th.Click += th_Click;
             // 
             // wd
             // 
@@ -756,6 +724,7 @@ namespace DOK_U
             wd.TabIndex = 2;
             wd.Text = "СР";
             wd.UseVisualStyleBackColor = true;
+            wd.Click += wd_Click;
             // 
             // tu
             // 
@@ -768,6 +737,7 @@ namespace DOK_U
             tu.TabIndex = 1;
             tu.Text = "ВТ";
             tu.UseVisualStyleBackColor = true;
+            tu.Click += tu_Click;
             // 
             // mn
             // 
@@ -780,6 +750,7 @@ namespace DOK_U
             mn.TabIndex = 0;
             mn.Text = "ПН";
             mn.UseVisualStyleBackColor = true;
+            mn.Click += mn_Click;
             // 
             // todayTomorrow
             // 
@@ -807,6 +778,7 @@ namespace DOK_U
             tommorow.TabIndex = 1;
             tommorow.Text = "Завтра";
             tommorow.UseVisualStyleBackColor = true;
+            tommorow.Click += tommorow_Click;
             // 
             // today
             // 
@@ -819,6 +791,7 @@ namespace DOK_U
             today.TabIndex = 0;
             today.Text = "Сегодня";
             today.UseVisualStyleBackColor = true;
+            today.Click += today_Click;
             // 
             // profile
             // 
@@ -1089,23 +1062,20 @@ namespace DOK_U
             // recordLectureBox7
             // 
             recordLectureBox7.BackColor = Color.FromArgb(232, 232, 232);
-            recordLectureBox7.BorderStyle = BorderStyle.None;
             recordLectureBox7.Dock = DockStyle.Top;
             recordLectureBox7.Enabled = false;
             recordLectureBox7.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             recordLectureBox7.FormattingEnabled = true;
             recordLectureBox7.ItemHeight = 19;
-            recordLectureBox7.Items.AddRange(new object[] { "Матан" });
             recordLectureBox7.Location = new Point(5, 435);
             recordLectureBox7.Margin = new Padding(4, 3, 4, 3);
             recordLectureBox7.Name = "recordLectureBox7";
-            recordLectureBox7.Size = new Size(478, 19);
+            recordLectureBox7.Size = new Size(478, 27);
             recordLectureBox7.TabIndex = 33;
             // 
             // markBox7
             // 
             markBox7.BackColor = Color.FromArgb(232, 232, 232);
-            markBox7.BorderStyle = BorderStyle.None;
             markBox7.Dock = DockStyle.Top;
             markBox7.Enabled = false;
             markBox7.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
@@ -1115,13 +1085,12 @@ namespace DOK_U
             markBox7.Location = new Point(492, 435);
             markBox7.Margin = new Padding(4, 3, 4, 3);
             markBox7.Name = "markBox7";
-            markBox7.Size = new Size(201, 19);
+            markBox7.Size = new Size(201, 27);
             markBox7.TabIndex = 32;
             // 
             // markBox6
             // 
             markBox6.BackColor = Color.FromArgb(232, 232, 232);
-            markBox6.BorderStyle = BorderStyle.None;
             markBox6.Dock = DockStyle.Top;
             markBox6.Enabled = false;
             markBox6.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
@@ -1131,29 +1100,26 @@ namespace DOK_U
             markBox6.Location = new Point(492, 371);
             markBox6.Margin = new Padding(4, 3, 4, 3);
             markBox6.Name = "markBox6";
-            markBox6.Size = new Size(201, 19);
+            markBox6.Size = new Size(201, 27);
             markBox6.TabIndex = 31;
             // 
             // recordLectureBox6
             // 
             recordLectureBox6.BackColor = Color.FromArgb(232, 232, 232);
-            recordLectureBox6.BorderStyle = BorderStyle.None;
             recordLectureBox6.Dock = DockStyle.Top;
             recordLectureBox6.Enabled = false;
             recordLectureBox6.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             recordLectureBox6.FormattingEnabled = true;
             recordLectureBox6.ItemHeight = 19;
-            recordLectureBox6.Items.AddRange(new object[] { "Матан" });
             recordLectureBox6.Location = new Point(5, 371);
             recordLectureBox6.Margin = new Padding(4, 3, 4, 3);
             recordLectureBox6.Name = "recordLectureBox6";
-            recordLectureBox6.Size = new Size(478, 19);
+            recordLectureBox6.Size = new Size(478, 27);
             recordLectureBox6.TabIndex = 30;
             // 
             // markBox5
             // 
             markBox5.BackColor = Color.FromArgb(232, 232, 232);
-            markBox5.BorderStyle = BorderStyle.None;
             markBox5.Dock = DockStyle.Top;
             markBox5.Enabled = false;
             markBox5.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
@@ -1163,29 +1129,26 @@ namespace DOK_U
             markBox5.Location = new Point(492, 307);
             markBox5.Margin = new Padding(4, 3, 4, 3);
             markBox5.Name = "markBox5";
-            markBox5.Size = new Size(201, 19);
+            markBox5.Size = new Size(201, 27);
             markBox5.TabIndex = 29;
             // 
             // recordLectureBox5
             // 
             recordLectureBox5.BackColor = Color.FromArgb(232, 232, 232);
-            recordLectureBox5.BorderStyle = BorderStyle.None;
             recordLectureBox5.Dock = DockStyle.Top;
             recordLectureBox5.Enabled = false;
             recordLectureBox5.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             recordLectureBox5.FormattingEnabled = true;
             recordLectureBox5.ItemHeight = 19;
-            recordLectureBox5.Items.AddRange(new object[] { "Матан" });
             recordLectureBox5.Location = new Point(5, 307);
             recordLectureBox5.Margin = new Padding(4, 3, 4, 3);
             recordLectureBox5.Name = "recordLectureBox5";
-            recordLectureBox5.Size = new Size(478, 19);
+            recordLectureBox5.Size = new Size(478, 27);
             recordLectureBox5.TabIndex = 28;
             // 
             // markBox4
             // 
             markBox4.BackColor = Color.FromArgb(232, 232, 232);
-            markBox4.BorderStyle = BorderStyle.None;
             markBox4.Dock = DockStyle.Top;
             markBox4.Enabled = false;
             markBox4.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
@@ -1195,29 +1158,26 @@ namespace DOK_U
             markBox4.Location = new Point(492, 243);
             markBox4.Margin = new Padding(4, 3, 4, 3);
             markBox4.Name = "markBox4";
-            markBox4.Size = new Size(201, 19);
+            markBox4.Size = new Size(201, 27);
             markBox4.TabIndex = 27;
             // 
             // recordLectureBox4
             // 
             recordLectureBox4.BackColor = Color.FromArgb(232, 232, 232);
-            recordLectureBox4.BorderStyle = BorderStyle.None;
             recordLectureBox4.Dock = DockStyle.Top;
             recordLectureBox4.Enabled = false;
             recordLectureBox4.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             recordLectureBox4.FormattingEnabled = true;
             recordLectureBox4.ItemHeight = 19;
-            recordLectureBox4.Items.AddRange(new object[] { "Матан" });
             recordLectureBox4.Location = new Point(5, 243);
             recordLectureBox4.Margin = new Padding(4, 3, 4, 3);
             recordLectureBox4.Name = "recordLectureBox4";
-            recordLectureBox4.Size = new Size(478, 19);
+            recordLectureBox4.Size = new Size(478, 27);
             recordLectureBox4.TabIndex = 26;
             // 
             // markBox3
             // 
             markBox3.BackColor = Color.FromArgb(232, 232, 232);
-            markBox3.BorderStyle = BorderStyle.None;
             markBox3.DisplayMember = "5";
             markBox3.Dock = DockStyle.Top;
             markBox3.Enabled = false;
@@ -1228,29 +1188,26 @@ namespace DOK_U
             markBox3.Location = new Point(492, 179);
             markBox3.Margin = new Padding(4, 3, 4, 3);
             markBox3.Name = "markBox3";
-            markBox3.Size = new Size(201, 19);
+            markBox3.Size = new Size(201, 27);
             markBox3.TabIndex = 25;
             // 
             // recordLectureBox3
             // 
             recordLectureBox3.BackColor = Color.FromArgb(232, 232, 232);
-            recordLectureBox3.BorderStyle = BorderStyle.None;
             recordLectureBox3.Dock = DockStyle.Top;
             recordLectureBox3.Enabled = false;
             recordLectureBox3.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             recordLectureBox3.FormattingEnabled = true;
             recordLectureBox3.ItemHeight = 19;
-            recordLectureBox3.Items.AddRange(new object[] { "Матан" });
             recordLectureBox3.Location = new Point(5, 179);
             recordLectureBox3.Margin = new Padding(4, 3, 4, 3);
             recordLectureBox3.Name = "recordLectureBox3";
-            recordLectureBox3.Size = new Size(478, 19);
+            recordLectureBox3.Size = new Size(478, 27);
             recordLectureBox3.TabIndex = 24;
             // 
             // markBox2
             // 
             markBox2.BackColor = Color.FromArgb(232, 232, 232);
-            markBox2.BorderStyle = BorderStyle.None;
             markBox2.Dock = DockStyle.Top;
             markBox2.Enabled = false;
             markBox2.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
@@ -1260,29 +1217,26 @@ namespace DOK_U
             markBox2.Location = new Point(492, 115);
             markBox2.Margin = new Padding(4, 3, 4, 3);
             markBox2.Name = "markBox2";
-            markBox2.Size = new Size(201, 19);
+            markBox2.Size = new Size(201, 27);
             markBox2.TabIndex = 23;
             // 
             // recordLectureBox2
             // 
             recordLectureBox2.BackColor = Color.FromArgb(232, 232, 232);
-            recordLectureBox2.BorderStyle = BorderStyle.None;
             recordLectureBox2.Dock = DockStyle.Top;
             recordLectureBox2.Enabled = false;
             recordLectureBox2.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             recordLectureBox2.FormattingEnabled = true;
             recordLectureBox2.ItemHeight = 19;
-            recordLectureBox2.Items.AddRange(new object[] { "Матан" });
             recordLectureBox2.Location = new Point(5, 115);
             recordLectureBox2.Margin = new Padding(4, 3, 4, 3);
             recordLectureBox2.Name = "recordLectureBox2";
-            recordLectureBox2.Size = new Size(478, 19);
+            recordLectureBox2.Size = new Size(478, 27);
             recordLectureBox2.TabIndex = 22;
             // 
             // markBox1
             // 
             markBox1.BackColor = Color.FromArgb(232, 232, 232);
-            markBox1.BorderStyle = BorderStyle.None;
             markBox1.DisplayMember = "1";
             markBox1.Dock = DockStyle.Top;
             markBox1.Enabled = false;
@@ -1293,8 +1247,7 @@ namespace DOK_U
             markBox1.Location = new Point(492, 51);
             markBox1.Margin = new Padding(4, 3, 4, 3);
             markBox1.Name = "markBox1";
-            markBox1.ScrollAlwaysVisible = true;
-            markBox1.Size = new Size(201, 19);
+            markBox1.Size = new Size(201, 27);
             markBox1.TabIndex = 20;
             // 
             // markLable
@@ -1325,17 +1278,15 @@ namespace DOK_U
             // 
             recordLectureBox1.AllowDrop = true;
             recordLectureBox1.BackColor = Color.FromArgb(232, 232, 232);
-            recordLectureBox1.BorderStyle = BorderStyle.None;
             recordLectureBox1.Dock = DockStyle.Top;
             recordLectureBox1.Enabled = false;
             recordLectureBox1.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             recordLectureBox1.FormattingEnabled = true;
             recordLectureBox1.ItemHeight = 19;
-            recordLectureBox1.Items.AddRange(new object[] { "Матан", "Алгем", "Прога" });
             recordLectureBox1.Location = new Point(5, 51);
             recordLectureBox1.Margin = new Padding(4, 3, 4, 3);
             recordLectureBox1.Name = "recordLectureBox1";
-            recordLectureBox1.Size = new Size(478, 19);
+            recordLectureBox1.Size = new Size(478, 27);
             recordLectureBox1.TabIndex = 19;
             // 
             // semesterPanel
@@ -1363,7 +1314,7 @@ namespace DOK_U
             studentBox.Location = new Point(391, 3);
             studentBox.Margin = new Padding(4, 3, 4, 3);
             studentBox.Name = "studentBox";
-            studentBox.Size = new Size(307, 23);
+            studentBox.Size = new Size(307, 27);
             studentBox.TabIndex = 3;
             // 
             // studentLabel
@@ -1388,8 +1339,9 @@ namespace DOK_U
             semesterBox.Location = new Point(155, 3);
             semesterBox.Margin = new Padding(4, 3, 4, 3);
             semesterBox.Name = "semesterBox";
-            semesterBox.Size = new Size(88, 23);
+            semesterBox.Size = new Size(88, 27);
             semesterBox.TabIndex = 1;
+            semesterBox.SelectedIndexChanged += semesterBox_SelectedIndexChanged;
             // 
             // semesterLabel
             // 
@@ -1553,30 +1505,30 @@ namespace DOK_U
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label groupLable;
 
-        private System.Windows.Forms.ListBox semesterBox;
+        private System.Windows.Forms.ComboBox semesterBox;
 
-        private System.Windows.Forms.ListBox studentBox;
+        private System.Windows.Forms.ComboBox studentBox;
 
         private System.Windows.Forms.Label studentLabel;
 
-        private System.Windows.Forms.ListBox markBox7;
-        private System.Windows.Forms.ListBox recordLectureBox7;
+        private System.Windows.Forms.ComboBox markBox7;
+        private System.Windows.Forms.ComboBox recordLectureBox7;
 
         private System.Windows.Forms.TableLayoutPanel recordsTable;
-        private System.Windows.Forms.ListBox markBox6;
-        private System.Windows.Forms.ListBox recordLectureBox6;
-        private System.Windows.Forms.ListBox markBox5;
-        private System.Windows.Forms.ListBox recordLectureBox5;
-        private System.Windows.Forms.ListBox markBox4;
-        private System.Windows.Forms.ListBox recordLectureBox4;
-        private System.Windows.Forms.ListBox markBox3;
-        private System.Windows.Forms.ListBox recordLectureBox3;
-        private System.Windows.Forms.ListBox markBox2;
-        private System.Windows.Forms.ListBox recordLectureBox2;
-        private System.Windows.Forms.ListBox markBox1;
+        private System.Windows.Forms.ComboBox markBox6;
+        private System.Windows.Forms.ComboBox recordLectureBox6;
+        private System.Windows.Forms.ComboBox markBox5;
+        private System.Windows.Forms.ComboBox recordLectureBox5;
+        private System.Windows.Forms.ComboBox markBox4;
+        private System.Windows.Forms.ComboBox recordLectureBox4;
+        private System.Windows.Forms.ComboBox markBox3;
+        private System.Windows.Forms.ComboBox recordLectureBox3;
+        private System.Windows.Forms.ComboBox markBox2;
+        private System.Windows.Forms.ComboBox recordLectureBox2;
+        private System.Windows.Forms.ComboBox markBox1;
         private System.Windows.Forms.Label markLable;
         private System.Windows.Forms.Label recordLectureLabel;
-        private System.Windows.Forms.ListBox recordLectureBox1;
+        private System.Windows.Forms.ComboBox recordLectureBox1;
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label1;
@@ -1590,18 +1542,12 @@ namespace DOK_U
 
         private System.Windows.Forms.Label aboutLabel;
 
-        private System.Windows.Forms.ListBox lectureBox2;
-
-        private System.Windows.Forms.ListBox cabinetBox1;
-        private System.Windows.Forms.ListBox lectureBox3;
-        private System.Windows.Forms.ListBox cabinetBox2;
-        private System.Windows.Forms.ListBox cabinetBox3;
-        private System.Windows.Forms.ListBox lectureBox4;
-        private System.Windows.Forms.ListBox cabinetBox4;
-        private System.Windows.Forms.ListBox lectureBox5;
-        private System.Windows.Forms.ListBox cabinetBox5;
-        private System.Windows.Forms.ListBox lectureBox6;
-        private System.Windows.Forms.ListBox cabinetBox6;
+        private System.Windows.Forms.ComboBox cabinetBox1;
+        private System.Windows.Forms.ComboBox cabinetBox2;
+        private System.Windows.Forms.ComboBox cabinetBox3;
+        private System.Windows.Forms.ComboBox cabinetBox4;
+        private System.Windows.Forms.ComboBox cabinetBox5;
+        private System.Windows.Forms.ComboBox cabinetBox6;
         private System.Windows.Forms.Label time2;
         private System.Windows.Forms.Label time3;
         private System.Windows.Forms.Label time4;
@@ -1610,14 +1556,12 @@ namespace DOK_U
 
         private System.Windows.Forms.Label lectureLabel;
 
-        private System.Windows.Forms.ListBox lectureBox1;
-
         private System.Windows.Forms.Label time1;
         private System.Windows.Forms.Label cabinetLable;
 
         private System.Windows.Forms.Label timeLabel;
 
-        private System.Windows.Forms.ListBox groupBox;
+        private System.Windows.Forms.ComboBox groupBox;
 
         private System.Windows.Forms.Panel groupPanel;
         private System.Windows.Forms.Label groupLabel;
@@ -1662,5 +1606,12 @@ namespace DOK_U
         private System.Windows.Forms.SplitContainer content;
 
         #endregion
+
+        private ComboBox lectureBox1;
+        private ComboBox lectureBox5;
+        private ComboBox lectureBox4;
+        private ComboBox lectureBox3;
+        private ComboBox lectureBox6;
+        private ComboBox lectureBox2;
     }
 }

@@ -24,21 +24,6 @@ namespace DOK_U
             FormClosing += Authorize_FormClosing;
             //db.Database.EnsureDeleted();
             LoadDB();
-            //var user = new Person(1,
-            //            "Диана",
-            //            "Логинова",
-            //            "Романовна",
-            //            "Ж",
-            //            false,
-            //            "SLDR",
-            //            "12345678",
-            //            new DateTime(2005, 04, 25),
-            //            1,
-            //            "password");
-            //db.Users.Add(user);
-            //var group = new Group(1, "09-321(1)");
-            //db.Groups.Add(group);
-            //db.SaveChanges();
         }
 
         public void forgetPasswordTool_MouseHover(object sender, EventArgs args)
@@ -55,7 +40,6 @@ namespace DOK_U
         {
             db.Database.EnsureCreated();
             db.Users.Load();
-            db.Groups.Load();
             DataContext = db.Users.Local.ToObservableCollection();
         }
 
@@ -128,9 +112,8 @@ namespace DOK_U
             var user = db.Users.FromSqlRaw(
                 "SELECT * FROM Users " +
                 "WHERE " +
-                $"Login = '{loginTextBox.Text}' " +
-                $"AND " +
-                $"Password = '{passwordTextBox.Text}' " +
+                $"  Login = '{loginTextBox.Text}' AND " +
+                $"  Password = '{passwordTextBox.Text}' " +
                 $"LIMIT 1").ToList();
             if (user.Count() > 0)
             {
@@ -146,6 +129,10 @@ namespace DOK_U
                     File.WriteAllText(MainForm.INITIAL_FILE,
                         JsonSerializer.Serialize<Person>(user[0], options));
                     askToClose = false;
+                    MessageBox.Show("Вход выполнен успешно",
+                        "Вход",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
                     Close();
                 }
                 catch (IOException ex)
