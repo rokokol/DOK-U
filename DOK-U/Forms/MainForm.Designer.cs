@@ -318,12 +318,12 @@ namespace DOK_U
             groupBox.Font = new Font("Microsoft YaHei", 10F, FontStyle.Bold, GraphicsUnit.Point, 204);
             groupBox.FormattingEnabled = true;
             groupBox.ItemHeight = 19;
-            groupBox.Items.AddRange(new object[] { "09-321(1)", "09-321(2)", "09-322(1)", "09-322(2)" });
             groupBox.Location = new Point(132, 3);
             groupBox.Margin = new Padding(4, 3, 4, 3);
             groupBox.Name = "groupBox";
             groupBox.Size = new Size(124, 27);
             groupBox.TabIndex = 1;
+            groupBox.SelectedIndexChanged += groupBox_SelectedIndexChanged;
             // 
             // groupLabel
             // 
@@ -391,6 +391,7 @@ namespace DOK_U
             lectureBox5.Name = "lectureBox5";
             lectureBox5.Size = new Size(430, 27);
             lectureBox5.TabIndex = 42;
+            lectureBox5.SelectedIndexChanged += lectureBox5_SelectedIndexChanged;
             // 
             // lectureBox4
             // 
@@ -403,6 +404,7 @@ namespace DOK_U
             lectureBox4.Name = "lectureBox4";
             lectureBox4.Size = new Size(430, 27);
             lectureBox4.TabIndex = 41;
+            lectureBox4.SelectedIndexChanged += lectureBox4_SelectedIndexChanged;
             // 
             // lectureBox3
             // 
@@ -415,6 +417,7 @@ namespace DOK_U
             lectureBox3.Name = "lectureBox3";
             lectureBox3.Size = new Size(430, 27);
             lectureBox3.TabIndex = 40;
+            lectureBox3.SelectedIndexChanged += lectureBox3_SelectedIndexChanged;
             // 
             // lectureBox6
             // 
@@ -427,6 +430,7 @@ namespace DOK_U
             lectureBox6.Name = "lectureBox6";
             lectureBox6.Size = new Size(430, 27);
             lectureBox6.TabIndex = 38;
+            lectureBox6.SelectedIndexChanged += lectureBox6_SelectedIndexChanged;
             // 
             // time6
             // 
@@ -506,6 +510,7 @@ namespace DOK_U
             cabinetBox6.Name = "cabinetBox6";
             cabinetBox6.Size = new Size(180, 27);
             cabinetBox6.TabIndex = 31;
+            cabinetBox6.SelectedIndexChanged += cabinetBox6_SelectedIndexChanged;
             // 
             // cabinetBox5
             // 
@@ -520,6 +525,7 @@ namespace DOK_U
             cabinetBox5.Name = "cabinetBox5";
             cabinetBox5.Size = new Size(180, 27);
             cabinetBox5.TabIndex = 29;
+            cabinetBox5.SelectedIndexChanged += cabinetBox5_SelectedIndexChanged;
             // 
             // cabinetBox4
             // 
@@ -534,6 +540,7 @@ namespace DOK_U
             cabinetBox4.Name = "cabinetBox4";
             cabinetBox4.Size = new Size(180, 27);
             cabinetBox4.TabIndex = 27;
+            cabinetBox4.SelectedIndexChanged += cabinetBox4_SelectedIndexChanged;
             // 
             // cabinetBox3
             // 
@@ -548,6 +555,7 @@ namespace DOK_U
             cabinetBox3.Name = "cabinetBox3";
             cabinetBox3.Size = new Size(180, 27);
             cabinetBox3.TabIndex = 25;
+            cabinetBox3.SelectedIndexChanged += cabinetBox3_SelectedIndexChanged;
             // 
             // cabinetBox2
             // 
@@ -562,6 +570,7 @@ namespace DOK_U
             cabinetBox2.Name = "cabinetBox2";
             cabinetBox2.Size = new Size(180, 27);
             cabinetBox2.TabIndex = 23;
+            cabinetBox2.SelectedIndexChanged += cabinetBox2_SelectedIndexChanged;
             // 
             // cabinetBox1
             // 
@@ -576,6 +585,7 @@ namespace DOK_U
             cabinetBox1.Name = "cabinetBox1";
             cabinetBox1.Size = new Size(180, 27);
             cabinetBox1.TabIndex = 20;
+            cabinetBox1.SelectedIndexChanged += cabinetBox1_SelectedIndexChanged;
             // 
             // time1
             // 
@@ -637,6 +647,7 @@ namespace DOK_U
             lectureBox1.Name = "lectureBox1";
             lectureBox1.Size = new Size(430, 27);
             lectureBox1.TabIndex = 37;
+            lectureBox1.SelectedIndexChanged += lectureBox1_SelectedIndexChanged;
             // 
             // lectureBox2
             // 
@@ -649,6 +660,7 @@ namespace DOK_U
             lectureBox2.Name = "lectureBox2";
             lectureBox2.Size = new Size(430, 27);
             lectureBox2.TabIndex = 39;
+            lectureBox2.SelectedIndexChanged += lectureBox2_SelectedIndexChanged;
             // 
             // days
             // 
@@ -1072,6 +1084,7 @@ namespace DOK_U
             recordLectureBox7.Name = "recordLectureBox7";
             recordLectureBox7.Size = new Size(478, 27);
             recordLectureBox7.TabIndex = 33;
+            recordLectureBox7.SelectedIndexChanged += recordLectureBox7_SelectedIndexChanged;
             // 
             // markBox7
             // 
@@ -1081,12 +1094,12 @@ namespace DOK_U
             markBox7.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             markBox7.FormattingEnabled = true;
             markBox7.ItemHeight = 19;
-            markBox7.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
             markBox7.Location = new Point(492, 435);
             markBox7.Margin = new Padding(4, 3, 4, 3);
             markBox7.Name = "markBox7";
             markBox7.Size = new Size(201, 27);
             markBox7.TabIndex = 32;
+            markBox7.SelectedIndexChanged += markBox7_SelectedIndexChanged;
             // 
             // markBox6
             // 
@@ -1096,12 +1109,12 @@ namespace DOK_U
             markBox6.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             markBox6.FormattingEnabled = true;
             markBox6.ItemHeight = 19;
-            markBox6.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
             markBox6.Location = new Point(492, 371);
             markBox6.Margin = new Padding(4, 3, 4, 3);
             markBox6.Name = "markBox6";
             markBox6.Size = new Size(201, 27);
             markBox6.TabIndex = 31;
+            markBox6.SelectedIndexChanged += markBox6_SelectedIndexChanged;
             // 
             // recordLectureBox6
             // 
@@ -1116,6 +1129,7 @@ namespace DOK_U
             recordLectureBox6.Name = "recordLectureBox6";
             recordLectureBox6.Size = new Size(478, 27);
             recordLectureBox6.TabIndex = 30;
+            recordLectureBox6.SelectedIndexChanged += recordLectureBox6_SelectedIndexChanged;
             // 
             // markBox5
             // 
@@ -1125,12 +1139,12 @@ namespace DOK_U
             markBox5.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             markBox5.FormattingEnabled = true;
             markBox5.ItemHeight = 19;
-            markBox5.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
             markBox5.Location = new Point(492, 307);
             markBox5.Margin = new Padding(4, 3, 4, 3);
             markBox5.Name = "markBox5";
             markBox5.Size = new Size(201, 27);
             markBox5.TabIndex = 29;
+            markBox5.SelectedIndexChanged += markBox5_SelectedIndexChanged;
             // 
             // recordLectureBox5
             // 
@@ -1145,6 +1159,7 @@ namespace DOK_U
             recordLectureBox5.Name = "recordLectureBox5";
             recordLectureBox5.Size = new Size(478, 27);
             recordLectureBox5.TabIndex = 28;
+            recordLectureBox5.SelectedIndexChanged += recordLectureBox5_SelectedIndexChanged;
             // 
             // markBox4
             // 
@@ -1154,12 +1169,12 @@ namespace DOK_U
             markBox4.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             markBox4.FormattingEnabled = true;
             markBox4.ItemHeight = 19;
-            markBox4.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
             markBox4.Location = new Point(492, 243);
             markBox4.Margin = new Padding(4, 3, 4, 3);
             markBox4.Name = "markBox4";
             markBox4.Size = new Size(201, 27);
             markBox4.TabIndex = 27;
+            markBox4.SelectedIndexChanged += markBox4_SelectedIndexChanged;
             // 
             // recordLectureBox4
             // 
@@ -1174,6 +1189,7 @@ namespace DOK_U
             recordLectureBox4.Name = "recordLectureBox4";
             recordLectureBox4.Size = new Size(478, 27);
             recordLectureBox4.TabIndex = 26;
+            recordLectureBox4.SelectedIndexChanged += recordLectureBox4_SelectedIndexChanged;
             // 
             // markBox3
             // 
@@ -1184,12 +1200,12 @@ namespace DOK_U
             markBox3.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             markBox3.FormattingEnabled = true;
             markBox3.ItemHeight = 19;
-            markBox3.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
             markBox3.Location = new Point(492, 179);
             markBox3.Margin = new Padding(4, 3, 4, 3);
             markBox3.Name = "markBox3";
             markBox3.Size = new Size(201, 27);
             markBox3.TabIndex = 25;
+            markBox3.SelectedIndexChanged += markBox3_SelectedIndexChanged;
             // 
             // recordLectureBox3
             // 
@@ -1204,6 +1220,7 @@ namespace DOK_U
             recordLectureBox3.Name = "recordLectureBox3";
             recordLectureBox3.Size = new Size(478, 27);
             recordLectureBox3.TabIndex = 24;
+            recordLectureBox3.SelectedIndexChanged += recordLectureBox3_SelectedIndexChanged;
             // 
             // markBox2
             // 
@@ -1213,12 +1230,12 @@ namespace DOK_U
             markBox2.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             markBox2.FormattingEnabled = true;
             markBox2.ItemHeight = 19;
-            markBox2.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
             markBox2.Location = new Point(492, 115);
             markBox2.Margin = new Padding(4, 3, 4, 3);
             markBox2.Name = "markBox2";
             markBox2.Size = new Size(201, 27);
             markBox2.TabIndex = 23;
+            markBox2.SelectedIndexChanged += markBox2_SelectedIndexChanged;
             // 
             // recordLectureBox2
             // 
@@ -1233,6 +1250,7 @@ namespace DOK_U
             recordLectureBox2.Name = "recordLectureBox2";
             recordLectureBox2.Size = new Size(478, 27);
             recordLectureBox2.TabIndex = 22;
+            recordLectureBox2.SelectedIndexChanged += recordLectureBox2_SelectedIndexChanged;
             // 
             // markBox1
             // 
@@ -1243,12 +1261,12 @@ namespace DOK_U
             markBox1.Font = new Font("Microsoft YaHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             markBox1.FormattingEnabled = true;
             markBox1.ItemHeight = 19;
-            markBox1.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
             markBox1.Location = new Point(492, 51);
             markBox1.Margin = new Padding(4, 3, 4, 3);
             markBox1.Name = "markBox1";
             markBox1.Size = new Size(201, 27);
             markBox1.TabIndex = 20;
+            markBox1.SelectedIndexChanged += markBox1_SelectedIndexChanged;
             // 
             // markLable
             // 
@@ -1288,6 +1306,7 @@ namespace DOK_U
             recordLectureBox1.Name = "recordLectureBox1";
             recordLectureBox1.Size = new Size(478, 27);
             recordLectureBox1.TabIndex = 19;
+            recordLectureBox1.SelectedIndexChanged += recordLectureBox1_SelectedIndexChanged;
             // 
             // semesterPanel
             // 
@@ -1310,12 +1329,12 @@ namespace DOK_U
             studentBox.Font = new Font("Microsoft YaHei", 10F, FontStyle.Bold, GraphicsUnit.Point, 204);
             studentBox.FormattingEnabled = true;
             studentBox.ItemHeight = 19;
-            studentBox.Items.AddRange(new object[] { "Лещенко Илья Федорович", "Логинова Диана Романовна" });
             studentBox.Location = new Point(391, 3);
             studentBox.Margin = new Padding(4, 3, 4, 3);
             studentBox.Name = "studentBox";
             studentBox.Size = new Size(307, 27);
             studentBox.TabIndex = 3;
+            studentBox.SelectedIndexChanged += studentBox_SelectedIndexChanged;
             // 
             // studentLabel
             // 
@@ -1391,7 +1410,7 @@ namespace DOK_U
             aboutLabel.Name = "aboutLabel";
             aboutLabel.Size = new Size(707, 248);
             aboutLabel.TabIndex = 4;
-            aboutLabel.Text = "DOK'U - Dictionary Of the Kazan' University\r\nУдобный электронный дневник для студентов\r\nПо предложениям писать на почту: dokuemail@yandex.ru";
+            aboutLabel.Text = "DOK'U - Diary Of the Kazan' University\r\nУдобный электронный дневник для студентов\r\nПо предложениям писать на почту: dokuemail@yandex.ru";
             aboutLabel.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // notifyIcon

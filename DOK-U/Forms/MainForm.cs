@@ -10,8 +10,10 @@ namespace DOK_U
         #region Vars
 
         private Person currentUser;
+        private int selectedDay;
         public static readonly string INITIAL_FILE = "../../../Source/Initial.json";
         private DatabaseContext db = new DatabaseContext();
+        private bool selectedStudentChanged;
 
         #region Boxes
 
@@ -34,8 +36,8 @@ namespace DOK_U
             notifyIcon.ContextMenuStrip.Items.Add("Закрыть приложение", null,
                 delegate { Application.Exit(); });
             //db.Database.EnsureDeleted();
-            //DBTest();
             LoadDB();
+            //DBTest();
             LoadContent();
             Authorize();
             notifyIcon.Visible = true;
@@ -43,6 +45,8 @@ namespace DOK_U
             //    "SELECT * FROM Schedules WHERE GroupId = 2 AND Day = 1 LIMIT 1").ToList()[0];
             //MessageBox.Show(schedule.GroupId.ToString());
         }
+
+        #region Test
 
         private void DBTest()
         {
@@ -68,19 +72,7 @@ namespace DOK_U
             lectures[3] = new Lecture(4, 5, "Физическая культура и спорт");
             lectures[4] = new Lecture(5, 2, "Практика по матанализу");
 
-            var marks = new Mark[10];
-            marks[0] = new Mark(1, 3, 3, 1, "0");
-            marks[1] = new Mark(2, 3, 5, 1, "незач");
-            marks[2] = new Mark(3, 2, 4, 1, "зач");
-            marks[3] = new Mark(4, 4, 3, 1, "90");
-            marks[4] = new Mark(5, 4, 4, 1, "100");
-            marks[5] = new Mark(6, 3, 3, 2, "7");
-            marks[6] = new Mark(7, 3, 5, 2, "незач");
-            marks[7] = new Mark(8, 2, 4, 2, "зач");
-            marks[8] = new Mark(9, 4, 2, 2, "99");
-            marks[9] = new Mark(10, 4, 3, 2, "100");
-
-            var schedules = new Schedule[24];
+            var schedules = new Schedule[30];
             schedules[0] = new Schedule(1, 2, 1, 3, 3, 3, 3, 5, 1);
             schedules[1] = new Schedule(2, 2, 2, 3, 1, 3, 3, 5, 1);
             schedules[2] = new Schedule(3, 2, 3, 1, 1, 3, 3, 5, 1);
@@ -108,6 +100,13 @@ namespace DOK_U
             schedules[21] = new Schedule(22, 5, 4, 5, 4, 3, 2, 1, 1);
             schedules[22] = new Schedule(23, 5, 5, 5, 4, 3, 2, 1, 1);
             schedules[23] = new Schedule(24, 5, 6, 5, 4, 3, 2, 1, 1);
+
+            schedules[24] = new Schedule(25, 1, 1, 1, 1, 1, 1, 1, 1);
+            schedules[25] = new Schedule(26, 1, 2, 1, 1, 1, 1, 1, 1);
+            schedules[26] = new Schedule(27, 1, 3, 1, 1, 1, 1, 1, 1);
+            schedules[27] = new Schedule(28, 1, 4, 1, 1, 1, 1, 1, 1);
+            schedules[28] = new Schedule(29, 1, 5, 1, 1, 1, 1, 1, 1);
+            schedules[29] = new Schedule(30, 1, 6, 1, 1, 1, 1, 1, 1);
 
 
             var users = new Person[5];
@@ -167,6 +166,12 @@ namespace DOK_U
                         3,
                         "password");
 
+            var marks = new Mark[users.Count() * 8 * 7];
+            for (int i = 0; i < marks.Count(); i++)
+            {
+                marks[i] = new Mark(i + 1, i % users.Count() + 1, 1, i % 8 + 1, "--");
+            }
+
             foreach (var user in users)
             {
                 db.Users.Add(user);
@@ -200,6 +205,8 @@ namespace DOK_U
             db.SaveChanges();
         }
 
+        #endregion
+
         private void LoadDB()
         {
             db.Database.EnsureCreated();
@@ -221,7 +228,9 @@ namespace DOK_U
                 TryAuthorize();
             }
 
+            selectedStudentChanged = true;
             SetupUser(currentUser);
+            selectedStudentChanged = false;
         }
 
         private void SetupUser(Person user)
@@ -234,17 +243,17 @@ namespace DOK_U
                 sexContent.Text = user.Sex == "М" ? "Мужской" : "Женский";
                 groupContent.Text = db.Groups.Find(currentUser.GroupId).GroupNumber;
 
-                if (user.IsAdmin)
-                {
-                    ToggleAdminSettings();
-                }
-
-                semesterBox.SelectedItem = "1";
-                LoadRecordsOf(1);
-                groupBox.SelectedItem = db.Groups.Find(currentUser.GroupId).GroupNumber;
-                studentBox.SelectedItem = currentUser.FullName();
                 var today = (int)DateTime.Today.DayOfWeek;
-                LoadScheduleOf(today == 7 ? 1 : today);
+                today = today == 7 ? 1 : today;
+                selectedDay = today;
+
+                studentBox.SelectedItem = currentUser.FullName();
+                groupBox.SelectedItem = db.Groups.Find(currentUser.GroupId).GroupNumber;
+
+                ToggleAdminSettings(currentUser.IsAdmin);
+                LoadRecordsOf(int.Parse(semesterBox.SelectedItem.ToString()));
+                LockDayButton(selectedDay);
+                LoadScheduleOf(selectedDay);
             }
         }
 
@@ -293,7 +302,8 @@ namespace DOK_U
         private void diaryButton_Click(object sender, EventArgs e)
         {
             contentTabs.SelectTab("diary");
-            LoadScheduleOf(1);
+            LockDayButton(selectedDay);
+            LoadScheduleOf(selectedDay);
             profileButton.Enabled = true;
             diaryButton.Enabled = false;
             recordBookButton.Enabled = true;
@@ -374,30 +384,30 @@ namespace DOK_U
             };
         }
 
-        private void ToggleAdminSettings()
+        private void ToggleAdminSettings(bool value)
         {
             foreach (var box in lectureBoxes)
             {
-                box.Enabled = !box.Enabled;
+                box.Enabled = value;
             }
 
             foreach (var box in cabinetBoxes)
             {
-                box.Enabled = !box.Enabled;
+                box.Enabled = value;
             }
 
             foreach (var box in recordLectureBoxes)
             {
-                box.Enabled = !box.Enabled;
+                box.Enabled = value;
             }
 
             foreach (var box in markBoxes)
             {
-                box.Enabled = !box.Enabled;
+                box.Enabled = value;
             }
 
-            groupBox.Enabled = !groupBox.Enabled;
-            studentBox.Enabled = !studentBox.Enabled;
+            groupBox.Enabled = value;
+            studentBox.Enabled = value;
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -427,10 +437,19 @@ namespace DOK_U
 
         private void LoadRecordsOf(int termNumber)
         {
+            var fio = studentBox.SelectedItem.ToString().Split(" ");
+            var user = db.Users.FromSqlRaw(
+                "SELECT * FROM Users " +
+                "WHERE " +
+                $"  LastName = '{fio[0]}' AND " +
+                $"  FirstName = '{fio[1]}' AND " +
+                $"  Surname = '{fio[2]}' " +
+                $"LIMIT 1").ToList()[0];
+
             var term = db.Marks.FromSqlRaw(
                 "SELECT * FROM Marks " +
                 "WHERE " +
-                $"  StudentId = {currentUser.Id} AND " +
+                $"  StudentId = {user.Id} AND " +
                 $"  TermNumber = {termNumber}").ToList();
 
             for (int i = 0; i < term.Count; i++)
@@ -438,22 +457,22 @@ namespace DOK_U
                 recordLectureBoxes[i].SelectedItem = db.Lectures.Find(term[i].LectureId).Value;
                 markBoxes[i].SelectedItem = term[i].Value;
             }
-
-            for (int i = term.Count; i < recordLectureBoxes.Count(); i++)
-            {
-                recordLectureBoxes[i].SelectedItem = "--";
-                markBoxes[i].SelectedItem = "--";
-            }
         }
 
         private void LoadScheduleOf(int day)
         {
             try
             {
+                var group = db.Groups.FromSqlRaw(
+                    "SELECT * FROM Groups " +
+                    "WHERE " +
+                    $"  GroupNumber = '{groupBox.SelectedItem}' " +
+                    $"LIMIT 1").ToList()[0];
+
                 var schedule = db.Schedules.FromSqlRaw(
                     "SELECT * FROM Schedules " +
                     "WHERE " +
-                    $"  GroupId = {currentUser.GroupId} AND " +
+                    $"  GroupId = {group.Id} AND " +
                     $"  Day = {day} " +
                     $"LIMIT 1").ToList()[0];
 
@@ -534,31 +553,43 @@ namespace DOK_U
 
         private void mn_Click(object sender, EventArgs e)
         {
+            selectedDay = 1;
+            LockDayButton(1);
             LoadScheduleOf(1);
         }
 
         private void tu_Click(object sender, EventArgs e)
         {
+            selectedDay = 2;
+            LockDayButton(2);
             LoadScheduleOf(2);
         }
 
         private void wd_Click(object sender, EventArgs e)
         {
+            selectedDay = 3;
+            LockDayButton(3);
             LoadScheduleOf(3);
         }
 
         private void th_Click(object sender, EventArgs e)
         {
+            selectedDay = 4;
+            LockDayButton(4);
             LoadScheduleOf(4);
         }
 
         private void fr_Click(object sender, EventArgs e)
         {
+            selectedDay = 5;
+            LockDayButton(5);
             LoadScheduleOf(5);
         }
 
         private void st_Click(object sender, EventArgs e)
         {
+            selectedDay = 6;
+            LockDayButton(6);
             LoadScheduleOf(6);
         }
 
@@ -574,6 +605,7 @@ namespace DOK_U
             }
             else
             {
+                LockDayButton((int)today);
                 LoadScheduleOf((int)today);
             }
         }
@@ -590,13 +622,344 @@ namespace DOK_U
             }
             else
             {
-                LoadScheduleOf(((int)today + 1) % 7);
+                var morrow = ((int)today + 1) % 7;
+                LockDayButton(morrow);
+                LoadScheduleOf(morrow);
+            }
+        }
+
+        private void LockDayButton(int number)
+        {
+            mn.Enabled = true;
+            tu.Enabled = true;
+            wd.Enabled = true;
+            th.Enabled = true;
+            fr.Enabled = true;
+            st.Enabled = true;
+            switch (number)
+            {
+                case 1:
+                    mn.Enabled = false;
+                    break;
+                case 2:
+                    tu.Enabled = false;
+                    break;
+                case 3:
+                    wd.Enabled = false;
+                    break;
+                case 4:
+                    th.Enabled = false;
+                    break;
+                case 5:
+                    fr.Enabled = false;
+                    break;
+                case 6:
+                    st.Enabled = false;
+                    break;
             }
         }
 
         private void semesterBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadRecordsOf(int.Parse(semesterBox.SelectedItem.ToString()));
+        }
+
+        private void groupBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (semesterBox.SelectedItem == null)
+            {
+                semesterBox.SelectedItem = "1";
+            }
+
+            LockDayButton(selectedDay);
+            LoadScheduleOf(selectedDay);
+        }
+
+        private void studentBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (semesterBox.SelectedItem == null)
+            {
+                semesterBox.SelectedItem = "1";
+            }
+
+            selectedStudentChanged = true;
+            LoadRecordsOf(int.Parse(semesterBox.SelectedItem.ToString()));
+            selectedStudentChanged = false;
+        }
+
+        private void ChangeRecordLecture(ComboBox sender, int number)
+        {
+            var fio = studentBox.SelectedItem.ToString().Split(" ");
+            var user = db.Users.FromSqlRaw(
+                "SELECT * FROM Users " +
+                "WHERE " +
+                $"  LastName = '{fio[0]}' AND " +
+                $"  FirstName = '{fio[1]}' AND " +
+                $"  Surname = '{fio[2]}' " +
+                $"LIMIT 1").ToList()[0];
+
+            var lecture = db.Lectures.FromSqlRaw(
+                "SELECT * FROM Lectures " +
+                "WHERE " +
+                $"  Value = '{sender.SelectedItem}' " +
+                $"LIMIT 1").ToList()[0];
+
+            var term = db.Marks.FromSqlRaw(
+                "SELECT * FROM Marks " +
+                "WHERE " +
+                $"  StudentId = {user.Id} AND " +
+                $"  TermNumber = {semesterBox.SelectedItem}").ToList();
+
+            if (!selectedStudentChanged && lecture.Value != "--")
+            {
+                foreach (var mark in term)
+                {
+                    if (mark.LectureId == lecture.Id)
+                    {
+                        MessageBox.Show("Оценка за эту дисциплину уже выставленна",
+                        "Ошибка",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                        LoadRecordsOf(int.Parse(semesterBox.SelectedItem.ToString()));
+                        return;
+                    }
+                }
+            }
+
+            if (term.Count < number)
+            {
+                return;
+            }
+
+            term[number - 1].LectureId = lecture.Id;
+            db.SaveChanges();
+            LoadRecordsOf(int.Parse(semesterBox.SelectedItem.ToString()));
+        }
+
+        private void ChangeScheduleLecture(ComboBox sender, int number)
+        {
+            var group = db.Groups.FromSqlRaw(
+                "SELECT * FROM Groups " +
+                "WHERE " +
+                $"  GroupNumber = '{groupBox.SelectedItem}' " +
+                $"LIMIT 1").ToList()[0];
+
+            var lecture = db.Lectures.FromSqlRaw(
+                "SELECT * FROM Lectures " +
+                "WHERE " +
+                $"  Value = '{sender.SelectedItem}' " +
+                $"LIMIT 1").ToList()[0];
+
+            var schedule = db.Schedules.FromSqlRaw(
+                "SELECT * FROM Schedules " +
+                "WHERE " +
+                $"  GroupId = {group.Id} AND " +
+                $"  Day = {selectedDay} " +
+                $"LIMIT 1").ToList()[0];
+
+            switch (number)
+            {
+                case 1:
+                    schedule.Lecture1Id = lecture.Id;
+                    break;
+                case 2:
+                    schedule.Lecture2Id = lecture.Id;
+                    break;
+                case 3:
+                    schedule.Lecture3Id = lecture.Id;
+                    break;
+                case 4:
+                    schedule.Lecture4Id = lecture.Id;
+                    break;
+                case 5:
+                    schedule.Lecture5Id = lecture.Id;
+                    break;
+                case 6:
+                    schedule.Lecture6Id = lecture.Id;
+                    break;
+            }
+
+            db.SaveChanges();
+            LoadScheduleOf(selectedDay);
+        }
+
+        private void ChangeCabinet(ComboBox sender, int number)
+        {
+            var lectureBox = lectureBoxes[number - 1];
+
+            var lecture = db.Lectures.FromSqlRaw(
+                "SELECT * FROM Lectures " +
+                "WHERE " +
+                $"  Value = '{lectureBox.SelectedItem}' " +
+                $"LIMIT 1").ToList()[0];
+
+            var cabinet = db.Cabinets.FromSqlRaw(
+                "SELECT * FROM Cabinets " +
+                "WHERE " +
+                $"  CabinetNumber = '{sender.SelectedItem}' " +
+                $"LIMIT 1").ToList()[0];
+
+            lecture.CabinetId = cabinet.Id;
+
+            db.SaveChanges();
+            LoadScheduleOf(selectedDay);
+        }
+
+        private void ChangeMark(ComboBox sender, int number)
+        {
+            var fio = studentBox.SelectedItem.ToString().Split(" ");
+            var user = db.Users.FromSqlRaw(
+                "SELECT * FROM Users " +
+                "WHERE " +
+                $"  LastName = '{fio[0]}' AND " +
+                $"  FirstName = '{fio[1]}' AND " +
+                $"  Surname = '{fio[2]}' " +
+                $"LIMIT 1").ToList()[0];
+
+            var term = db.Marks.FromSqlRaw(
+                "SELECT * FROM Marks " +
+                "WHERE " +
+                $"  StudentId = {user.Id} AND " +
+                $"  TermNumber = {semesterBox.SelectedItem}").ToList();
+
+            if (term.Count < number)
+            {
+                return;
+            }
+
+            term[number - 1].Value = sender.SelectedItem.ToString();
+            db.SaveChanges();
+            LoadRecordsOf(int.Parse(semesterBox.SelectedItem.ToString()));
+        }
+
+        private void recordLectureBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeRecordLecture((ComboBox)sender, 1);
+        }
+
+        private void recordLectureBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeRecordLecture((ComboBox)sender, 2);
+        }
+
+        private void recordLectureBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeRecordLecture((ComboBox)sender, 3);
+        }
+
+        private void recordLectureBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeRecordLecture((ComboBox)sender, 4);
+        }
+
+        private void recordLectureBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeRecordLecture((ComboBox)sender, 5);
+        }
+
+        private void recordLectureBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeRecordLecture((ComboBox)sender, 6);
+        }
+
+        private void recordLectureBox7_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeRecordLecture((ComboBox)sender, 7);
+        }
+
+        private void markBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeMark((ComboBox)sender, 1);
+        }
+
+        private void markBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeMark((ComboBox)sender, 2);
+        }
+
+        private void markBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeMark((ComboBox)sender, 3);
+        }
+
+        private void markBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeMark((ComboBox)sender, 4);
+        }
+
+        private void markBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeMark((ComboBox)sender, 5);
+        }
+
+        private void markBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeMark((ComboBox)sender, 6);
+        }
+
+        private void markBox7_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeMark((ComboBox)sender, 7);
+        }
+
+        private void lectureBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeScheduleLecture((ComboBox)sender, 1);
+        }
+
+        private void lectureBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeScheduleLecture((ComboBox)sender, 2);
+        }
+
+        private void lectureBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeScheduleLecture((ComboBox)sender, 3);
+        }
+
+        private void lectureBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeScheduleLecture((ComboBox)sender, 4);
+        }
+
+        private void lectureBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeScheduleLecture((ComboBox)sender, 5);
+        }
+
+        private void lectureBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeScheduleLecture((ComboBox)sender, 6);
+        }
+
+        private void cabinetBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeCabinet((ComboBox)sender, 1);
+        }
+
+        private void cabinetBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeCabinet((ComboBox)sender, 2);
+        }
+
+        private void cabinetBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeCabinet((ComboBox)sender, 3);
+        }
+
+        private void cabinetBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeCabinet((ComboBox)sender, 4);
+        }
+
+        private void cabinetBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeCabinet((ComboBox)sender, 5);
+        }
+
+        private void cabinetBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeCabinet((ComboBox)sender, 6);
         }
     }
 }

@@ -14,7 +14,7 @@ namespace DOK_U.Classes
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=doku.db");
+            optionsBuilder.UseSqlite("Data Source=../../../Source/doku.db");
         }
     }
 }
