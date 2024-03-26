@@ -125,6 +125,7 @@ namespace DOK_U
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
+            saveFileDialog = new SaveFileDialog();
             ((ISupportInitialize)content).BeginInit();
             content.Panel1.SuspendLayout();
             content.Panel2.SuspendLayout();
@@ -859,6 +860,7 @@ namespace DOK_U
             extraCodesButton.TabIndex = 6;
             extraCodesButton.Text = "Получить резервный код";
             extraCodesButton.UseVisualStyleBackColor = false;
+            extraCodesButton.Click += extraCodesButton_Click;
             // 
             // tableLayoutPanel1
             // 
@@ -901,6 +903,7 @@ namespace DOK_U
             groupContent.Size = new Size(551, 81);
             groupContent.TabIndex = 43;
             groupContent.TextAlign = ContentAlignment.MiddleLeft;
+            groupContent.Click += groupContent_Click;
             // 
             // sexContent
             // 
@@ -914,6 +917,7 @@ namespace DOK_U
             sexContent.Size = new Size(551, 78);
             sexContent.TabIndex = 42;
             sexContent.TextAlign = ContentAlignment.MiddleLeft;
+            sexContent.Click += sexContent_Click;
             // 
             // birthdayContent
             // 
@@ -927,6 +931,7 @@ namespace DOK_U
             birthdayContent.Size = new Size(551, 78);
             birthdayContent.TabIndex = 41;
             birthdayContent.TextAlign = ContentAlignment.MiddleLeft;
+            birthdayContent.Click += birthdayContent_Click;
             // 
             // loginContent
             // 
@@ -940,6 +945,7 @@ namespace DOK_U
             loginContent.Size = new Size(551, 78);
             loginContent.TabIndex = 40;
             loginContent.TextAlign = ContentAlignment.MiddleLeft;
+            loginContent.Click += loginContent_Click;
             // 
             // nameContent
             // 
@@ -953,6 +959,7 @@ namespace DOK_U
             nameContent.Size = new Size(551, 78);
             nameContent.TabIndex = 39;
             nameContent.TextAlign = ContentAlignment.MiddleLeft;
+            nameContent.Click += nameContent_Click;
             // 
             // nameLabel
             // 
@@ -1470,6 +1477,12 @@ namespace DOK_U
             label3.Text = "13:50\r\n-\r\n15:20";
             label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // saveFileDialog
+            // 
+            saveFileDialog.DefaultExt = "txt";
+            saveFileDialog.FileName = "backup-code.txt";
+            saveFileDialog.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1632,5 +1645,6 @@ namespace DOK_U
         private ComboBox lectureBox3;
         private ComboBox lectureBox6;
         private ComboBox lectureBox2;
+        private SaveFileDialog saveFileDialog;
     }
 }

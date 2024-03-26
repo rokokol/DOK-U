@@ -189,8 +189,9 @@ namespace DOK_U
             forgetPasswordTool.Size = new Size(141, 27);
             forgetPasswordTool.TabIndex = 5;
             forgetPasswordTool.Text = "Забыли пароль?";
-            forgetPasswordTool.MouseHover += forgetPasswordTool_MouseHover;
+            forgetPasswordTool.Click += forgetPasswordTool_Click;
             forgetPasswordTool.MouseLeave += forgetPasswordTool_MouseLeave;
+            forgetPasswordTool.MouseHover += forgetPasswordTool_MouseHover;
             // 
             // changeModeButton
             // 

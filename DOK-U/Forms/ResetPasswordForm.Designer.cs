@@ -2,7 +2,7 @@
 
 namespace DOK_U
 {
-    partial class RecoverPasswordForm
+    partial class ResetPasswordForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@ namespace DOK_U
         /// </summary>
         private void InitializeComponent()
         {
-            ComponentResourceManager resources = new ComponentResourceManager(typeof(RecoverPasswordForm));
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(ResetPasswordForm));
             formContainer = new SplitContainer();
             blank4 = new PictureBox();
             blank3 = new PictureBox();
@@ -42,18 +42,17 @@ namespace DOK_U
             passwordPanel = new Panel();
             loginPanel = new Panel();
             loginTextBox = new TextBox();
-            loginPicture = new PictureBox();
-            splitContainer1 = new SplitContainer();
+            content = new SplitContainer();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
-            pictureBox5 = new PictureBox();
-            panel1 = new Panel();
+            pictureDoku = new PictureBox();
+            resetPanel = new Panel();
             passwordConfirmTextpanel = new Panel();
             passwordConfirmTextBox = new TextBox();
             passwordConfirmPicture = new PictureBox();
-            panel4 = new Panel();
+            passwordBoxPanel = new Panel();
             passwordTextBox = new TextBox();
             passwordPicture = new PictureBox();
             codePanel = new Panel();
@@ -61,9 +60,9 @@ namespace DOK_U
             codePicture = new PictureBox();
             showPasswordButton = new CheckBox();
             recoverButton = new Button();
-            panel3 = new Panel();
-            textBox2 = new TextBox();
-            pictureBox7 = new PictureBox();
+            loginPanelBox = new Panel();
+            loginBox = new TextBox();
+            loginPicture = new PictureBox();
             recoverLabel = new Label();
             ((ISupportInitialize)formContainer).BeginInit();
             formContainer.Panel1.SuspendLayout();
@@ -76,25 +75,24 @@ namespace DOK_U
             ((ISupportInitialize)picture).BeginInit();
             autorizeMenu.SuspendLayout();
             loginPanel.SuspendLayout();
-            ((ISupportInitialize)loginPicture).BeginInit();
-            ((ISupportInitialize)splitContainer1).BeginInit();
-            splitContainer1.Panel1.SuspendLayout();
-            splitContainer1.Panel2.SuspendLayout();
-            splitContainer1.SuspendLayout();
+            ((ISupportInitialize)content).BeginInit();
+            content.Panel1.SuspendLayout();
+            content.Panel2.SuspendLayout();
+            content.SuspendLayout();
             ((ISupportInitialize)pictureBox1).BeginInit();
             ((ISupportInitialize)pictureBox2).BeginInit();
             ((ISupportInitialize)pictureBox3).BeginInit();
             ((ISupportInitialize)pictureBox4).BeginInit();
-            ((ISupportInitialize)pictureBox5).BeginInit();
-            panel1.SuspendLayout();
+            ((ISupportInitialize)pictureDoku).BeginInit();
+            resetPanel.SuspendLayout();
             passwordConfirmTextpanel.SuspendLayout();
             ((ISupportInitialize)passwordConfirmPicture).BeginInit();
-            panel4.SuspendLayout();
+            passwordBoxPanel.SuspendLayout();
             ((ISupportInitialize)passwordPicture).BeginInit();
             codePanel.SuspendLayout();
             ((ISupportInitialize)codePicture).BeginInit();
-            panel3.SuspendLayout();
-            ((ISupportInitialize)pictureBox7).BeginInit();
+            loginPanelBox.SuspendLayout();
+            ((ISupportInitialize)loginPicture).BeginInit();
             SuspendLayout();
             // 
             // formContainer
@@ -205,7 +203,6 @@ namespace DOK_U
             // 
             loginPanel.BackColor = SystemColors.ButtonShadow;
             loginPanel.Controls.Add(loginTextBox);
-            loginPanel.Controls.Add(loginPicture);
             loginPanel.Location = new Point(0, 37);
             loginPanel.Margin = new Padding(4, 3, 4, 3);
             loginPanel.Name = "loginPanel";
@@ -226,43 +223,33 @@ namespace DOK_U
             loginTextBox.TabIndex = 1;
             loginTextBox.Tag = "Ваш логин";
             // 
-            // loginPicture
+            // content
             // 
-            loginPicture.Image = (Image)resources.GetObject("loginPicture.Image");
-            loginPicture.Location = new Point(0, 0);
-            loginPicture.Margin = new Padding(4, 3, 4, 3);
-            loginPicture.Name = "loginPicture";
-            loginPicture.Size = new Size(61, 59);
-            loginPicture.SizeMode = PictureBoxSizeMode.StretchImage;
-            loginPicture.TabIndex = 0;
-            loginPicture.TabStop = false;
+            content.BorderStyle = BorderStyle.FixedSingle;
+            content.Dock = DockStyle.Fill;
+            content.FixedPanel = FixedPanel.Panel1;
+            content.IsSplitterFixed = true;
+            content.Location = new Point(0, 0);
+            content.Margin = new Padding(4, 3, 4, 3);
+            content.Name = "content";
             // 
-            // splitContainer1
+            // content.Panel1
             // 
-            splitContainer1.BorderStyle = BorderStyle.FixedSingle;
-            splitContainer1.Dock = DockStyle.Fill;
-            splitContainer1.FixedPanel = FixedPanel.Panel1;
-            splitContainer1.IsSplitterFixed = true;
-            splitContainer1.Location = new Point(0, 0);
-            splitContainer1.Margin = new Padding(4, 3, 4, 3);
-            splitContainer1.Name = "splitContainer1";
+            content.Panel1.BackColor = SystemColors.ButtonShadow;
+            content.Panel1.Controls.Add(pictureBox1);
+            content.Panel1.Controls.Add(pictureBox2);
+            content.Panel1.Controls.Add(pictureBox3);
+            content.Panel1.Controls.Add(pictureBox4);
+            content.Panel1.Controls.Add(pictureDoku);
             // 
-            // splitContainer1.Panel1
+            // content.Panel2
             // 
-            splitContainer1.Panel1.BackColor = SystemColors.ButtonShadow;
-            splitContainer1.Panel1.Controls.Add(pictureBox1);
-            splitContainer1.Panel1.Controls.Add(pictureBox2);
-            splitContainer1.Panel1.Controls.Add(pictureBox3);
-            splitContainer1.Panel1.Controls.Add(pictureBox4);
-            splitContainer1.Panel1.Controls.Add(pictureBox5);
-            // 
-            // splitContainer1.Panel2
-            // 
-            splitContainer1.Panel2.Controls.Add(panel1);
-            splitContainer1.Size = new Size(749, 459);
-            splitContainer1.SplitterDistance = 120;
-            splitContainer1.SplitterWidth = 1;
-            splitContainer1.TabIndex = 2;
+            content.Panel2.BackColor = SystemColors.ActiveBorder;
+            content.Panel2.Controls.Add(resetPanel);
+            content.Size = new Size(749, 459);
+            content.SplitterDistance = 120;
+            content.SplitterWidth = 1;
+            content.TabIndex = 2;
             // 
             // pictureBox1
             // 
@@ -308,34 +295,34 @@ namespace DOK_U
             pictureBox4.TabIndex = 3;
             pictureBox4.TabStop = false;
             // 
-            // pictureBox5
+            // pictureDoku
             // 
-            pictureBox5.BackColor = Color.FromArgb(232, 232, 232);
-            pictureBox5.BorderStyle = BorderStyle.FixedSingle;
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.InitialImage = (Image)resources.GetObject("pictureBox5.InitialImage");
-            pictureBox5.Location = new Point(0, 0);
-            pictureBox5.Margin = new Padding(4, 3, 4, 3);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(121, 95);
-            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox5.TabIndex = 2;
-            pictureBox5.TabStop = false;
+            pictureDoku.BackColor = Color.FromArgb(232, 232, 232);
+            pictureDoku.BorderStyle = BorderStyle.FixedSingle;
+            pictureDoku.Image = (Image)resources.GetObject("pictureDoku.Image");
+            pictureDoku.InitialImage = (Image)resources.GetObject("pictureDoku.InitialImage");
+            pictureDoku.Location = new Point(0, 0);
+            pictureDoku.Margin = new Padding(4, 3, 4, 3);
+            pictureDoku.Name = "pictureDoku";
+            pictureDoku.Size = new Size(121, 95);
+            pictureDoku.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureDoku.TabIndex = 2;
+            pictureDoku.TabStop = false;
             // 
-            // panel1
+            // resetPanel
             // 
-            panel1.Controls.Add(passwordConfirmTextpanel);
-            panel1.Controls.Add(panel4);
-            panel1.Controls.Add(codePanel);
-            panel1.Controls.Add(showPasswordButton);
-            panel1.Controls.Add(recoverButton);
-            panel1.Controls.Add(panel3);
-            panel1.Controls.Add(recoverLabel);
-            panel1.Location = new Point(145, 51);
-            panel1.Margin = new Padding(4, 3, 4, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(363, 372);
-            panel1.TabIndex = 1;
+            resetPanel.Controls.Add(passwordConfirmTextpanel);
+            resetPanel.Controls.Add(passwordBoxPanel);
+            resetPanel.Controls.Add(codePanel);
+            resetPanel.Controls.Add(showPasswordButton);
+            resetPanel.Controls.Add(recoverButton);
+            resetPanel.Controls.Add(loginPanelBox);
+            resetPanel.Controls.Add(recoverLabel);
+            resetPanel.Location = new Point(145, 51);
+            resetPanel.Margin = new Padding(4, 3, 4, 3);
+            resetPanel.Name = "resetPanel";
+            resetPanel.Size = new Size(363, 372);
+            resetPanel.TabIndex = 1;
             // 
             // passwordConfirmTextpanel
             // 
@@ -374,16 +361,16 @@ namespace DOK_U
             passwordConfirmPicture.TabIndex = 1;
             passwordConfirmPicture.TabStop = false;
             // 
-            // panel4
+            // passwordBoxPanel
             // 
-            panel4.BackColor = SystemColors.ButtonShadow;
-            panel4.Controls.Add(passwordTextBox);
-            panel4.Controls.Add(passwordPicture);
-            panel4.Location = new Point(1, 162);
-            panel4.Margin = new Padding(4, 3, 4, 3);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(362, 59);
-            panel4.TabIndex = 4;
+            passwordBoxPanel.BackColor = SystemColors.ButtonShadow;
+            passwordBoxPanel.Controls.Add(passwordTextBox);
+            passwordBoxPanel.Controls.Add(passwordPicture);
+            passwordBoxPanel.Location = new Point(1, 162);
+            passwordBoxPanel.Margin = new Padding(4, 3, 4, 3);
+            passwordBoxPanel.Name = "passwordBoxPanel";
+            passwordBoxPanel.Size = new Size(362, 59);
+            passwordBoxPanel.TabIndex = 4;
             // 
             // passwordTextBox
             // 
@@ -475,43 +462,44 @@ namespace DOK_U
             recoverButton.TabIndex = 3;
             recoverButton.Text = "Восстановить";
             recoverButton.UseVisualStyleBackColor = false;
+            recoverButton.Click += recoverButton_Click;
             // 
-            // panel3
+            // loginPanelBox
             // 
-            panel3.BackColor = SystemColors.ButtonShadow;
-            panel3.Controls.Add(textBox2);
-            panel3.Controls.Add(pictureBox7);
-            panel3.Location = new Point(0, 37);
-            panel3.Margin = new Padding(4, 3, 4, 3);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(362, 59);
-            panel3.TabIndex = 1;
+            loginPanelBox.BackColor = SystemColors.ButtonShadow;
+            loginPanelBox.Controls.Add(loginBox);
+            loginPanelBox.Controls.Add(loginPicture);
+            loginPanelBox.Location = new Point(0, 37);
+            loginPanelBox.Margin = new Padding(4, 3, 4, 3);
+            loginPanelBox.Name = "loginPanelBox";
+            loginPanelBox.Size = new Size(362, 59);
+            loginPanelBox.TabIndex = 1;
             // 
-            // textBox2
+            // loginBox
             // 
-            textBox2.BackColor = SystemColors.ControlDark;
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Microsoft YaHei", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(68, 18);
-            textBox2.Margin = new Padding(4, 3, 4, 3);
-            textBox2.MaxLength = 16;
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Ваш логин";
-            textBox2.ScrollBars = ScrollBars.Vertical;
-            textBox2.Size = new Size(289, 32);
-            textBox2.TabIndex = 1;
-            textBox2.Tag = "Ваш логин";
+            loginBox.BackColor = SystemColors.ControlDark;
+            loginBox.BorderStyle = BorderStyle.None;
+            loginBox.Font = new Font("Microsoft YaHei", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            loginBox.Location = new Point(68, 18);
+            loginBox.Margin = new Padding(4, 3, 4, 3);
+            loginBox.MaxLength = 16;
+            loginBox.Name = "loginBox";
+            loginBox.PlaceholderText = "Ваш логин";
+            loginBox.ScrollBars = ScrollBars.Vertical;
+            loginBox.Size = new Size(289, 32);
+            loginBox.TabIndex = 1;
+            loginBox.Tag = "Ваш логин";
             // 
-            // pictureBox7
+            // loginPicture
             // 
-            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(0, 0);
-            pictureBox7.Margin = new Padding(4, 3, 4, 3);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(61, 59);
-            pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox7.TabIndex = 0;
-            pictureBox7.TabStop = false;
+            loginPicture.Image = (Image)resources.GetObject("loginPicture.Image");
+            loginPicture.Location = new Point(0, 0);
+            loginPicture.Margin = new Padding(4, 3, 4, 3);
+            loginPicture.Name = "loginPicture";
+            loginPicture.Size = new Size(61, 59);
+            loginPicture.SizeMode = PictureBoxSizeMode.StretchImage;
+            loginPicture.TabIndex = 0;
+            loginPicture.TabStop = false;
             // 
             // recoverLabel
             // 
@@ -523,17 +511,17 @@ namespace DOK_U
             recoverLabel.TabIndex = 0;
             recoverLabel.Text = "Восстановить пароль";
             // 
-            // RecoverPasswordForm
+            // ResetPasswordForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(749, 459);
-            Controls.Add(splitContainer1);
+            Controls.Add(content);
             Controls.Add(formContainer);
             Margin = new Padding(4, 3, 4, 3);
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "RecoverPasswordForm";
+            Name = "ResetPasswordForm";
             ShowIcon = false;
             Text = "Восстановить пароль";
             formContainer.Panel1.ResumeLayout(false);
@@ -548,53 +536,52 @@ namespace DOK_U
             autorizeMenu.ResumeLayout(false);
             loginPanel.ResumeLayout(false);
             loginPanel.PerformLayout();
-            ((ISupportInitialize)loginPicture).EndInit();
-            splitContainer1.Panel1.ResumeLayout(false);
-            splitContainer1.Panel2.ResumeLayout(false);
-            ((ISupportInitialize)splitContainer1).EndInit();
-            splitContainer1.ResumeLayout(false);
+            content.Panel1.ResumeLayout(false);
+            content.Panel2.ResumeLayout(false);
+            ((ISupportInitialize)content).EndInit();
+            content.ResumeLayout(false);
             ((ISupportInitialize)pictureBox1).EndInit();
             ((ISupportInitialize)pictureBox2).EndInit();
             ((ISupportInitialize)pictureBox3).EndInit();
             ((ISupportInitialize)pictureBox4).EndInit();
-            ((ISupportInitialize)pictureBox5).EndInit();
-            panel1.ResumeLayout(false);
+            ((ISupportInitialize)pictureDoku).EndInit();
+            resetPanel.ResumeLayout(false);
             passwordConfirmTextpanel.ResumeLayout(false);
             passwordConfirmTextpanel.PerformLayout();
             ((ISupportInitialize)passwordConfirmPicture).EndInit();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
+            passwordBoxPanel.ResumeLayout(false);
+            passwordBoxPanel.PerformLayout();
             ((ISupportInitialize)passwordPicture).EndInit();
             codePanel.ResumeLayout(false);
             codePanel.PerformLayout();
             ((ISupportInitialize)codePicture).EndInit();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            ((ISupportInitialize)pictureBox7).EndInit();
+            loginPanelBox.ResumeLayout(false);
+            loginPanelBox.PerformLayout();
+            ((ISupportInitialize)loginPicture).EndInit();
             ResumeLayout(false);
         }
 
         private System.Windows.Forms.PictureBox passwordPicture;
         private System.Windows.Forms.PictureBox passwordConfirmPicture;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel passwordBoxPanel;
         private System.Windows.Forms.Panel passwordConfirmTextpanel;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.TextBox passwordConfirmTextBox;
 
-        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.SplitContainer content;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureDoku;
+        private System.Windows.Forms.Panel resetPanel;
         private System.Windows.Forms.CheckBox showPasswordButton;
         private System.Windows.Forms.Panel codePanel;
         private System.Windows.Forms.TextBox codeTextBox;
         private System.Windows.Forms.PictureBox codePicture;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Panel loginPanelBox;
+        private System.Windows.Forms.TextBox loginBox;
+        private System.Windows.Forms.PictureBox loginPicture;
 
         private System.Windows.Forms.SplitContainer formContainer;
         private System.Windows.Forms.PictureBox blank4;
@@ -607,7 +594,6 @@ namespace DOK_U
         private System.Windows.Forms.Panel passwordPanel;
         private System.Windows.Forms.Panel loginPanel;
         private System.Windows.Forms.TextBox loginTextBox;
-        private System.Windows.Forms.PictureBox loginPicture;
         private System.Windows.Forms.Label recoverLabel;
 
         #endregion

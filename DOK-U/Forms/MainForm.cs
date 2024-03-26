@@ -1,7 +1,9 @@
 ﻿using System.Text.Json;
 using System.Windows.Forms;
 using DOK_U.Classes;
+using DOK_U.Forms;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace DOK_U
 {
@@ -9,7 +11,7 @@ namespace DOK_U
     {
         #region Vars
 
-        private Person currentUser;
+        public static Person currentUser;
         private int selectedDay;
         public static readonly string INITIAL_FILE = "../../../Source/Initial.json";
         private DatabaseContext db = new DatabaseContext();
@@ -228,13 +230,12 @@ namespace DOK_U
                 TryAuthorize();
             }
 
-            selectedStudentChanged = true;
             SetupUser(currentUser);
-            selectedStudentChanged = false;
         }
 
         private void SetupUser(Person user)
         {
+            selectedStudentChanged = true;
             if (user != null)
             {
                 nameContent.Text = currentUser.FullName(); ;
@@ -255,6 +256,7 @@ namespace DOK_U
                 LockDayButton(selectedDay);
                 LoadScheduleOf(selectedDay);
             }
+            selectedStudentChanged = false;
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -273,8 +275,7 @@ namespace DOK_U
             {
                 try
                 {
-                    currentUser = JsonSerializer.Deserialize<Person>
-                        (File.ReadAllText(INITIAL_FILE));
+                    currentUser = JsonSerializer.Deserialize<Person>(File.ReadAllText(INITIAL_FILE));
                     return true;
                 }
                 catch (IOException e)
@@ -960,6 +961,71 @@ namespace DOK_U
         private void cabinetBox6_SelectedIndexChanged(object sender, EventArgs e)
         {
             ChangeCabinet((ComboBox)sender, 6);
+        }
+
+        private void extraCodesButton_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog.ShowDialog() == DialogResult.Cancel)
+                return;
+
+            string filename = saveFileDialog.FileName;
+            var rand = new Random(DateTime.Now.Microsecond);
+            var code = rand.NextInt64(int.MaxValue, long.MaxValue).ToString("X");
+
+            File.WriteAllText(filename,
+                "Ваш резервный код для сброса пароля:\n" +
+                "\n" +
+                $"\t{code}" +
+                "\n" +
+                "\nСохраните его в надежном месте и не сообщайте никому!" +
+                "\nДля сброса пароля воспользуйтесь кнопкой \"Забыли пароль?\" в окне входа");
+
+            db.Users.Find(currentUser.Id).ReserveCode = code;
+            db.SaveChanges();
+            MessageBox.Show("Резервный код создан успешно!",
+                        "Успешно!",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+        }
+
+        private void nameContent_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Обратитесь в администрацию КФУ для изменения информации о ваших инициалах",
+            "Информация",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Information);
+        }
+
+        private void birthdayContent_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Обратитесь в администрацию КФУ для изменения информации о вашей дате рождения",
+            "Информация",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Information);
+        }
+
+        private void sexContent_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Обратитесь в администрацию КФУ для изменения информации о вашем поле",
+            "Информация",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Information);
+        }
+
+        private void groupContent_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Обратитесь в администрацию КФУ для изменения информации о вашей группе",
+            "Информация",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Information);
+        }
+
+        private void loginContent_Click(object sender, EventArgs e)
+        {
+            var change = new ChangeLoginForm();
+            change.ShowDialog();
+
+            loginContent.Text = currentUser.Login;
         }
     }
 }

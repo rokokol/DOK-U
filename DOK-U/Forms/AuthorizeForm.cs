@@ -1,6 +1,8 @@
 ﻿using DOK_U.Classes;
+using DOK_U.Forms;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualBasic.ApplicationServices;
+using Microsoft.VisualBasic.Logging;
 using System.Text.Json;
 
 namespace DOK_U
@@ -12,17 +14,26 @@ namespace DOK_U
         private bool isEnterMode = true;
         private bool askToClose = true;
         private DatabaseContext db = new DatabaseContext();
+        public static JsonSerializerOptions OPTIONS = new JsonSerializerOptions
+        {
+            WriteIndented = true
+        };
+        public static string sex;
+        public static int groupId;
+        public static DateTime birthday;
+        public static string firstName;
+        public static string lastName;
+        public static string surname;
+        public static bool registrate = false;
 
         #endregion
 
         public AuthorizeForm()
         {
             InitializeComponent();
-            loginTextBox.AccessibleDescription = "Ваш логин";
             loginTextBox.Click += TextBoxOnClick;
             passwordTextBox.Click += TextBoxOnClick;
             FormClosing += Authorize_FormClosing;
-            //db.Database.EnsureDeleted();
             LoadDB();
         }
 
@@ -56,11 +67,13 @@ namespace DOK_U
             textBox.Focus();
         }
 
-        private void changeModeButton_Click(object sender, EventArgs e)
+        private void ChangeMode()
         {
             isEnterMode = !isEnterMode;
             passwordTextBox.UseSystemPasswordChar = true;
             showPasswordButton.Checked = false;
+            loginTextBox.Text = string.Empty;
+            passwordTextBox.Text = string.Empty;
             if (isEnterMode)
             {
                 Text = "Вход";
@@ -81,17 +94,13 @@ namespace DOK_U
             }
         }
 
+        private void changeModeButton_Click(object sender, EventArgs e)
+        {
+            ChangeMode();
+        }
+
         private void enterButton_Click(object sender, EventArgs e)
         {
-            if (passwordTextBox.Text.Length < 8)
-            {
-                MessageBox.Show("Минимальная длина пароля - 8 символов",
-                    "Пароль слишком короткий",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-                return;
-            }
-
             if (isEnterMode)
             {
                 Authorize();
@@ -104,7 +113,67 @@ namespace DOK_U
 
         private void Registrate()
         {
+            var login = loginTextBox.Text;
+            if (login.Length < 4 || login.Length > 16)
+            {
+                MessageBox.Show("Длина логина должна быть больше 4 и меньше 16 символов",
+                "Ошибка",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+                return;
+            }
 
+            var count = db.Users.FromSqlRaw(
+                "SELECT * FROM Users " +
+                "WHERE " +
+                $"  Login = '{login}' " +
+                "LIMIT 1").Count();
+
+            if (count > 0)
+            {
+                MessageBox.Show("Данный логин уже занят, попробуйте какой-нибудь другой",
+                "Ошибка",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+                return;
+            }
+
+            var password = passwordTextBox.Text;
+            if (password.Length < 8 || password.Length > 16)
+            {
+                MessageBox.Show("Длина пароля должна быть больше 8 и меньше 16 символов",
+                "Ошибка",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+                return;
+            }
+
+            var reg = new RegistrationForm();
+            reg.ShowDialog();
+            if (registrate)
+            {
+                var user = new Person(
+                    db.Users.Count() + 1,
+                    firstName,
+                    lastName,
+                    surname,
+                    sex,
+                    false,
+                    login,
+                    password,
+                    birthday,
+                    groupId,
+                    "--");
+                db.Users.Add(user);
+                db.SaveChanges();
+                ChangeMode();
+                registrate = false;
+
+                MessageBox.Show("Регистрация прошла успешно. Пожалуйста, войдите в систему",
+               "Успех",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+            }
         }
 
         private void Authorize()
@@ -119,15 +188,11 @@ namespace DOK_U
             {
                 try
                 {
-                    user[0].Password =  string.Empty;
+                    user[0].Password = string.Empty;
                     user[0].ReserveCode = string.Empty;
-                    var options = new JsonSerializerOptions
-                    {
-                        WriteIndented = true
-                    };
 
                     File.WriteAllText(MainForm.INITIAL_FILE,
-                        JsonSerializer.Serialize<Person>(user[0], options));
+                        JsonSerializer.Serialize<Person>(user[0], OPTIONS));
                     askToClose = false;
                     MessageBox.Show("Вход выполнен успешно",
                         "Вход",
@@ -182,6 +247,13 @@ namespace DOK_U
         private void showPasswordButton_CheckedChanged(object sender, EventArgs e)
         {
             passwordTextBox.UseSystemPasswordChar = !showPasswordButton.Checked;
+        }
+
+        private void forgetPasswordTool_Click(object sender, EventArgs e)
+        {
+            var resetForm = new ResetPasswordForm();
+            resetForm.ShowDialog();
+            db.Users.Load();
         }
     }
 }
