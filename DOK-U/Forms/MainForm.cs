@@ -1,9 +1,8 @@
 ﻿using System.Text.Json;
-using System.Windows.Forms;
 using DOK_U.Classes;
 using DOK_U.Forms;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualBasic.ApplicationServices;
+
 
 namespace DOK_U
 {
@@ -43,9 +42,6 @@ namespace DOK_U
             LoadContent();
             Authorize();
             notifyIcon.Visible = true;
-            //var schedule = db.Schedules.FromSqlRaw(
-            //    "SELECT * FROM Schedules WHERE GroupId = 2 AND Day = 1 LIMIT 1").ToList()[0];
-            //MessageBox.Show(schedule.GroupId.ToString());
         }
 
         #region Test
@@ -235,10 +231,9 @@ namespace DOK_U
 
         private void SetupUser(Person user)
         {
-            selectedStudentChanged = true;
             if (user != null)
             {
-                nameContent.Text = currentUser.FullName(); ;
+                nameContent.Text = currentUser.FullName();
                 loginContent.Text = user.Login;
                 birthdayContent.Text = $"{user.Birthday.Day:D2}.{user.Birthday.Month:D2}.{user.Birthday.Year}";
                 sexContent.Text = user.Sex == "М" ? "Мужской" : "Женский";
@@ -256,7 +251,6 @@ namespace DOK_U
                 LockDayButton(selectedDay);
                 LoadScheduleOf(selectedDay);
             }
-            selectedStudentChanged = false;
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -438,6 +432,7 @@ namespace DOK_U
 
         private void LoadRecordsOf(int termNumber)
         {
+            selectedStudentChanged = true;
             var fio = studentBox.SelectedItem.ToString().Split(" ");
             var user = db.Users.FromSqlRaw(
                 "SELECT * FROM Users " +
@@ -458,6 +453,7 @@ namespace DOK_U
                 recordLectureBoxes[i].SelectedItem = db.Lectures.Find(term[i].LectureId).Value;
                 markBoxes[i].SelectedItem = term[i].Value;
             }
+            selectedStudentChanged = false;
         }
 
         private void LoadScheduleOf(int day)
@@ -683,9 +679,7 @@ namespace DOK_U
                 semesterBox.SelectedItem = "1";
             }
 
-            selectedStudentChanged = true;
             LoadRecordsOf(int.Parse(semesterBox.SelectedItem.ToString()));
-            selectedStudentChanged = false;
         }
 
         private void ChangeRecordLecture(ComboBox sender, int number)

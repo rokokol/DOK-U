@@ -1,8 +1,6 @@
 ﻿using DOK_U.Classes;
 using DOK_U.Forms;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualBasic.ApplicationServices;
-using Microsoft.VisualBasic.Logging;
 using System.Text.Json;
 
 namespace DOK_U
@@ -51,6 +49,7 @@ namespace DOK_U
         {
             db.Database.EnsureCreated();
             db.Users.Load();
+            db.Marks.Load();
             DataContext = db.Users.Local.ToObservableCollection();
         }
 
@@ -164,6 +163,14 @@ namespace DOK_U
                     birthday,
                     groupId,
                     "--");
+
+
+                var indent = db.Marks.Count();
+                for (int i = 0; i < 8 * 7; i++)
+                {
+                    db.Marks.Add(new Mark(indent + i + 1, user.Id, 1, i % 8 + 1, "--"));
+                }
+
                 db.Users.Add(user);
                 db.SaveChanges();
                 ChangeMode();

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Windows.Forms;
-
-namespace DOK_U
+﻿namespace DOK_U
 {
     static class Program
     {

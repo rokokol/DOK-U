@@ -1,7 +1,4 @@
-﻿using System;
-using System.Text;
-
-namespace DOK_U
+﻿namespace DOK_U
 {
     public class Person
     {

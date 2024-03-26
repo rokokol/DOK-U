@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DOK_U.Classes
+﻿namespace DOK_U.Classes
 {
     internal class Mark
     {
